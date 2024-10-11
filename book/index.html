@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>unity.md - wuye book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="ar眼镜开发/unity.html" class="active"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="c++/深入c++.html"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="数据库/cmu15445.html"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="数据库/数据库.html"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="自学的技术/git.html"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="计算机网络/TCP.html"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="计算机网络/网络其他相关知识.html"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="库"><a class="header" href="#库">库</a></h2>
+<p>unity 开发库XR Interaction Toolkit
+Mixed Reality OpenXR Plugin
+AR Foundation
+Open XR标准</p>
+<h3 id="api"><a class="header" href="#api">API</a></h3>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/api/microsoft.mixedreality.toolkit?view=mixed-reality-toolkit-unity-2020-dotnet-2.8.0">微软MRTK的API参考</a></p>
+<ul>
+<li>TrackedHandJoint API可以获取手部的不同点位</li>
+</ul>
+<h2 id="1环境"><a class="header" href="#1环境">1.环境：</a></h2>
+<h4 id="在unity的build构建项目"><a class="header" href="#在unity的build构建项目">在unity的build构建项目</a></h4>
+<ul>
+<li>
+<p>如果安装-编辑器只有打开文件资源管理器和从hub里删除两个选项的话，是因为编辑器从外部导入，无法安装模块</p>
+</li>
+<li>
+<p>安装UWP(Universal Window Plaform)模块</p>
+</li>
+<li>
+<p>勾选 Development Build，并设置 Build Type 为 D3D Project。</p>
+</li>
+<li>
+<p>在 Player Settings 中，配置应用程序的 Company Name, Product Name，并确保 XR Settings 中启用了 Virtual Reality Supported 并选择了 Windows Mixed Reality。</p>
+</li>
+<li>
+<p>在XR plugin setting 选择HoloLens相关</p>
+</li>
+<li>
+<p>新建一个目录build, 点击build开始构建</p>
+</li>
+</ul>
+<h4 id="在vstudio里打开build文件里的sln文件"><a class="header" href="#在vstudio里打开build文件里的sln文件">在vstudio里打开build文件里的sln文件</a></h4>
+<h3 id="用microsoft-mixed-reality-feature-tool-安装mrkt工具包"><a class="header" href="#用microsoft-mixed-reality-feature-tool-安装mrkt工具包">用microsoft Mixed Reality Feature Tool 安装MRKT工具包</a></h3>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778">下载连接</a></li>
+<li>选择项目时，在unity项目目录下，如图中的AR_TEST目录下，随意创建一个文件，在选择该文件来打开就可以自动检测当前目录下的文件
+<img src="src/%E5%9B%BE1.png" alt="alt text" /></li>
+<li>在discover feature里选择如下两个组件
+<img src="src/%E5%9B%BE2.png" alt="alt text" />
+<img src="src/%E5%9B%BE3.png" alt="alt text" /></li>
+<li>最后点击import和approve。在打开unity项目里，可以开到package多了MRTK
+<img src="src/%E5%9B%BE4.png" alt="alt text" /></li>
+</ul>
+<h2 id="21-unity项目文件结构"><a class="header" href="#21-unity项目文件结构">2.1 unity项目文件结构</a></h2>
+<p>asserts
+Library</p>
+<p>不需要手动修改。该文件夹会被自动生成。</p>
+<blockquote>
+</blockquote>
+<h3 id="22-组件"><a class="header" href="#22-组件">2.2 组件</a></h3>
+<p>nScence 场景:相当于一个对象，如D模型，ui元素，脚本</p>
+<h3 id="23-inspector-即右边所见的视图"><a class="header" href="#23-inspector-即右边所见的视图">2.3 inspector 即右边所见的视图</a></h3>
+<p>像transformzhe'y等都是组件。组件有c#文件的，通过添加组件的方式将编写的c#代码加入到项目里</p>
+<h3 id="24-材质"><a class="header" href="#24-材质">2.4 材质</a></h3>
+<p>Albedo: 设置基本颜色或纹理。
+Metallic: 调整金属感（通常为 0）。
+Smoothness: 控制表面光滑度（较高的值会产生更多高光反射）。
+Transparency: 在 Rendering Mode 选择 Transparent，以控制透明度。
+Emission: 启用 Emission，设置发光颜色和强度。
+Normal Map: 添加法线贴图以增加表面细节。</p>
+<h2 id="3-sense模板选择"><a class="header" href="#3-sense模板选择">3. sense模板选择</a></h2>
+<h3 id="3d"><a class="header" href="#3d">3D</a></h3>
+<ol>
+<li>3D Object（3D 对象）
+用于在场景中创建和管理 3D 几何体。
+Cube: 创建一个立方体对象。常用于基础 3D 建模和碰撞检测。
+Sphere: 创建一个球体对象。用于表示球形物体。
+Capsule: 创建一个胶囊体对象。常用于角色碰撞体。
+Cylinder: 创建一个圆柱体对象。用于表示柱状物体。
+Plane: 创建一个平面对象。用于地板、天花板或墙壁。
+Quad: 创建一个四边形对象。用于 2D 纹理贴图。
+Text - TextMeshPro: 使用 TextMeshPro 显示 3D 文本，支持高级文本排版和渲染。</li>
+<li>2D Object（2D 对象）
+用于创建和管理 2D 场景中的对象。</li>
+</ol>
+<p>Sprite: 创建一个 2D 精灵。用于显示图像和精灵动画。
+Sprite Mask: 用于遮罩精灵，使得部分精灵可见或不可见。
+Tilemap: 创建一个瓦片地图，用于 2D 网格化的游戏场景。
+Polygon: 创建一个自定义形状的多边形对象。
+Text - TextMeshPro: 使用 TextMeshPro 显示 2D 文本，支持高级文本排版和渲染。
+3. UI（用户界面）
+用于创建和管理用户界面元素。</p>
+<p>Canvas: UI 的根容器，所有 UI 元素都必须作为 Canvas 的子元素。
+Text: 创建一个文本对象，用于显示简单的文本。
+Button: 创建一个按钮对象，支持点击事件。
+Image: 创建一个图像对象，用于显示图片。
+Raw Image: 显示原始的纹理图像，支持更多格式。
+Slider: 创建一个滑动条，用于调整值。
+Scrollbar: 创建一个滚动条，用于在长内容中滚动。
+Dropdown: 创建一个下拉菜单，用于选择项。
+Toggle: 创建一个开关，用于二元状态（开/关）。
+Input Field: 创建一个输入字段，用于用户输入文本。
+Panel: 用于容纳和布局 UI 元素的容器。
+Scroll View: 创建一个滚动视图，用于在有限空间内显示大量内容。
+4. Light（光源）
+用于在场景中创建和管理光照效果。</p>
+<p>Directional Light: 创建一个方向光源，类似于太阳光照。
+Point Light: 创建一个点光源，从一个点向四周发散光线。
+Spot Light: 创建一个聚光灯，从一个点沿锥形区域发射光线。
+Area Light: 创建一个区域光源，从一个面板发射光线（主要用于静态全局照明）。
+5. Audio（音频）
+用于在场景中创建和管理音频效果。</p>
+<p>Audio Source: 创建一个音频源，用于播放音效。
+Audio Reverb Zone: 创建一个混响区域，模拟环境的声音反射效果。
+6. Effects（特效）
+用于在场景中创建和管理各种视觉特效。</p>
+<p>Particle System: 创建一个粒子系统，用于模拟火焰、烟雾、爆炸等特效。
+Trail: 创建一个轨迹渲染器，用于显示对象移动时的轨迹。
+Line: 创建一个线条渲染器，用于显示直线或曲线。
+7. Video（视频）
+用于在场景中创建和管理视频播放。</p>
+<p>Video Player: 创建一个视频播放器对象，用于播放视频文件。
+8. Camera（摄像机）
+用于在场景中创建和管理视图。</p>
+<p>Camera: 创建一个摄像机对象，捕捉场景中的图像和动画。
+9. Empty Object（空对象）
+Empty: 创建一个空的 GameObject，用于组织层次结构或附加组件。
+10. XR（扩展现实）
+用于创建扩展现实（AR/VR）中的对象。</p>
+<p>AR Camera: 特定于 AR 场景的摄像机。
+AR Session Origin: 控制 AR 场景中的对象位置。
+AR Session: 管理 AR 会话。
+11. Mixed Reality Toolkit（MRTK）
+用于在 HoloLens 和其他混合现实设备中开发应用。</p>
+<p>Mixed Reality Toolkit: 提供常用的混合现实功能配置，如输入系统、手势、空间感知。
+Boundary System: 配置空间边界。
+Spatial Mesh Observer: 管理空间网格，用于环境感知。
+Teleport System: 配置空间传送功能。
+12. Other（其他）</p>
+<h3 id="31-tmptextmaxpro"><a class="header" href="#31-tmptextmaxpro">3.1 TMP(textMaxpro)</a></h3>
+<ul>
+<li>组件RectTransform, 控制文本的位置和缩放
+<a href="https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/class-RectTransform.html">Rect ransform官方文档</a></li>
+</ul>
+<pre><code>Position 控制组件位置
+Rotation 控制组件旋转
+Anchor 主要用于固定 UI 元素或 3D 对象的位置
+Scale 
+</code></pre>
+<ul>
+<li>组件Mesh Renderer 组件用于渲染网格</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="ar眼镜开发/项目计划.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="ar眼镜开发/项目计划.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

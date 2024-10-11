@@ -1,0 +1,24 @@
+<mxfile host="Electron" modified="2024-06-16T04:35:27.170Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="QaSOkIkZMTVcO26unPfv" version="21.2.8" type="device">
+  <diagram name="第 1 页" id="8Xlapo3tjLt-E50rdj1y">
+    <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V-uJDz-EXJBmDBKLaoEy-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="V-uJDz-EXJBmDBKLaoEy-4" target="V-uJDz-EXJBmDBKLaoEy-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V-uJDz-EXJBmDBKLaoEy-4" value="因为前人的沉重/丰富/，被质疑，所以从头开始构建&#xa;结合当下环境和经验，进行纠正" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="170" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="V-uJDz-EXJBmDBKLaoEy-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="V-uJDz-EXJBmDBKLaoEy-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="419.9310344827586" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V-uJDz-EXJBmDBKLaoEy-6" value="目标：满足人的基本（阶段式，不同阶段的人不同的需求）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277.5" y="390" width="195" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>数据库.md - wuye book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../ar眼镜开发/unity.html"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="../ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="../c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="../c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="../c++/深入c++.html"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="../c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="../c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="../数据库/cmu15445.html"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库.html" class="active"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="../算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="../算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/git.html"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP.html"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/网络其他相关知识.html"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>##操作数据库基本语句</p>
+<blockquote>
+<blockquote>
+<ul>
+<li>CREATE TABLE table_name (
+column1 datatype,
+column2 datatype,
+...
+);</li>
+<li>INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);<strong>//如果value和表的结构顺序一样可以省略列名</strong></li>
+<li>SELECT column1, column2, ... FROM table_name WHERE condition;</li>
+<li>UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;</li>
+<li>DELETE FROM table_name WHERE condition;</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2>##进一步学习
+###一.对已建的数据库修改</h2>
+<blockquote>
+<ul>
+<li>alter table table_name MODIFY COLUMN name VACHAR(200);</li>
+<li>alter TABLE table_name RENAME COLUMN to new_name;</li>
+<li>alter TABLE table_name ADD COLUMN column_name type;</li>
+<li>alter TABLE table_name DROP COLUMN  column_name;</li>
+<li>DROP TABLE;</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>数据库改名：
+1.CREATE DATABASE song;
+2.在终端使用mysqldump -uwuye -p music &gt; music_backup.sql
+3.mysql -uwuye -p --default-character-set=utf8 song &lt; music_backup.sql
+4.del music_backup.sql
+5.drop music</li>
+</ul>
+</blockquote>
+<p>###二.导出表</p>
+<blockquote>
+<p><strong>mysqldump -uusername -p db_name &gt; db_name.sql</strong>
+输入密码后，导出表，
+<strong>mysql -u root -p db_name &lt; db_name;</strong>
+没有错误提示表示导入完成</p>
+</blockquote>
+<blockquote>
+<p><strong>SELECT * FROM table_name where 条件 and 条件</strong>
+not&gt;and&gt;or优先级
+<strong>SELECT * FROM table_name where level IN ()</strong></p>
+</blockquote>
+<p>###三.子查询</p>
+<blockquote>
+<ul>
+<li><strong>SELECT AVG(column_name) form tabel_name</strong>//求平均值</li>
+<li>select * from player where level &gt; (SELECT AVG(column_name) form tabel_name);//子查询
+round()//四舍五入</li>
+<li><strong>select level,ROUND((SELECt AVG(level) form player)) as average,leve - ROUND((SELECT AVG(level)from player)) as diff</strong>
+//将平均值和，level与平均值的差建立表</li>
+<li>CREATE table_name select * from table_name where 条件</li>
+<li>INSERT INTO table1 select * from table2 where 条件</li>
+<li><strong>SELECT exist(select * from table_name where 条件)//返会bool类型</strong></li>
+</ul>
+</blockquote>
+<h1 id="进阶"><a class="header" href="#进阶">进阶</a></h1>
+<h2 id="表关联"><a class="header" href="#表关联">表关联</a></h2>
+<ul>
+<li>内连接：返回左右两个表都有的数据；左连接会显示左表所有的数据，右表数据有条件匹配到的话就显示，没有的用null，右表多余的且条件匹配不到的不显示</li>
+</ul>
+<blockquote>
+<p>select * from db_left
+inner join db_right<br />
+on db_left.id = db_right.id;//条件</p>
+</blockquote>
+<ul>
+<li>内连接的另一种写法：</li>
+</ul>
+<blockquote>
+<p>select * from db_left l,db_right r where  l.id=r.colunm_id;<br />
+如果没有指定条件，将以笛卡尔积的形式显示</p>
+</blockquote>
+<h2 id="索引"><a class="header" href="#索引">索引</a></h2>
+<ul>
+<li>可以在添加表之后再添加索引.在数量少的时候查询速度比不加索引要快很多</li>
+</ul>
+<blockquote>
+<p>CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX index_name on tbl_name (index_col_name)</p>
+</blockquote>
+<ul>
+<li>主键 不能重复的记录，所以不用业务作为主键</li>
+</ul>
+<h1>#理论
+数据库的的查询流程</h1>
+<blockquote>
+<p>语法分析器，</p>
+</blockquote>
+<p>net start/stop mysql(管理员权限运行)</p>
+<p>javascripts脚本模式
+使用\js切换到js语言，同理用\sql切换到sql语言</p>
+<p>在sqlshell启动mysql</p>
+<h2 id="常用命令sql"><a class="header" href="#常用命令sql">常用命令（sql）</a></h2>
+<blockquote>
+<p>mysql -u username -p;
+USE database_name;
+SELECT CURRENT_USER();
+SHOW TABLES;
+SHOW DATABASE;
+DESCRIBE tableName;
+SELECT * FROM tableName;
+select count(*) from table;//返回表的数据量
+创建新用户</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>CREATE USER 'wuye'@'localhost' IDENTIFIED BY '1';</p>
+</blockquote>
+<p>//登陆(先exit退出当前用户)</p>
+<blockquote>
+<p>mysql -u wuye -p;</p>
+</blockquote>
+<p>//获取创建数据库的权限</p>
+<blockquote>
+<p>GRANT CREATE DATABASE ON <em>.</em> TO 'wuye'@'localhost';</p>
+</blockquote>
+<p>//刷新权限</p>
+<blockquote>
+<p>FLUSH PRIVILEGES;</p>
+</blockquote>
+<p>//授予所有权限</p>
+<blockquote>
+<p>GRANT ALL PRIVILEGES ON <em>.</em> TO 'wuye'@'localhost';//有密码需要在后面补上“Identified by '1'”.把1替换成你的密码</p>
+</blockquote>
+<hr />
+<h1 id="错误和解决"><a class="header" href="#错误和解决">错误和解决</a></h1>
+<p>1.mysql无法启动服务，在“服务”里手动启动后停止。</p>
+<blockquote>
+<p>mysqld -remove
+mysqld -install
+mysqld -initialize</p>
+</blockquote>
+<p>2.重置root密码
+1)管理员权限运行命令行</p>
+<blockquote>
+<p>net stop mysql
+mysqld --console --skip-grant-tables --shared-memory</p>
+</blockquote>
+<p>2)在新的命令行（原有的不能关闭）</p>
+<blockquote>
+<p>mysql -uroot -p  //不用输入密码，直接按下enter
+use mysql
+UPDATE mysql.user SET authentication_string='' WHERE user='root';//在命令中引号里面设置root密码，或者留空，用enter登陆</p>
+</blockquote>
+<p>3)关闭所有窗口
+net start mysql</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../数据库/cmu15445.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../数据库/数据库刷题.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../数据库/cmu15445.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../数据库/数据库刷题.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

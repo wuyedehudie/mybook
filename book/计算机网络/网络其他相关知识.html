@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>网络其他相关知识.md - wuye book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../ar眼镜开发/unity.html"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="../ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="../c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="../c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="../c++/深入c++.html"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="../c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="../c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="../数据库/cmu15445.html"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库.html"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="../算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="../算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/git.html"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP.html"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/网络其他相关知识.html" class="active"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="网络与信息安全"><a class="header" href="#网络与信息安全">网络与信息安全</a></h2>
+<ul>
+<li>IETF定义端口，公认端口，动态分配的端口</li>
+<li>PDRR模型
+protect, detect, recovery, reaction存储</li>
+<li>netstat -t</li>
+</ul>
+<h3 id="cdn"><a class="header" href="#cdn">CDN</a></h3>
+<p>内容分发网络，通过在不同地理位置网络服务器节点来分发内容，降低主服务器的压力。
+用户请求时（一般是通过域名访问，要经过DNS转换），访问到DNS服务器时，会将请求分发到最近的CDN节点，CDN节点存储部分内容，不需要主服务器来返回请求。当CDN节点没有该资源时会再从主服务器获取，再由CDN节点返回</p>
+<h3 id="dns"><a class="header" href="#dns">DNS</a></h3>
+<p>DNS(DNS（Domain Name System，域名系统)。将域名转换为 IP 地址：DNS 将人类可读的域名（如 www.example.com）转换为机器可读的 IP 地址（如 192.0.2.1），使设备能够相互通信。
+工作流程：</p>
+<ul>
+<li>
+<ol>
+<li>用户请求。
+当用户在浏览器中输入一个网址（如 www.example.com） 并按下回车时，操作系统首先需要将该域名解析为 IP 地址。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>操作系统查询 DNS
+本地 DNS 缓存：操作系统会首先检查本地缓存，看是否已经有该域名的 IP 地址。如果有，并且未过期，则直接使用这个 IP 地址。</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>DNS 解析流程
+如果本地缓存中没有该 IP 地址，操作系统将进行 DNS 查询：
+递归 DNS 服务器：操作系统会向配置的 DNS 服务器（通常是互联网服务提供商提供的）发送请求。这个 DNS 服务器通常是递归 DNS 服务器，负责帮助用户查找所请求的域名。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>DNS 解析过程
+根 DNS 服务器：如果递归 DNS 服务器没有缓存结果，它会查询根 DNS 服务器，获得对应的顶级域名服务器的地址。
+顶级域名服务器：根服务器会返回负责该域名的顶级域名服务器（如 .com、.org 等）的地址。
+权威 DNS 服务器：顶级域名服务器再将请求转发到权威 DNS 服务器，以获取最终的 IP 地址。</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>返回 IP 地址
+权威 DNS 服务器返回 IP 地址到递归 DNS 服务器，递归 DNS 服务器再将结果返回给操作系统。
+操作系统将该 IP 地址缓存一段时间（根据 TTL 设置），以便未来使用。</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>发送实际请求
+一旦操作系统获取到 IP 地址，就会使用该地址向目标服务器发送实际的 HTTP 请求。</li>
+</ol>
+</li>
+</ul>
+<h3 id="arp协议"><a class="header" href="#arp协议">ARP协议</a></h3>
+<p>Dynamic Host Configuration Protocol（DHCP）是一种用于在计算机网络上自动分配 IP 地址和其他网络配置信息的协议。它有以下功能和特点：</p>
+<blockquote>
+<p>ARP（Address Resolution Protocol）地址解析协议是用于将 IP 地址解析为物理 MAC 地址的协议。在数据包从一个网络设备发送到另一个网络设备时，需要知道目标设备的物理地址（MAC 地址）才能将数据包正确传递到目标设备。
+ARP 协议工作原理如下：</p>
+<ul>
+<li>IP 地址解析为 MAC 地址：当设备 A 要发送数据包给设备 B 时，设备 A 首先检查本地 ARP 缓存中是否有设备 B 的 MAC 地址。如果找到了，它就会直接使用这个地址发送数据包。</li>
+<li>ARP 查询：如果设备 A 的 ARP 缓存中没有设备 B 的 MAC 地址，它会发送一个 ARP 请求广播到本地网络，该请求包含设备 A 想要通信的设备 B 的 IP 地址。这个请求会发送到本地网络的所有设备。</li>
+<li>ARP 响应：设备 B 收到 ARP 请求后，会回复一个 ARP 响应，其中包含它的 MAC 地址。这个响应只发送给设备 A。</li>
+<li>ARP 缓存：设备 A 收到 ARP 响应后，会将设备 B 的 IP 地址和 MAC 地址映射关系存储到本地的 ARP 缓存中，以便下次发送数据包时直接使用。</li>
+<li>ARP 协议的主要作用是在通信之前解析目标设备的物理地址，以确保数据包能够正确地传输到目标设备。ARP 请求和响应过程帮助网络设备建立起 IP 地址和 MAC 地址之间的对应关系，提供了在本地网络中进行通信所需的基础。</li>
+</ul>
+</blockquote>
+<p><img src="img/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%BA%A7%E7%9A%84%E5%8D%8F%E8%AE%AE.png" alt="Alt text" /></p>
+<h2 id="其他"><a class="header" href="#其他">其他</a></h2>
+<p>ICMP（Internet Control Message Protocol，互联网控制消息协议）是在 TCP/IP 协议族中的一个重要协议，用于在 IP 网络上发送控制和错误消息。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../计算机网络/简历的亮点.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../计算机网络/简历的亮点.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

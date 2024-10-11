@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>TCP.md - wuye book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../ar眼镜开发/unity.html"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="../ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="../c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="../c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="../c++/深入c++.html"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="../c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="../c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="../数据库/cmu15445.html"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库.html"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="../算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="../算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/git.html"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP.html" class="active"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/网络其他相关知识.html"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>进度</p>
+<p>TCP协议格式</p>
+<pre><code>------------------------------------------------------------------------
+|     Source Port (16 bits)      |    Destination Port (16 bits)      |
+------------------------------------------------------------------------
+|                        Sequence Number (32 bits)                    |
+------------------------------------------------------------------------
+|                   Acknowledgment Number (32 bits)                   |
+------------------------------------------------------------------------
+| Data Offset |Reserved|  Flags  |        Window Size (16 bits)       |
+------------------------------------------------------------------------
+|      Checksum (16 bits)        |    Urgent Pointer (16 bits)       |
+------------------------------------------------------------------------
+|                           Options                                |
+|                             (if any)                                 |
+------------------------------------------------------------------------
+|                            Data                                     |
+------------------------------------------------------------------------
+</code></pre>
+<p>Source Port / Destination Port: 用于标识源和目标应用程序的端口号。
+Sequence Number: 用于按序传送数据，每个数据包都有一个唯一的序列号。
+Acknowledgment Number: 确认已接收到的数据序列号。
+Data Offset: 数据偏移量，指示数据字段在整个TCP数据包中的位置。
+Reserved: 保留字段，暂时未使用。
+Flags: TCP标志位，用于控制TCP连接的建立、终止和状态等。
+Window Size: 接收窗口大小，用于流量控制，指示发送方可以发送的数据量。
+Checksum: 校验和，用于检查数据包在传输过程中是否损坏。
+Urgent Pointer: 用于指示紧急数据在数据段中的位置。
+Options: 可能包含选项信息，如最大报文长度（MSS）等。
+Data: 实际传输的数据。</p>
+<p>##计算机网络之TCP</p>
+<ul>
+<li>概念/定位：TCP:transport control princple传输控制协议，TCP位于网络协议栈的传输层，负责提供可靠的数据传输和连接管理</li>
+<li>据TCP协议的设计，即使在关闭连接的过程（四次挥手过程中）中，数据仍然可以在连接保持期间传输。</li>
+<li>套接字是tcp的具体实现,//类似文件描述符文件描述符</li>
+</ul>
+<h1 id="四次挥手"><a class="header" href="#四次挥手">四次挥手</a></h1>
+<h2><img src="%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.webp" alt="Alt text" />
+挥手是双向的(双方对等)</h2>
+<p>即服务器也可以通过四次挥手的过程来断开连接,FIN（Finish）报文段,ACK（Acknowledgment）</p>
+<h2 id="简单概括为什么要设计四次挥手"><a class="header" href="#简单概括为什么要设计四次挥手">简单概括为什么要设计四次挥手</a></h2>
+<ul>
+<li>发出fin报文后，相当于客户端向服务端喊了一声，但客户端不知道服务端是否收到中断的请求，所以需要服务端收到fin后立刻告知客户端它已经知道要结束了，但还没有真正结束，因为可能数据没传完。等真正传输完了之后服务端发出fin报文告诉客户端真的结束了</li>
+<li>为什么服务端还要客户端确认结束，直接断开不就好了？这是因为在服务端发送ack发和fin报文这中间的数据还不确定是否完整地被客户端收到，当客户端的ack报文到达服务端后才可以进入close状态，因为这时候是没有数据传输了。</li>
+</ul>
+<h2 id="状态总结"><a class="header" href="#状态总结">状态总结</a></h2>
+<ul>
+<li>CLOSED（关闭）：表示连接处于关闭状态，未建立连接。
+LISTEN（监听）：表示服务器正在监听传入的连接请求。</li>
+<li>SYN_SENT（同步已发送）：表示客户端已发送SYN（同步）报文，等待服务器的确认。</li>
+<li>SYN_RECEIVED（同步已接收）：表示服务器已收到客户端的SYN报文，并发送了自己的SYN和ACK（确认）报文。</li>
+<li>ESTABLISHED（已建立）：表示连接已成功建立，双方可以进行数据的传输。</li>
+<li>FIN_WAIT_1（结束等待1）：表示连接中一方已发送FIN（结束）报文，等待对方的ACK报文。</li>
+<li>FIN_WAIT_2（结束等待2）：表示连接中一方已收到对方的ACK报文，等待对方发送FIN报文。</li>
+<li>TIME_WAIT（时间等待）：表示连接已关闭，但仍在等待一段时间以确保所有报文都已被处理完毕。</li>
+<li>CLOSE_WAIT（关闭等待）：表示连接中一方已收到对方的FIN报文，正在等待自己发送FIN报文。</li>
+<li>LAST_ACK（最后确认）：表示连接中一方已发送FIN报文，等待对方的确认。</li>
+<li>CLOSED（关闭）：表示连接已彻底关闭。</li>
+</ul>
+<h2 id="挥手断开连接丢失的情况"><a class="header" href="#挥手断开连接丢失的情况">挥手断开连接丢失的情况</a></h2>
+<ul>
+<li><strong>第一次</strong>挥手丢失（服务器）</li>
+</ul>
+<blockquote>
+<ul>
+<li>客户端发送FIN（结束）报文给服务器，希望关闭连接并停止发送数据。</li>
+<li>服务器没有收到客户端发送的FIN报文，此时服务器并不知道客户端希望关闭连接。</li>
+<li>服务器将保持连接状态，继续接收客户端发送的数据，以及发送自己的数据给客户端。</li>
+<li>客户端在超时等待一段时间后，可能会重新发送挥手报文（FIN）给服务器，以确保服务器收到关闭连接的请求。</li>
+<li>如果客户端持续未能收到服务器的回应，客户端可能会认为服务器已经关闭了连接，并主动关闭自己的连接。</li>
+<li>在这种情况下，服务器可能会继续发送数据给客户端，但客户端已经不再接收数据，并认为连接已关闭。</li>
+<li>由于服务器并不知道客户端已经关闭连接，服务器将保持连接状态，直到其自己的应用层决定关闭连接。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>第二次</strong>挥手丢失
+客户端首先发送一个关闭连接的请求给服务器，这是第一次挥手（FIN）。</li>
+</ul>
+<blockquote>
+<ul>
+<li>服务器收到客户端的关闭请求后，会进入关闭等待状态，并发送一个确认报文给客户端，表示已经接收到关闭请求。这是第二次挥手（ACK）。
+在接收到服务器的确认报文后，客户端进入等待状态，等待服务器发送最后的数据。在这个阶段，客户端仍然可以接收服务器发送的数据。
+服务器完成最后的数据传输后，会发送一个关闭连接的请求给客户端，这是第三次挥手（FIN）。
+客户端收到服务器的关闭请求后，发送一个确认报文给服务器，表示已经接收到关闭请求的确认。这是第四次挥手（ACK）。
+在收到客户端的确认报文后，服务器进入关闭状态，双方都已完成连接的关闭。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>第三次</strong>挥手丢失</li>
+</ul>
+<blockquote>
+<p>客户端已发送了FIN报文并进入了TIME_WAIT状态。它将继续等待一段时间，以确保服务器接收到了ACK报文，并且等待时间取决于具体的实现，默认为2倍的最大段生存时间（2MSL）。
+服务器没有收到来自客户端的ACK报文确认，它会持续发送FIN报文，试图重新触发客户端发送ACK报文。
+如果客户端在等待时间结束后仍未收到服务器的FIN报文，它将关闭连接并释放资源，此时服务器可能仍然认为连接是打开的。
+如果服务器在一定时间内没有收到来自客户端的ACK报文，并且超过了服务器的超时时间，服务器将关闭连接并释放资源。
+最终，如果客户端和服务器的连接状态不一致，可能会导致连接的不正常关闭和资源泄漏。</p>
+</blockquote>
+<h2 id="time_wait相关"><a class="header" href="#time_wait相关">TIME_WAIT相关</a></h2>
+<blockquote>
+<ul>
+<li>为什么 TIME_WAIT 等待的时间是 2MSL？
+MSL 是 Maximum Segment Lifetime，报文最大生存时间</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>为什么需要 TIME_WAIT 状态？
+主动发起关闭连接的一方，才会有 TIME-WAIT 状态。
+防止历史连接中的数据，被后面相同四元组的连接错误的接收；(如果主动关闭的一方在另一个进程里使用了相同的四元组，可能会接收到上一次连接的数据)
+保证「被动关闭连接」的一方，能被正确的关闭；</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>服务器出现大量 TIME_WAIT 状态的原因
+第一个场景：HTTP 没有使用长连接
+第二个场景：HTTP 长连接超时
+第三个场景：HTTP 长连接的请求数量达到上限</p>
+</blockquote>
+<p>Linux内核相关</p>
+<blockquote>
+<p>Linux内核中会维护两个队列：
+半连接队列（SYN 队列）：接收到一个 SYN 建立连接请求，处于 SYN_RCVD 状态；//接收到SYN后加入
+全连接队列（Accpet 队列）：已完成 TCP 三次握手过程，处于 ESTABLISHED 状态； //接收到ACK后加入</p>
+</blockquote>
+<h2 id="什么时候发出fin报文"><a class="header" href="#什么时候发出fin报文">什么时候发出fin报文</a></h2>
+<blockquote>
+<p>close 函数，同时 socket 关闭发送方向和读取方向，也就是 socket 不再有发送和接收数据的能力。如果有多进程/多线程共享同一个 socket，如果有一个进程调用了 close 关闭只是让 socket 引用计数 -1，并不会导致 socket 不可用，同时也不会发出 FIN 报文，其他进程还是可以正常读写该 socket，直到引用计数变为 0，才会发出 FIN 报文。
+shutdown 函数，可以指定 socket 只关闭发送方向而不关闭读取方向，也就是 socket 不再有发送数据的能力，但是还是具有接收数据的能力。如果有多进程/多线程共享同一个 socket，shutdown 则不管引用计数，直接使得该 socket 不可用，然后发出 FIN 报文，如果有别的进程企图使用该 socket，将会受到影响。</p>
+</blockquote>
+<h1 id="tcp机制"><a class="header" href="#tcp机制">TCP机制</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../计算机网络/IP.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../计算机网络/简历的亮点.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../计算机网络/IP.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../计算机网络/简历的亮点.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

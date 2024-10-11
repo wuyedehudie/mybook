@@ -1,0 +1,2916 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>wuye book</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="ar眼镜开发/unity.html"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="c++/深入c++.html"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="数据库/cmu15445.html"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="数据库/数据库.html"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="自学的技术/git.html"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="计算机网络/TCP.html"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="计算机网络/网络其他相关知识.html"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="库"><a class="header" href="#库">库</a></h2>
+<p>unity 开发库XR Interaction Toolkit
+Mixed Reality OpenXR Plugin
+AR Foundation
+Open XR标准</p>
+<h3 id="api"><a class="header" href="#api">API</a></h3>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/api/microsoft.mixedreality.toolkit?view=mixed-reality-toolkit-unity-2020-dotnet-2.8.0">微软MRTK的API参考</a></p>
+<ul>
+<li>TrackedHandJoint API可以获取手部的不同点位</li>
+</ul>
+<h2 id="1环境"><a class="header" href="#1环境">1.环境：</a></h2>
+<h4 id="在unity的build构建项目"><a class="header" href="#在unity的build构建项目">在unity的build构建项目</a></h4>
+<ul>
+<li>
+<p>如果安装-编辑器只有打开文件资源管理器和从hub里删除两个选项的话，是因为编辑器从外部导入，无法安装模块</p>
+</li>
+<li>
+<p>安装UWP(Universal Window Plaform)模块</p>
+</li>
+<li>
+<p>勾选 Development Build，并设置 Build Type 为 D3D Project。</p>
+</li>
+<li>
+<p>在 Player Settings 中，配置应用程序的 Company Name, Product Name，并确保 XR Settings 中启用了 Virtual Reality Supported 并选择了 Windows Mixed Reality。</p>
+</li>
+<li>
+<p>在XR plugin setting 选择HoloLens相关</p>
+</li>
+<li>
+<p>新建一个目录build, 点击build开始构建</p>
+</li>
+</ul>
+<h4 id="在vstudio里打开build文件里的sln文件"><a class="header" href="#在vstudio里打开build文件里的sln文件">在vstudio里打开build文件里的sln文件</a></h4>
+<h3 id="用microsoft-mixed-reality-feature-tool-安装mrkt工具包"><a class="header" href="#用microsoft-mixed-reality-feature-tool-安装mrkt工具包">用microsoft Mixed Reality Feature Tool 安装MRKT工具包</a></h3>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778">下载连接</a></li>
+<li>选择项目时，在unity项目目录下，如图中的AR_TEST目录下，随意创建一个文件，在选择该文件来打开就可以自动检测当前目录下的文件
+<img src="ar%E7%9C%BC%E9%95%9C%E5%BC%80%E5%8F%91/src/%E5%9B%BE1.png" alt="alt text" /></li>
+<li>在discover feature里选择如下两个组件
+<img src="ar%E7%9C%BC%E9%95%9C%E5%BC%80%E5%8F%91/src/%E5%9B%BE2.png" alt="alt text" />
+<img src="ar%E7%9C%BC%E9%95%9C%E5%BC%80%E5%8F%91/src/%E5%9B%BE3.png" alt="alt text" /></li>
+<li>最后点击import和approve。在打开unity项目里，可以开到package多了MRTK
+<img src="ar%E7%9C%BC%E9%95%9C%E5%BC%80%E5%8F%91/src/%E5%9B%BE4.png" alt="alt text" /></li>
+</ul>
+<h2 id="21-unity项目文件结构"><a class="header" href="#21-unity项目文件结构">2.1 unity项目文件结构</a></h2>
+<p>asserts
+Library</p>
+<p>不需要手动修改。该文件夹会被自动生成。</p>
+<blockquote>
+</blockquote>
+<h3 id="22-组件"><a class="header" href="#22-组件">2.2 组件</a></h3>
+<p>nScence 场景:相当于一个对象，如D模型，ui元素，脚本</p>
+<h3 id="23-inspector-即右边所见的视图"><a class="header" href="#23-inspector-即右边所见的视图">2.3 inspector 即右边所见的视图</a></h3>
+<p>像transformzhe'y等都是组件。组件有c#文件的，通过添加组件的方式将编写的c#代码加入到项目里</p>
+<h3 id="24-材质"><a class="header" href="#24-材质">2.4 材质</a></h3>
+<p>Albedo: 设置基本颜色或纹理。
+Metallic: 调整金属感（通常为 0）。
+Smoothness: 控制表面光滑度（较高的值会产生更多高光反射）。
+Transparency: 在 Rendering Mode 选择 Transparent，以控制透明度。
+Emission: 启用 Emission，设置发光颜色和强度。
+Normal Map: 添加法线贴图以增加表面细节。</p>
+<h2 id="3-sense模板选择"><a class="header" href="#3-sense模板选择">3. sense模板选择</a></h2>
+<h3 id="3d"><a class="header" href="#3d">3D</a></h3>
+<ol>
+<li>3D Object（3D 对象）
+用于在场景中创建和管理 3D 几何体。
+Cube: 创建一个立方体对象。常用于基础 3D 建模和碰撞检测。
+Sphere: 创建一个球体对象。用于表示球形物体。
+Capsule: 创建一个胶囊体对象。常用于角色碰撞体。
+Cylinder: 创建一个圆柱体对象。用于表示柱状物体。
+Plane: 创建一个平面对象。用于地板、天花板或墙壁。
+Quad: 创建一个四边形对象。用于 2D 纹理贴图。
+Text - TextMeshPro: 使用 TextMeshPro 显示 3D 文本，支持高级文本排版和渲染。</li>
+<li>2D Object（2D 对象）
+用于创建和管理 2D 场景中的对象。</li>
+</ol>
+<p>Sprite: 创建一个 2D 精灵。用于显示图像和精灵动画。
+Sprite Mask: 用于遮罩精灵，使得部分精灵可见或不可见。
+Tilemap: 创建一个瓦片地图，用于 2D 网格化的游戏场景。
+Polygon: 创建一个自定义形状的多边形对象。
+Text - TextMeshPro: 使用 TextMeshPro 显示 2D 文本，支持高级文本排版和渲染。
+3. UI（用户界面）
+用于创建和管理用户界面元素。</p>
+<p>Canvas: UI 的根容器，所有 UI 元素都必须作为 Canvas 的子元素。
+Text: 创建一个文本对象，用于显示简单的文本。
+Button: 创建一个按钮对象，支持点击事件。
+Image: 创建一个图像对象，用于显示图片。
+Raw Image: 显示原始的纹理图像，支持更多格式。
+Slider: 创建一个滑动条，用于调整值。
+Scrollbar: 创建一个滚动条，用于在长内容中滚动。
+Dropdown: 创建一个下拉菜单，用于选择项。
+Toggle: 创建一个开关，用于二元状态（开/关）。
+Input Field: 创建一个输入字段，用于用户输入文本。
+Panel: 用于容纳和布局 UI 元素的容器。
+Scroll View: 创建一个滚动视图，用于在有限空间内显示大量内容。
+4. Light（光源）
+用于在场景中创建和管理光照效果。</p>
+<p>Directional Light: 创建一个方向光源，类似于太阳光照。
+Point Light: 创建一个点光源，从一个点向四周发散光线。
+Spot Light: 创建一个聚光灯，从一个点沿锥形区域发射光线。
+Area Light: 创建一个区域光源，从一个面板发射光线（主要用于静态全局照明）。
+5. Audio（音频）
+用于在场景中创建和管理音频效果。</p>
+<p>Audio Source: 创建一个音频源，用于播放音效。
+Audio Reverb Zone: 创建一个混响区域，模拟环境的声音反射效果。
+6. Effects（特效）
+用于在场景中创建和管理各种视觉特效。</p>
+<p>Particle System: 创建一个粒子系统，用于模拟火焰、烟雾、爆炸等特效。
+Trail: 创建一个轨迹渲染器，用于显示对象移动时的轨迹。
+Line: 创建一个线条渲染器，用于显示直线或曲线。
+7. Video（视频）
+用于在场景中创建和管理视频播放。</p>
+<p>Video Player: 创建一个视频播放器对象，用于播放视频文件。
+8. Camera（摄像机）
+用于在场景中创建和管理视图。</p>
+<p>Camera: 创建一个摄像机对象，捕捉场景中的图像和动画。
+9. Empty Object（空对象）
+Empty: 创建一个空的 GameObject，用于组织层次结构或附加组件。
+10. XR（扩展现实）
+用于创建扩展现实（AR/VR）中的对象。</p>
+<p>AR Camera: 特定于 AR 场景的摄像机。
+AR Session Origin: 控制 AR 场景中的对象位置。
+AR Session: 管理 AR 会话。
+11. Mixed Reality Toolkit（MRTK）
+用于在 HoloLens 和其他混合现实设备中开发应用。</p>
+<p>Mixed Reality Toolkit: 提供常用的混合现实功能配置，如输入系统、手势、空间感知。
+Boundary System: 配置空间边界。
+Spatial Mesh Observer: 管理空间网格，用于环境感知。
+Teleport System: 配置空间传送功能。
+12. Other（其他）</p>
+<h3 id="31-tmptextmaxpro"><a class="header" href="#31-tmptextmaxpro">3.1 TMP(textMaxpro)</a></h3>
+<ul>
+<li>组件RectTransform, 控制文本的位置和缩放
+<a href="https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/class-RectTransform.html">Rect ransform官方文档</a></li>
+</ul>
+<pre><code>Position 控制组件位置
+Rotation 控制组件旋转
+Anchor 主要用于固定 UI 元素或 3D 对象的位置
+Scale 
+</code></pre>
+<ul>
+<li>组件Mesh Renderer 组件用于渲染网格</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="1大致时间安排"><a class="header" href="#1大致时间安排">1.大致时间安排：</a></h2>
+<ul>
+<li>配置unity，安装相关的模块，用vstudio连接Hololens，操作HoloLens，一天</li>
+<li>学习和了解C#、unity的使用，仅了解AR相关的话，预测需要两到三天</li>
+<li>熟悉Hololens交互界面的开发，仅了解基础开发模式、ui和交互，做一些小demo了解开发流程，两到三天左右。</li>
+<li>开始真正入手和根据需求调试，时间不确定</li>
+<li>创建git项目，调试和开发</li>
+</ul>
+<p>主要文档：<a href="https://learn.microsoft.com/zh-cn/windows/mixed-reality/develop/unity/unity-development-overview?tabs=arr%2CD365%2Chl2">针对HoloLens的Unity开发</a></p>
+<h2 id="2需求猜想"><a class="header" href="#2需求猜想">2.需求猜想</a></h2>
+<p>目的：用AR眼镜提示医生相关的知识，病情
+后续有其他需求再扩展</p>
+<h3 id="21-交互方式"><a class="header" href="#21-交互方式">2.1 交互方式</a></h3>
+<ul>
+<li>眼动模块
+眼部凝视接口，检测用户凝视，但需要根据实际情况实现。
+相关文档：<a href="https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/eye-gaze-interaction">微软文档基于眼部凝视的交互</a></li>
+<li>手势模块
+医生坐在桌子旁边的情况下, 可以适当使用手势语言进行交互</li>
+<li>语音输入模块
+如果有患者，可根据患者病情陈述，自动获取相关可能的病情</li>
+</ul>
+<h3 id="22显示"><a class="header" href="#22显示">2.2显示</a></h3>
+<ul>
+<li>难点：窗口不妨碍到医生，需要考虑字体大小，窗口自适应状态，可以的话增加自定义功能</li>
+<li>亮点猜想：是否可以通过颜色提示标识不同的病症</li>
+<li>用眼疲劳问题，如何解决</li>
+<li>考虑医生不同环境下的需求变化如亮度，颜色</li>
+</ul>
+<h3 id="23通信模块"><a class="header" href="#23通信模块">2.3通信模块</a></h3>
+<ul>
+<li>先简单做一个接口，后续再具体修改，考虑到这使用http可能会方便点</li>
+<li>是否要考虑延迟问题</li>
+<li>技术选择：</li>
+</ul>
+<blockquote>
+<p>WebSocket:通用，底层比较麻烦
+HTTP/HTTPS:有便捷的库
+Azure:和账户耦合，后续移植会麻烦</p>
+</blockquote>
+<ul>
+<li>简单构建一个服务端模块，用于返回信息交互</li>
+</ul>
+<h2 id="3开发库和环境"><a class="header" href="#3开发库和环境">3.开发库和环境</a></h2>
+<h3 id="31项目开发框架"><a class="header" href="#31项目开发框架">3.1项目开发框架：</a></h3>
+<ul>
+<li>unity
+unity3D项目</li>
+<li>vstual stidio构建项目的选择
+1.<code>MSBuild</code>
+2<code>.Nuke</code>
+3<code>.net</code></li>
+</ul>
+<h3 id="32-vstudio和unity如何开发"><a class="header" href="#32-vstudio和unity如何开发">3.2 vstudio和unity如何开发</a></h3>
+<ul>
+<li>vstudio 负责连接HoloLens调试</li>
+<li>Unity负责开发应用和交互等内容
+1.在 Unity 中开发和测试：在 Unity 编辑器中进行开发和基本的场景测试。
+2.导出 UWP 项目：将 Unity 项目导出为通用 Windows 平台（UWP）项目。
+3.在 Visual Studio 中编译和部署：在 Visual Studio 中编译 UWP 项目并部署到 HoloLens 设备进行实际测试。</li>
+</ul>
+<h3 id="33显示界面"><a class="header" href="#33显示界面">3.3显示界面</a></h3>
+<p>MRTK 是一个为 Unity 提供的开源工具包
+UI 组件：提供常用的 UI 组件，如按钮、菜单、对话框。
+输入管理：支持多种输入方式，包括手势、语音、注视。
+空间映射：提供与现实世界交互的功能，如空间映射和碰撞检测。</p>
+<h3 id="34其他工具"><a class="header" href="#34其他工具">3.4其他工具</a></h3>
+<ul>
+<li>Unity Profiler
+是一个性能分析工具，用于监控和分析 Unity 应用的运行性能。</li>
+<li>HoloLens Emulator
+HoloLens Emulator 是一个模拟器，允许开发者在没有 HoloLens 硬件的情况下开发和测试应用。</li>
+<li>Azure Spatial Anchors
+Azure Spatial Anchors 提供云端空间锚点服务，支持跨设备的持久化空间锚点。
+跨设备共享：允许不同 HoloLens 设备共享空间锚点。
+持久化存储：在云端持久化存储空间锚点。</li>
+</ul>
+<h2 id="4unity流程"><a class="header" href="#4unity流程">4.Unity流程</a></h2>
+<ol>
+<li>开发和测试
+在 Unity 编辑器中进行主要的开发工作，包括编写脚本、设置场景、添加交互等。你可以在 Unity 编辑器中使用 Play 模式进行一些基本的测试，但这无法完全模拟 HoloLens 设备的运行环境。</li>
+<li>导出 UWP 项目
+准备好将项目部署到 HoloLens 设备上时，需要将项目导出为 UWP 项目：
+设置平台：在 Unity 中选择 File &gt; Build Settings，将平台设置为 Universal Windows Platform。</li>
+</ol>
+<blockquote>
+<p>配置项目设置：
+Target Device：选择 HoloLens。
+Architecture：选择适合你的 HoloLens 设备的架构（通常为 x86 或 ARM）。
+Build Type：选择 D3D 或 XAML。
+Build Configuration：选择 Release 或 Debug，视情况而定。
+生成项目：点击 Build 按钮，选择一个输出文件夹，Unity 将导出一个 UWP 项目。</p>
+</blockquote>
+<ol start="3">
+<li>编译和部署
+在 Visual Studio 中打开 Unity 导出的 UWP 项目，并进行以下操作：</li>
+</ol>
+<blockquote>
+<p>打开项目：在 Visual Studio 中打开 .sln 文件。
+配置目标设备：设置目标设备为 HoloLens。
+远程部署：
+在 HoloLens 上启用开发者模式：通过 HoloLens 的设置启用开发者模式。
+获取 HoloLens 的 IP 地址：在 HoloLens 的设置中找到设备的 IP 地址。
+配置 Visual Studio：在 Visual Studio 中配置远程设备的 IP 地址，并启用远程调试。
+编译和部署：选择 Build &gt; Deploy Solution，将应用部署到 HoloLens 设备。</p>
+</blockquote>
+<h2 id="其他内容"><a class="header" href="#其他内容">其他内容</a></h2>
+<h3 id="hololens显示原理"><a class="header" href="#hololens显示原理">HoloLens显示原理</a></h3>
+<p>光学波导：HoloLens 使用光学波导（Optical Waveguide）将光学成像投射到用户眼前。波导通过内部反射将图像引导到显示区域。
+光学投影：使用全息光学元件将虚拟内容与实际视野融合，用户可以在现实世界中看到叠加的全息图像。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="c深入学习记录"><a class="header" href="#c深入学习记录"><em>c++深入学习记录</em></a></h1>
+<p>//你喜欢某个方向也许是因为你了解某个方向,只有了解完所有的方向再进行选择你才能说你喜欢这个方向</p>
+<h2 id="内联函数"><a class="header" href="#内联函数">内联函数</a></h2>
+<ul>
+<li>ifndef,endif:</li>
+</ul>
+<blockquote>
+<p>头文件防止重复引用</p>
+</blockquote>
+<ul>
+<li>当文件名为引号时，预处理器将在当前目录中查找（自己定义的头文件）</li>
+<li>#define TOTAL_MARGIN (LEFT_MARGIN * SCALE + RIGHT_MARGIN * SCALE)</li>
+<li>typedef</li>
+</ul>
+<blockquote>
+<p>枚举</p>
+</blockquote>
+<h2 id="宏定义"><a class="header" href="#宏定义">宏定义</a></h2>
+<ul>
+<li>注意区分</li>
+</ul>
+<blockquote>
+<p>#define MANXSIZE 35    //这是定义了一个常量
+#define park a         //这是把a替换成park
+宏定义大致分为两类,对于#define A B,一类是把A的值定义为B(对象宏),另一类为在B出现的地方把B替换为A(函数宏)</p>
+</blockquote>
+<ul>
+<li>防止重复定义(条件编译)   //macro：宏指令</li>
+</ul>
+<blockquote>
+<p>// structs.h
+#ifndef STRUCTS_H
+#define STRUCTS_H
+struct MyStruct {
+int x;
+int y;
+};
+#endif // STRUCTS_H</p>
+</blockquote>
+<ul>
+<li>函数宏</li>
+</ul>
+<blockquote>
+<p>#define PLUS_ONE(x) ((x) + 1)
+int x = PLUS_ONE(137);
+其他例子:
+#define MAKE_FUNCTION(fnName) void fnName()
+MAKE_FUNCTION(MyFunction) {
+cout &lt;&lt; "This is a function!" &lt;&lt; endl;
+}
+结果:
+void MyFunction() {
+cout &lt;&lt; "This is a function!" &lt;&lt; endl;
+}//把fnName想象为x(或者一个占位符),替换到后面的fnName</p>
+</blockquote>
+<ul>
+<li>定义字符串常量</li>
+</ul>
+<blockquote>
+<p>#define ERROR_MESSAGE "An error occurred"</p>
+</blockquote>
+<ul>
+<li>定义条件表达式</li>
+</ul>
+<blockquote>
+<p>#define MAX(a, b) ((a) &gt; (b) ? (a) : (b))
+-取消宏定义
+#define MY_INT 137
+int x = MY_INT; // MY_INT is replaced
+#undef MY_INT;
+int MY_INT = 42; // MY_INT not replaced
+内联函数
+--</p>
+</blockquote>
+<ul>
+<li>相当于在预处理过程帮你把函数定义补上去,用于减少调用,缺点是增加内存.一般用于调用频繁的函数</li>
+</ul>
+<h1 id="继承和派生"><a class="header" href="#继承和派生">继承和派生</a></h1>
+<ul>
+<li>class PartTimeWorker : public Person{}</li>
+<li>class NoDerived final { }; //final防止被继承</li>
+<li>
+<pre><code>  a           b               c       d
+</code></pre>
+</li>
+</ul>
+<p>访问位置 该类成员函数 派生类成员函数 该类友元 该类对象
+public : 可以被 a、b、c 和 d 访问。
+protected : 可以被 a、b 和 c 访问。
+private: 可以被 a 和 c 访问。</p>
+<ul>
+<li>public 继承: 基类的 protected 和 public 属性在其派生类中保持不变。
+protected 继承: 基类的 protected 和 public 属性在派生类中变为 protected。
+private 继承: 基类的 protected 和 public 属性在派生类中变为 private。</li>
+</ul>
+<blockquote>
+<ul>
+<li>公有继承（Public Inheritance）：
+语法：class DerivedClass : public BaseClass
+特点：派生类从基类继承的成员在派生类内部仍然保持公有的访问权限。派生类对象可以访问基类的公有成员，但不能直接访问基类的私有成员。</li>
+<li>私有继承（Private Inheritance）：
+语法：class DerivedClass : private BaseClass
+特点：派生类从基类继承的成员在派生类内部变为私有成员。派生类对象无法直接访问基类的成员，但可以通过派生类的成员函数间接访问基类的成员。</li>
+<li>保护继承（Protected Inheritance）：
+语法：class DerivedClass : protected BaseClass
+特点：派生类从基类继承的成员在派生类内部变为受保护的成员。派生类对象无法直接访问基类的成员，但可以通过派生类的成员函数间接访问基类的成员。同时，派生类的子类也可以访问基类的成员。</li>
+<li>虚拟继承（Virtual Inheritance）：
+语法：class DerivedClass : virtual public BaseClass
+特点：虚拟继承主要用于解决多重继承中的菱形继承问题。它确保在继承链中只存在一个共享基类对象的实例。在虚拟继承中，派生类对共享基类的访问是间接的，需要通过基类的指针或引用进行访问。</li>
+</ul>
+</blockquote>
+<h2 id="构造函数和析构函数--都可以重载"><a class="header" href="#构造函数和析构函数--都可以重载">构造函数和析构函数  //都可以重载</a></h2>
+<blockquote>
+<p>析构函数在对象销毁时执行一系列清理任务，例如关闭文件、释放动态分配的内存、释放资源等。在析构函数中可以执行任何必要的操作，以确保对象的资源得到适当的释放和清理。</p>
+</blockquote>
+<blockquote>
+<p>需要释放的资源</p>
+<ul>
+<li>动态分配的内存：如果在对象的构造函数中使用了动态内存分配运算符new，那么在析构函数中应该使用相应的delete或delete[]运算符释放这些内存，以防止内存泄漏。</li>
+<li>打开的文件或流：如果在对象的构造函数中打开了文件、创建了流或建立了其他类型的资源连接，那么在析构函数中应该关闭文件、释放流或断开资源连接，以避免资源泄漏。</li>
+<li>分配的系统资源：如果对象分配了其他类型的系统资源，例如锁、句柄或网络连接，那么在析构函数中应该释放这些资源，以保持系统资源的正确管理。</li>
+<li>被对象所管理的其他对象：如果对象拥有其他对象的所有权，即对象负责管理其他对象的生命周期，那么在析构函数中应该释放这些被管理的对象。</li>
+</ul>
+</blockquote>
+<hr />
+<ul>
+<li>静态类型<br />
+指对象声明时的类型或表达式生成时的类型，在编译时就已经确定，例如：
+class Base { }
+Base *p; //指针p的静态类型为Base
+或者:
+void print(int num) {cout &lt;&lt; "Integer: " &lt;&lt; num &lt;&lt; endl;}
+void print(float num) {cout &lt;&lt; "Float: " &lt;&lt; num &lt;&lt; endl;}</li>
+<li>动态类型  //理解为对象中出现?
+指指针或引用所绑定的对象的类型，仅在运行时可知，例如：
+class Derived : public Base { };
+Derived d; //非指针或引用，动态类型与静态类型相同
+Base *p = &amp;d; //指针p的动态类型为Derived</li>
+</ul>
+<hr />
+<blockquote>
+<p>构造函数</p>
+</blockquote>
+<blockquote>
+<p>虚函数</p>
+<ul>
+<li>运行时多态性（Runtime Polymorphism）:</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>#include <iostream>
+using namespace std;
+class B0 //基类B0声明
+{
+public:
+void display(){cout&lt;&lt;"B0::display()"&lt;&lt;endl;} //公有成员函数
+};
+class B1: public B0
+{
+public:
+void display(){cout&lt;&lt;"B1::display()"&lt;&lt;endl;}
+};
+void fun(B0 *ptr)
+{
+ptr-&gt;display(); //"对象指针-&gt;成员名"<br />
+}
+int  main() //主函数
+{
+B0 b0; //声明B0类对象
+B1 b1; //声明B1类对象
+B0 *p; //声明<strong>B0类指针</strong>
+p=&amp;b0; //B0类指针指向B0类对象
+fun(p);
+p=&amp;b1; //B0类指针指向B1类对象
+fun(p);
+fun(p);//结果一样，说明用指针调用的都是基类的函数，如果在B0的display 函数前加上virtual，结果不一样。
+}</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><p>渠道：b站；牛客；boss网页版；</p>
+<p>基本要求：java后端框架SSM，</p>
+<p>加分hadoop.hive.spark;数据库内核;分布式系统开发</p>
+<p>新的方向php;qt+医疗软件;上位机;
+服务端/后端/后台
+CGI</p>
+<h1 id="v2"><a class="header" href="#v2">v2</a></h1>
+<ul>
+<li>C++ 后台开发面试时一般考察什么？
+C++方向后台开发一般考察什么呢？linux会考察多深？操作系统一般问什么？
+先后在腾讯和百度用 C++做推荐系统、搜索引擎的后台开发，说说我自己在面试应届生时的关注点：</li>
+<li>C++基本的认识，问得比较多的是指针、多态（虚函数表、内存 layout等）、作用域、内存的管理等等。（通常只有宣称熟悉 C++或者简历中有很多 C++项目的人，我才会把这个当做一个重要的方面考察；对语言细节研究不深入，或者一直用其它语言比如 go/java 之类的，那也无妨，这块可以稍微放宽要求。）</li>
+<li>算法和数据结构，数据结构我比较关注哈希、优先级队列等，算法则是字符串处理、简单的 DFS、BFS、动态规划都有
+系统的知识：进程、线程、协程、锁的使用、消息队列、共享内存、还有网络协议、epoll、select等。顺便会考察一些处理问题的基本思路，比如通过哈希来划分、通过队列来序列化操作等等。此外，往往很多同学的项目经历中，有很多点可以结合系统的知识来考察，看看是否真的做过项目。比如我就碰到过自己写过 web server 的，搞过 key-value 数据库的，声称读过 redis 源码的，这些很适合配合系统知识考察，确认是不是真的做过这些项目，理解如何。
+和应聘者背景经历有关的知识，比如学信息安全，刚好是我的专业，我会问一些简单的安全知识，比如缓冲区溢出、SQL 注入、虚拟机、https、数字签名原理等等。当然，后面从事了个性化推荐有关的工作，机器学习也稍微懂一点，偶尔可以聊聊。这个主要是发现一些学习态度也特别好，但是又想做后台的同学。</li>
+<li>CSAPP内存管理</li>
+</ul>
+<h1 id="v1"><a class="header" href="#v1">v1</a></h1>
+<p>现代c++特性
+内存管理:new/delete,智能指针，RALL（资源获取即初始化），野指针和悬挂指针
+对线程框架，某框架的事件和同步机制
+（形式化）
+opencv
+安防监控
+数据储存如ORM框架，redis缓存
+日志框架
+boost库，eigen
+内存管理、多线程、网络编程，thread，低延迟高性能，
+管理什么的软件
+Linux系统api
+数据库负载均衡和主备切换</p>
+<hr />
+<p>简历
+计算机环境
+超级简历（写简历软件）
+排版：不要花里胡哨，项目50到60%
+C++基础良好（划掉），加上熟悉的的（虚拟指针，反射，并发编程库）
+主修改为熟悉
+Threadlocal别写错（不熟悉或者不认真）
+Jvm调试经验，mvt，jmap等分析工具，配置信息
+谨慎：对（）有什么研究
+项目名已包含的信息不要重复，亮点先列
+降低第三方接口成本，与编写校验程序（先简单识别）
+为解决高并发访问量，使用静态化访问，如何自动生成，大小限制，文章自动清理，是否使用cdn加快访问
+什么是动态构建，架构模型eurcka，自动剔除
+使用多种均衡算法（让人觉得想问用了什么算法
+基于（），实现（）  //不能这样（避免大众写法），要结合业务去写
+专业技能写了要在项目体现
+在三种（）做法中选择使用（）做法</p>
+<p>精通 &gt; 熟悉（推荐使用）&gt;掌握（推荐使用）&gt; 了解（推荐使用）
+（实践过的写成熟悉）</p>
+<p>背景详细
+项目地址（真实性）源码，优先级（重点突出一个项目，一个项目多写几点，代码优化、架构优化、），不要做重复项目，多做优化。//具体优化效果
+{
+技术类L脚手架，组件库，
+业务类：数据可视化，运用树形组的复杂管理系统
+前端工程化系统学习
+API开放平台
+}
+自己造搜索引擎
+Linux具体使用哪些项目
+自己写了倒排索引，为什么不用es库（写了就要答上来）
+不用过多强调开发技巧，要用技术深入，要有体现（突出前端性能优化，项目调试，前端信息收集）
+无需自我评价
+技术名词书写规范：MySQL
+Canel监听数据库原理（伪装节点）
+优化了搜索速度，有没有测试？
+昨天关注chatgpt的竞品有了什么优化
+荣誉证书放在前面，贡献什么代码
+熟悉HTTP熟悉浏览器原理
+单例模式
+遵循什么开发规范
+列举完消息队列的特性：rabbit六种工作模式
+抽象几个表的模型，个人表，
+技术选型
+写了哪些（具体）开发文档
+Token过期机制，刷新机制
+聚会搜索平台
+Mock数据模拟
+前端工程化
+后端错误码全局处理，自定义错误码
+Pretteier前端代码格式化工具
+高级检索组件（什么高级组件）
+前端监控
+优先把后端放前面
+一等奖加粗
+效果在项目写
+MakeDown语法，多写文档，博客
+全程参与，负责全栈</p>
+<p>C++有点杂，准备两份（两个岗位，javac++分开）
+哪些并发库（）
+cs144（c++17）说了解了原理，面试官会重点问
+能否自己扩展，
+使用了自己的东西
+结合Linux优化项目</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="编译器基本规则"><a class="header" href="#编译器基本规则">编译器基本规则</a></h3>
+<p>创建变量就会分配空间，
+调用函数时会为函数的参数中是变量的参数会分配空间
+简单理解堆和栈，堆是一个数组，或者理解成静态链表
+程序说白了，就是对一些数据进行修改</p>
+<h2 id="各种关键字"><a class="header" href="#各种关键字">各种关键字</a></h2>
+<p>noexcept 不抛出异常
+<code>constexpr</code>用于声明常量表达式, 指示编译器在编译时计算表达式的值, 声明的变量必须在编译时求值，所以必须是常量表达式。onstexpr 还可以用于函数模板参数，从而可以在编译时对函数进行求值，而不仅仅是对常量进行求值。常量构造函数 C++11 中，constexpr 还可以用于构造函数，用于声明常量表达式构造函数，这样的构造函数可以在编译时求值，并且可以用于在编译时初始化常量表达式</p>
+<h3 id="模板"><a class="header" href="#模板">模板</a></h3>
+<p>函数模板/类模板/
+template <typename T>
+T myFunction(T a, T b) {
+return a + b;
+}
+template <typenameT>
+class MyTemplateClass{
+T myVariable;
+}
+Myclass<T>::funtional(T&amp; name)</p>
+<h3 id="匿名函数"><a class="header" href="#匿名函数">匿名函数</a></h3>
+<p><code>[捕获列表](参数列表) -&gt; 返回类型 { 函数体 }</code></p>
+<h2 id="理论知识"><a class="header" href="#理论知识">理论知识</a></h2>
+<ul>
+<li>有些编译器要求您使用特定的标记，让其支持部分C+11特性:g++-std=c++0x use_auto.cpp</li>
+<li>强制类型转换只在表达式里转换，不会修改变量真正属性</li>
+<li><code>[[nodiscard]]</code> 是 C++11 新增的属性（attribute），用于告诉编译器应该检查函数的返回值，并在调用函数时处理其返回值。如果你希望确保调用 check() 函数时不会忽略其返回值，可以使用 <code>[[nodiscard]]</code> 标记该函数。</li>
+</ul>
+<pre><code>const bool getbool(){}      //函数的返回值不可修改
+bool getbool()const{return} //保证函数内部不可修改成员
+</code></pre>
+<h2 id="实战过程的零散知识"><a class="header" href="#实战过程的零散知识">实战过程的零散知识</a></h2>
+<ul>
+<li>如果模板头文件没有c++文件引用它，它可能会被用c编译器编译</li>
+<li>::sendmsg(m_sock, &amp;msg, flags);//用::表示它是全局命名空间的函数，提高可读性</li>
+</ul>
+<h2 id="跨平台"><a class="header" href="#跨平台">跨平台</a></h2>
+<ul>
+<li>条件编译</li>
+</ul>
+<pre><code>#ifdef _WIN32
+#elif __linux__
+#endif
+</code></pre>
+<h2 id="标准库的函数或容器"><a class="header" href="#标准库的函数或容器">标准库的函数或容器</a></h2>
+<ul>
+<li>std::multimap 也是按照键（key）来组织和存储数据的，不同之处在于 std::multimap 允许键具有重复的值。</li>
+<li>std::funtional
+函数对象:</li>
+</ul>
+<pre><code>class MyFunctor {
+public:
+    // 重载 () 运算符
+    int operator()(int a, int b) const {
+        return a + b;
+    }
+};
+MyFunctor functor;
+int a = functor(3,4);
+</code></pre>
+<ul>
+<li>funtional用法</li>
+</ul>
+<pre><code>#include &lt;functional&gt;
+int add(int a, int b) {
+    return a + b;
+}
+// 一个可调用对象（函数对象）
+struct Substract {
+    int operator()(int a, int b) const {
+        return a - b;
+    }
+};
+int main() {
+    std::function&lt;int(int, int)&gt; func;
+    func = add;
+    std::cout &lt;&lt; "add(3, 4): " &lt;&lt; func(3, 4) &lt;&lt; std::endl; // 输出 7
+
+    Substract sub;
+    func = sub;
+    std::cout &lt;&lt; "sub(8, 5): " &lt;&lt; func(8, 5) &lt;&lt; std::endl; // 输出 3
+
+    func = [](int a, int b) { return a * b; };
+    std::cout &lt;&lt; "lambda(6, 7): " &lt;&lt; func(6, 7) &lt;&lt; std::endl; // 输出 42
+    return 0;
+}
+</code></pre>
+<h2 id="inline内联函数"><a class="header" href="#inline内联函数">inline内联函数：</a></h2>
+<ul>
+<li>函数调用改为直接函数代码的代码嵌入程序使用该函数的地方，就不需要函数调用过程中创造栈帧浪费时间，缺点是将代码嵌入程序需要更大的内存（如循环过程，内联函数就需要复制10次代码到内存区，如果函数调用只需要一份代码的内存区。）</li>
+</ul>
+<h2 id="继承与多态"><a class="header" href="#继承与多态">继承与多态</a></h2>
+<blockquote>
+<p>子类构造函数初始化父类私有变量：</p>
+<ul>
+<li>调用父类私有变量进行构造</li>
+<li>在构造函数中调用父类函数修改私有变量,如下面的代码</li>
+</ul>
+</blockquote>
+<pre><code>-ChildClass(int parentValue, int childValue) : ParentClass(parentValue) {}
+</code></pre>
+<ul>
+<li>子类在构造前先调用父类构造函数</li>
+<li>private关键字也对派生类进行限制，如果对析构函数使用private，外部不能delete该对象</li>
+</ul>
+<h2 id="数据类型"><a class="header" href="#数据类型">数据类型</a></h2>
+<ul>
+<li>_t表示是数据类型
+size_t 无符号整数类型，不同系统上表示内存中对象的大小,也常用于表示数字长度，内存分配，字符串长度</li>
+<li>int32_t保证不同平台都是64位宽度</li>
+<li>自动变量，静态变量(程序运行时创建，程序结束时销毁)，动态变量</li>
+</ul>
+<h2 id="内存模型相关"><a class="header" href="#内存模型相关">内存模型相关</a></h2>
+<h3 id="移动语义"><a class="header" href="#移动语义">移动语义</a></h3>
+<p>移动语义可以相当于浅拷贝+源指针置空
+浅拷贝就是遇到指针的成员变量时只复制指针，不复制指针指向的内容</p>
+<ul>
+<li>传入的对象处于有效但未定义的状态，通常被称为移后源对象（Moved-From Object）</li>
+<li>拷贝构造函数和移动构造函数</li>
+<li>std::move()是将对象标志为可移动状态, 如果有移动构造的话就会调用移动构造</li>
+</ul>
+<h4 id="左值右值亡值"><a class="header" href="#左值右值亡值">左值，右值，亡值</a></h4>
+<p>左值: 变量
+纯右值表达式:字面量如常数, 匿名函数返回值[]{return1;}, 引用&amp;a, 算数表达式a+b
+亡值: 资源权将要被转移的<code>a=std::move(b)</code>中的b, <code>int a{3}</code>中的3</p>
+<pre><code>//函数里在什么时候使用对象的拷贝构造函数情况
+//拷贝两次
+Myclass fun1(myclass a) {     //在传入参数a时，没有用到&amp;，所以传进来是靠拷贝得来的a，
+    //这里任一修改a, 随便写
+    return a;                //返回值是Myclass, return a时函数还会拷贝一次, 原来的a会析构掉。如果编译器有返回值优化（Return Value Optimization，RVO），会直接将第一次拷贝直接构造到返回值的内存空间里, 只拷贝一次
+}                                  
+//拷贝一次
+Myclass fun2(myclass&amp; a){    //传的是引用，不用再拷贝a参数了
+    //这里任一修改a
+    return std::move(a);     //这里还是会拷贝一次, 返回的是a修改后的拷贝, 因为返回值是Myclass，而不是Myclass的引用
+}
+//没有拷贝
+Myclass&amp; fun3(myclass&amp; a){
+    //任一修改a
+    return a;               //此时返回的是a修改后的引用
+}
+</code></pre>
+<p>右值引用相关函数相关函数
+<code>static_cast&lt;int&amp;&amp;&gt;(value)</code>强制转为右值引用</p>
+<h4 id="stdmove使用例子"><a class="header" href="#stdmove使用例子">std::move使用例子</a></h4>
+<ol>
+<li></li>
+</ol>
+<pre><code> unique_ptr&lt;Myclass&gt; ptr1,ptr2;
+ ptr2 = std::make_shared&lt;Myclass&gt;(*arg);
+ ptr1=std::move(ptr1);
+</code></pre>
+<ol start="2">
+<li><code>myClasses.push_back(std::move(tmp));</code></li>
+</ol>
+<pre><code>右值指在表达式中只能出现在赋值号右边的值，它通常具有临时性质，表示无法被取地址的、即将被销毁或者不再被使用的值
+e:&amp;10;、&amp;(x + y);、&amp;fmin(x, y);右值不可取地址,上述三个会报错，所以是右值
+int&amp; ra = a;
+左值引用和右值引用
+- 临时创建的对象(没有声明的):在函数返回语句中，函数返回一个临时对象,可以是对象，也可以是变量；在类型中转换的临时对象
+- 右值引用使用 &amp;&amp; 符号声明，允许程序员访问临时创建的对象，并且允许移动语义，右值引用主要用于两个方面：移动语义和完美转发。
+</code></pre>
+<pre><code>- 浅拷贝：其中仅复制对象的成员变量的值。对于包含指针的对象，浅拷贝将仅复制指针的值，而不会复制指针所指向的内容。
+- 深拷贝：
+深拷贝（Deep Copy）通常是指当一个对象包含指针成员变量时，对这些指针所指向的内存进行复制，而不是简单地复制指针本身。(需要手动写代码用new为指针分配内存空间)
+</code></pre>
+<h3 id="原子性"><a class="header" href="#原子性">原子性</a></h3>
+<p>即保证某些操作必须连续完成且过程不被骚扰，例如修改一个变量的值需要找地址，修改地址上的该变量值，多线程情况下可能出现一个线程a在取地址的过程中，另外一个线程b修改了该变量的值，导致线程a修改的不是原有的值。原子性的实现需要依赖处理器之类或者锁</p>
+<h2 id="指针"><a class="header" href="#指针">指针</a></h2>
+<h3 id="基础"><a class="header" href="#基础">基础</a></h3>
+<p><code>&amp;</code>取地址符号
+<code>*</code>声明指针对象或者解引用
+<strong>引用</strong>：<code>Myclass&amp; b=a</code>, 此时的<code>b</code>相当于<code>&amp;a</code>，因为引用没有存储空间，相当于<code>&amp;a</code>的一个别名, 所以不能声明必须初始化
+<strong>解引用</strong>：<code>*（地址）</code>这就是一个右值，如<code>*p</code>或者<code>&amp;value</code>，其中p是指针变量，value是变量</p>
+<h3 id="普通指针"><a class="header" href="#普通指针">普通指针</a></h3>
+<ul>
+<li>指针基础声明</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>int *ptr</code>强调 *ptr是int类型,<code>int* ptr</code>则强调这是指向int类型的指针，实际都一样</li>
+<li>int*pl,p2;//创建一个int类型指针和一个int类型变量</li>
+<li>指针长度一样，无论指向什么类型。。。</li>
+<li><code>long fellow; *fe11ow=223323;</code>野指针</li>
+<li>pt=(int*)0xB8000000;</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>悬挂指针：指针原本指向的内存区域已经被释放或者未被初始化的指针。当指针指向的内存区域被释放后，指针仍然保留着之前指向的地址，这样的指针就成为悬挂指针。在使用悬挂指针时，由于指针所指向的内存已经被释放，访问该指针可能导致未定义的行为。</li>
+<li>野指针：指针未初始化或者指向了未知的内存区域，可能是任意值（包括0、无效地址或者已释放的地址等）。野指针通常是指没有被明确初始化或赋值的指针，在程序中引起未定义的行为。</li>
+</ul>
+</blockquote>
+<h3 id="malloc和new"><a class="header" href="#malloc和new">malloc和new</a></h3>
+<ul>
+<li>指针内存分配</li>
+</ul>
+<blockquote>
+<p>1.new,分配在堆上
+2.malloc和calloc，分配在堆上，需要用free释放
+3.alloc,分配在栈上,在函数返回时自动释放</p>
+</blockquote>
+<h3 id="智能指针"><a class="header" href="#智能指针">智能指针</a></h3>
+<h4 id="基础使用"><a class="header" href="#基础使用">基础使用</a></h4>
+<p>首先，智能指针是一个模板类，头文件<code>#include &lt;memory&gt;</code></p>
+<ul>
+<li><code>std::shared_ptr&lt;T&gt;</code></li>
+</ul>
+<p>两种创建方式
+<code>std::shared_ptr&lt;Myclass&gt; ptr(new Myclass(*arg))</code>构造函数构造</p>
+<pre><code>std::shared_ptr&lt;Myclass&gt; ptr
+std::make_shared&lt;Myclass&gt;(*arg)
+</code></pre>
+<ul>
+<li><code>std::weak_ptr</code></li>
+</ul>
+<blockquote>
+<ul>
+<li>std::weak_ptr 也用于管理动态分配的内存资源，但它并不拥有所指向的对象。它主要用于解决由 std::shared_ptr 可能造成的强引用环（circular reference）问题。强引用环是指两个或多个对象相互持有彼此的 std::shared_ptr，导致它们之间形成循环引用，使得对象无法被正确地释放，从而造成内存泄漏。</li>
+<li>std::weak_ptr 是一种弱引用，它不会增加对象的引用计数。它可以从 std::shared_ptr 创建，允许观察由 std::shared_ptr 管理的对象，但不会增加对象的引用计数。因此，即使存在 std::weak_ptr，所指向的对象也可以被释放。</li>
+</ul>
+</blockquote>
+<hr />
+<ul>
+<li>使用场景概述：需要对引用的资源进行共享的时候, 通常使用share_ptr。需要解决循环引用的时候</li>
+</ul>
+<h4 id="底层原理相关"><a class="header" href="#底层原理相关">底层原理相关</a></h4>
+<p><code>std::shared_ptr</code>的计数是原子的，性能开销大。</p>
+<h3 id="智能指针代码案例"><a class="header" href="#智能指针代码案例">智能指针代码案例</a></h3>
+<ul>
+<li><code>tcs::socket::ptr sock = CreateTCPSocket();</code>如果函数返回一个临时智能指针对象，编译器会使用移动构造来将临时智能指针对象的资源权赋值给</li>
+<li><code>tcs::socket::ptr sock(CreateTCPSocket());</code>和<code>tcs::socket::ptr sock=CreateTCPSocket()</code>的效果是一样的。</li>
+</ul>
+<pre><code>tcs::socket::ptr sock1(new tcs::socket());
+tcs::socket::ptr sock2(new tcs::socket());
+// 深拷贝，引用计数增加
+sock1 = sock2;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="设计模式"><a class="header" href="#设计模式">设计模式：</a></h1>
+<blockquote>
+<p>涉及模式基本分为
+1.行为型：关注对象之间的通信和协作完成同一任务
+2.创建型：关注对象如果创建，通常涉及对象如何实例化、对象的组合等
+3.结构型：灵活定义对象的关系</p>
+</blockquote>
+<h2 id="策略模式行为型"><a class="header" href="#策略模式行为型">策略模式(行为型)：</a></h2>
+<ul>
+<li>1.在需要策略的类A里面组合一个策略对象B，并调用这个策略对象的方法。策略需要通过A自身内部的方法来设置具体的策略，然后在需要的方法内部使用该策略的方法</li>
+<li>2.使用场景：同一物品不同价格策略</li>
+<li>体现原则</li>
+</ul>
+<blockquote>
+<p>1.（OCP）：策略者模式符合开放-封闭原则，它通过将具体的算法或行为封装到不同的策略类中，使得客户端能够在运行时选择不同的策略，而不需要修改客户端代码。客户端只需要针对抽象策略接口编程，通过依赖倒置原则，将具体策略的选择交给客户端，从而实现了扩展性和灵活性。
+2.（SRP）：策略者模式遵循单一职责原则，它将不同的算法或行为封装到不同的策略类中，每个策略类只负责实现一种具体的算法或行为。这样使得每个策略类都具有清晰的职责，易于理解和维护。
+-拿购物优惠举例：</p>
+</blockquote>
+<pre><code>class DiscountStrategy {        //优惠基类，作为策略
+public:
+    virtual double applyDiscount(double amount) const = 0;
+    virtual ~DiscountStrategy() {}
+};
+class PercentageDiscount : public DiscountStrategy {
+public:
+    explicit PercentageDiscount(double percentage) : percentage(percentage) {}
+
+    double applyDiscount(double amount) const override {
+        return amount * (1 - percentage);
+    }
+
+private:
+    double percentage;
+};
+class FlatDiscount : public DiscountStrategy {      //子类，实现不同优惠需求
+public:
+    explicit FlatDiscount(double discountAmount) : discountAmount(discountAmount) {}
+
+    double applyDiscount(double amount) const override {
+        return amount - discountAmount;
+    }
+
+private:
+    double discountAmount;
+};
+class ShoppingCart {        //需要策略的类
+public:
+    ShoppingCart(double amount, std::shared_ptr&lt;DiscountStrategy&gt; strategy)
+        : amount(amount), strategy(strategy) {}
+    double calculateTotal() const {
+        return strategy-&gt;applyDiscount(amount);
+    }
+private:
+    double amount;
+    std::shared_ptr&lt;DiscountStrategy&gt; strategy;     //需要策略的类里包含策略类的指针也算
+};
+int main() {
+    double totalAmount = 100.0;
+    std::shared_ptr&lt;DiscountStrategy&gt; discountStrategy = std::make_shared&lt;PercentageDiscount&gt;(0.1); // 10% 折扣
+    ShoppingCart cart(totalAmount, discountStrategy);   //在这里可以自由更换策略，实现策略和需要策略的类互不干涉
+    double totalAfterDiscount = cart.calculateTotal();
+    std::cout &lt;&lt; "Total amount after discount: " &lt;&lt; totalAfterDiscount &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+<hr />
+<h2 id="访问者模式行为型"><a class="header" href="#访问者模式行为型">访问者模式(行为型)：</a></h2>
+<ul>
+<li>定义：访问者A和访问者B内部的方法中用到对方的对象参数，使用该参数的方法进行需要的操作。具体的访问者通过传参的不同来实现多态。访问者模式被称为双重分派技术，核心是将数据的存储和操作解除解耦。</li>
+<li>场景：数据分析时普通用户和高级用户时，对不同用户有不同的访问行为</li>
+<li>缺点：因为重载函数只有静态的,代码实现复杂，可读性较差，了解即可</li>
+<li>代码示例：</li>
+</ul>
+<pre><code>#include &lt;string&gt;
+class User {        //用户基类，被访问者
+public:
+    virtual void accept(class Visitor&amp; v) = 0;
+    virtual ~User() {}
+    virtual std::string getName() const = 0;
+    virtual int getAge() const = 0;
+};
+class BasicUser : public User {         //普通用户
+public:
+    BasicUser(std::string name, int age) : name(name), age(age) {}
+
+    void accept(Visitor&amp; v) override {
+        v.visitBasicUser(*this);
+    }
+
+    std::string getName() const override {
+        return name;
+    }
+
+    int getAge() const override {
+        return age;
+    }
+private:
+    std::string name;
+    int age;
+};
+class PremiumUser : public User {       //高级用户
+public:
+    PremiumUser(std::string name, int age, std::string premiumInfo) : name(name), age(age), premiumInfo(premiumInfo) {}
+
+    void accept(Visitor&amp; v) override {
+        v.visitPremiumUser(*this);
+    }
+
+    std::string getName() const override {
+        return name;
+    }
+
+    int getAge() const override {
+        return age;
+    }
+
+    std::string getPremiumInfo() const {
+        return premiumInfo;
+    }
+private:
+    std::string name;
+    int age;
+    std::string premiumInfo;
+};
+#include "user.h" // 引入 User 类的前置声明
+class Visitor {     //访问者
+public:
+    virtual void visitBasicUser(BasicUser&amp; user) = 0;
+    virtual void visitPremiumUser(PremiumUser&amp; user) = 0;
+    // 可以添加更多的 visit 方法...
+};
+
+</code></pre>
+<hr />
+<h2 id="装饰者模式结构型"><a class="header" href="#装饰者模式结构型">装饰者模式(结构型):</a></h2>
+<ul>
+<li>组件A和装饰B中，A和B都继承与抽象组件C，在B中还组合有实现了抽象组件的对象c（内部的类，C c）。假设A和B都实现C中的mathod，调用路程是：</li>
+</ul>
+<blockquote>
+<ul>
+<li>1.一般创建B的上转型对象来进行操作，如</li>
+</ul>
+<blockquote>
+<p>C c=new A();      //此时c的属性是A，方法调用的也是A的mathod</p>
+</blockquote>
+<ul>
+<li>2.然后创建一个对象B（接收参数C），并将c用装饰B赋值，如</li>
+</ul>
+<blockquote>
+<p>c= new B(c);     //此时c的属性是B，方法调用的是B重新实现的mathod</p>
+</blockquote>
+<ul>
+<li>3.调用方法</li>
+</ul>
+<blockquote>
+<p>c.mathod();</p>
+</blockquote>
+</blockquote>
+<p>在上面的过程第二部中，装饰B将接收的c参数赋值给自己内部的c。然后在第三步中，c调用的方法会是B中重新实现的方法，该重新实现的方法通常包含原有的c的方法（通过B内部赋值的c来调用）加上装饰的部分，实现不需要修改A的方法增加了一部分，所以叫装饰</p>
+<ul>
+<li>体现原则：OCP、SRP、LoD和DIP</li>
+</ul>
+<blockquote>
+<p>1.（OCP）：它允许在不修改现有对象的情况下动态地扩展其功能。通过将对象包装在装饰者对象中，并且让装饰者对象实现与原始对象相同的接口，可以在运行时动态地添加新的装饰者对象来扩展对象的行为，而不需要修改原始对象的代码。这样使得系统具有良好的可扩展性和可维护性。
+2.（SRP）：它将功能的扩展分散到不同的装饰者对象中，每个装饰者对象只负责特定的功能扩展。原始对象和装饰者对象都应该遵循单一职责原则，每个对象只负责自身的核心功能，使得系统中的对象职责清晰、可维护。
+3.(LoD)在装饰者模式中，装饰者类和被装饰者类都实现了同一个抽象接口，因此可以在程序中将装饰者对象替换为被装饰者对象，而不会引起错误。
+具体来说，装饰者模式中的装饰者类继承自抽象组件（Component）类，同时也可以作为组件类的一种替代品使用。装饰者类不仅可以对组件对象进行装饰，还可以替代组件对象在使用时，而且在使用装饰者对象时，客户端代码不需要关心具体是使用了装饰者还是原始组件，可以将二者视为同一种类型，达到无缝替换的效果。
+4.（DIP）：装饰者模式通过抽象组件类作为装饰者和被装饰者的共同接口，实现了依赖倒置原则。高层模块（客户端代码）依赖于抽象接口，而不依赖于具体的实现类。这样使得系统更加灵活，可以在运行时动态地替换和组合装饰者对象。</p>
+</blockquote>
+<hr />
+<h2 id="工厂模式创建型"><a class="header" href="#工厂模式创建型">工厂模式(创建型):</a></h2>
+<ul>
+<li>定义:核心是:product=creator.getproduct();
+product不需要关心哪一个产品，需要改变产品时只需要改变creator的方法就好，实现用户代码和特定子类代码的解耦，用户是需要使用这段代码的程序员，好处是你使用别人写的creator时不需要关系如何改变creator，减少阅读成本</li>
+<li>场景：不同的验证方式，</li>
+</ul>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+#include &lt;string&gt;
+// Abstract base class for authentication
+class Authentication {      //验证器的基类
+public:
+    virtual void authenticate() = 0;
+    virtual ~Authentication() {}
+};
+// Concrete authentication classes
+class AuthorizationCodeAuthentication : public Authentication {
+public:
+    void authenticate() override {
+        std::cout &lt;&lt; "Performing Authorization Code Authentication" &lt;&lt; std::endl;
+    }
+};
+class ImplicitAuthentication : public Authentication {
+public:
+    void authenticate() override {
+        std::cout &lt;&lt; "Performing Implicit Authentication" &lt;&lt; std::endl;
+    }
+};
+class PasswordCredentialsAuthentication : public Authentication {
+public:
+    void authenticate() override {
+        std::cout &lt;&lt; "Performing Password Credentials Authentication" &lt;&lt; std::endl;
+    }
+};
+class ClientCredentialsAuthentication : public Authentication {
+public:
+    void authenticate() override {
+        std::cout &lt;&lt; "Performing Client Credentials Authentication" &lt;&lt; std::endl;
+    }
+};
+class AuthenticationFactory {   //工厂
+public:
+    std::unique_ptr&lt;Authentication&gt; createAuthentication(const std::string&amp; type) {
+        if (type == "authorization_code") {
+            return std::make_unique&lt;AuthorizationCodeAuthentication&gt;();
+        } else if (type == "implicit") {
+            return std::make_unique&lt;ImplicitAuthentication&gt;();
+        } else if (type == "password_credentials") {
+            return std::make_unique&lt;PasswordCredentialsAuthentication&gt;();
+        } else if (type == "client_credentials") {
+            return std::make_unique&lt;ClientCredentialsAuthentication&gt;();
+        } else {
+            return nullptr;
+        }
+    }
+};
+int main() {
+    AuthenticationFactory factory;
+    std::unique_ptr&lt;Authentication&gt; auth1 = factory.createAuthentication("authorization_code");     //单一个工厂返回不同验证器
+    std::unique_ptr&lt;Authentication&gt; auth2 = factory.createAuthentication("implicit");
+    std::unique_ptr&lt;Authentication&gt; auth3 = factory.createAuthentication("password_credentials");
+    std::unique_ptr&lt;Authentication&gt; auth4 = factory.createAuthentication("client_credentials");
+    auth1-&gt;authenticate();
+    auth2-&gt;authenticate();
+    auth3-&gt;authenticate();
+    auth4-&gt;authenticate();
+    return 0;
+}
+</code></pre>
+<hr />
+<p>观察者模式(行为型)</p>
+<ul>
+<li>定义：观察者和被观察者分离，通常一个被观察者，多个观察者，当被观察者发生变化时通知观察者，观察者执行各自的行为。如果观察者过多，例如通知全服玩家的那种，就不考虑观察者模式而是使用消息队列</li>
+<li>场景：邮件，异步通知，ui更新（如qt的信号机制）</li>
+</ul>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+class Publisher {       //被观察者
+public:
+    void publish(const std::string&amp; message) {
+        std::cout &lt;&lt; "Publishing message: " &lt;&lt; message &lt;&lt; std::endl;
+        // 将消息发布到消息队列或者消息通道中
+    }
+};
+class Subscriber {      //观察者
+public:
+    void receive(const std::string&amp; message) {
+        std::cout &lt;&lt; "Received message: " &lt;&lt; message &lt;&lt; std::endl;
+    }
+};
+int main() {
+    Publisher publisher;
+    std::vector&lt;Subscriber&gt; subscribers = {
+        Subscriber(),
+        Subscriber(),
+        Subscriber()
+    };
+    publisher.publish("Hello, World!");
+    return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p>###类</p>
+<ul>
+<li>私有继承(private)和共有继承(public)可以同时出现</li>
+</ul>
+<p>Noncopyable类关键字
+Noncopyable 模式通常用于确保特定类的对象不被复制，以避免一些潜在的问题，比如资源管理类可能持有独占的资源，禁止复制可以避免资源重复释放或资源泄漏等问题。</p>
+<p>RAII（资源获取即初始化）思想,利用对象生命周期和析构函数的特性，在对象创建时获取资源，在对象生命周期结束时自动释放资源，从而确保资源的正确管理
+Scoped Lock 是一种简化锁管理的技术，用于在一段代码中自动获取锁并在作用域结束时释放锁。</p>
+<p>c++
+##字符串stl库的操作
+string.length()/size();
+string.substr(i,offset)</p>
+<p>##迭代器</p>
+<blockquote>
+<ul>
+<li>迭代器失效:迭代器失效是指在对容器进行修改操作（例如插入、删除元素）后，之前获取的迭代器可能会变得无效，即不再指向容器中的有效元素，或者指向了已经被删除的元素。这可能会导致程序运行时出现未定义的行为或者崩溃。</li>
+<li>向容器中插入元素（可能触发重新分配内存）
+从容器中删除元素（可能导致容器内部元素的移动）
+使用erase()方法删除元素（迭代器失效）</li>
+<li>解决方法:
+使用erase函数返回的迭代器
+使用智能指针或者迭代器适配器
+避免在并发情况下修改容器，添加锁等措施</li>
+</ul>
+</blockquote>
+<p>unordered_set</p>
+<blockquote>
+<p>set.insert();
+set.find();
+set.count();</p>
+</blockquote>
+<p>二维vector
+std::vector&lt;std::vector<int>&gt; matrix(3, std::vector<int>(3, 0));
+vector.resize();</p>
+<h2 id="字符串"><a class="header" href="#字符串">字符串</a></h2>
+<blockquote>
+<ul>
+<li>构造函数和赋值操作符：
+std::string str1; // 默认构造函数创建一个空字符串
+std::string str2 = "Hello, World!"; // 使用字符串字面值进行初始化
+std::string str3(str2); // 拷贝构造函数
+std::string str4 = str2; // 拷贝赋值操作符</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>字符串连接：
+std::string str1 = "Hello, ";
+std::string str2 = "World!";
+std::string result = str1 + str2; // 使用+操作符进行字符串连接</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>字符串长度：
+std::string str = "Hello";
+int length = str.length(); // 或者使用 str.size()</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>字符串比较
+std::string str1 = "apple";
+std::string str2 = "banana";
+if (str1 == str2) {
+// 字符串相等
+} else if (str1 &lt; str2) {
+// str1 在字典中位于 str2 之前
+} else {
+// str1 在字典中位于 str2 之后
+}</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>子字符串查找
+std::string str = "Hello, World!";
+size_t found = str.find("World"); // 查找子字符串的位置
+if (found != std::string::npos) {
+// 找到了子字符串
+}</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>子字符串提取：
+std::string str = "Hello, World!";
+std::string subStr = str.substr(7, 5); // 提取从位置7开始的5个字符，结果是"World"</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>字符串替换：
+std::string str = "Hello, World!";
+str.replace(7, 5, "C++"); // 替换从位置7开始的5个字符为"C++"</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>字符串插入和删除
+std::string str = "Hello, World!";
+str.insert(7, "C++"); // 在位置7插入"C++"
+str.erase(5, 7); // 从位置5开始删除7个字符，结果是"Hello!"</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><p>名词<strong>依赖注入</strong>：
+对象有一个子对象，子对象通过函数设置，不同需求就用函数设置不同对象</p>
+<p><strong>单一职责原则SRP</strong>（Single Responsibility Principle）：一个类应该只有一个引起它变化的原因。换句话说，一个类应该只负责一项单一的职责。这样做可以提高类的内聚性和可维护性。
+<strong>开放-封闭原则OCP</strong>（Open-Closed Principle）：软件实体（类、模块、函数等）应该对扩展开放，对修改封闭。即，当需要增加新功能时，应该通过扩展现有实体来实现，而不是修改现有实体的代码。这样可以保持代码的稳定性和可复用性。
+<strong>里氏替换原则LSP</strong>（Liskov Substitution Principle）：子类应该能够替代其基类，而不会影响程序的正确性。换句话说，如果一个类是基类的一种类型，那么它应该能够以基类的方式使用，而不引发错误或不一致的行为。
+<strong>依赖倒置原则DIP</strong>（Dependency Inversion Principle）：高层模块不应该依赖于低层模块，而应该依赖于抽象接口。抽象接口应该定义在高层模块中，并由低层模块来实现。这种依赖关系的反转可以提高系统的灵活性和可扩展性。
+<strong>接口隔离原则ISP</strong>（Interface Segregation Principle）：客户端不应该依赖于它不需要的接口。一个类或模块应该只依赖于它需要使用的接口，而不应该强迫依赖于不相关的接口。这样可以减少对不必要接口的依赖，提高代码的可读性和可维护性。
+<strong>合成/聚合复用原则CARP</strong>（Composition/Aggregation Reuse Principle）：应该优先使用合成/聚合关系（对象组合）而不是继承关系来实现代码复用。通过将对象组合成更大的对象，可以提高代码的灵活性和可复用性，同时避免了继承关系的耦合问题。</p>
+<p><strong>迪米特法则LoD</strong>（Law of Demeter），也称为最少知识原则（Principle of Least Knowledge），是面向对象设计中的一个原则。迪米特法则的核心思想是降低对象之间的耦合性，使得各个对象能够尽可能独立地进行设计、开发和维护。</p>
+<blockquote>
+<p>只与直接的朋友通信：一个对象只应该与其直接耦合的对象进行通信，不应该了解其他对象的内部结构和实现细节。直接朋友包括以下几种情况：</p>
+</blockquote>
+<ul>
+<li>当前对象本身</li>
+<li>当前对象的成员对象</li>
+<li>当前对象所创建或实例化的对象</li>
+<li>当前对象的方法的输入参数</li>
+<li>避免链式调用：不应该通过一长串的链式调用来访问其他对象的方法或属性，这样会增加对象之间的耦合性。应该尽量减少对其他对象的依赖，保持对象之间的松散耦合。
+封装隐私信息：对象应该尽量封装自己的内部状态和实现细节，对外部对象提供简洁的公共接口。这样可以降低对象之间的依赖关系，减少对其他对象内部信息的了解。
+遵循迪米特法则可以提高系统的灵活性、可维护性和可复用性。它能够减少对象之间的依赖</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p>事件循环
+reactor模式</p>
+<p>注册事件处理器（Event Handler）：</p>
+<p>在使用 Muduo 编写网络应用时，你需要注册事件处理器来处理各种事件，如读事件、写事件、连接事件等。
+例如，你可以通过调用 Channel 类的成员函数 setReadCallback()、setWriteCallback() 等来注册事件处理器。</p>
+<ul>
+<li>事件循环（Event Loop）：
+Muduo 中的事件循环负责监听并处理发生在文件描述符上的事件。
+主要的事件循环位于 EventLoop 类中，它会在一个循环中不断地调用系统的 I/O 多路复用机制（如 epoll、kqueue）来监听文件描述符上的事件。</li>
+<li>事件分发（Event Dispatching）：
+当有事件发生时（如有新的连接到来、有数据可读、连接关闭等），系统会通知 Muduo 中的事件循环。
+事件循环会根据发生的事件类型，在注册的事件处理器中查找对应的回调函数。
+回调函数的执行：</li>
+</ul>
+<p>一旦找到了对应的事件处理器，事件循环会调用该事件处理器中注册的回调函数来处理事件。
+回调函数通常是你自己定义的，用于处理特定事件的逻辑，比如处理接收到的数据、处理新的连接等。
+事件处理：</p>
+<p>回调函数执行相应的事件处理逻辑，比如读取数据、发送数据、关闭连接等。
+在处理完事件后，事件循环会继续监听下一个事件，并调用相应的回调函数。</p>
+<ul>
+<li>boost/any.hpp :boost::any var;//允许赋值任意一种类型</li>
+<li>iovec 是在 UNIX 和类 UNIX 系统上进行 I/O 操作时使用的一个数据结构。它通常用于在 I/O 操作（如读取或写入）中提供多个缓冲区的数据结构信息。</li>
+<li>struct msghdr 是在 UNIX 和类 UNIX 操作系统上用于进行系统调用（如 recvmsg() 和 sendmsg()）时，传递消息头信息的数据结构。</li>
+</ul>
+<h2 id="net命名空间"><a class="header" href="#net命名空间">net命名空间</a></h2>
+<p>inetAddress</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git添加密钥"><a class="header" href="#git添加密钥">git添加密钥</a></h1>
+<p>1.安装git</p>
+<pre><code>sudp apt install git
+sudo apt install openssh-server 
+</code></pre>
+<p>2.登陆</p>
+<pre><code>git config --global user.email "2195593114@qq.com"
+git config --global user.name "wuyedehudie"
+</code></pre>
+<p>3.生成密钥,生成在默认路径/home/ciji/.ssh/id_rsa</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C "2195593114@qq.com"
+密码为 ********   //输入密码时不会显示
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ciji/.ssh/id_rsa
+Your public key has been saved in /home/ciji/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:ZGaqWE1MxgvxdW42yvTvdUIhwmGT+OOeiT8g0UtKCJQ 2195593114@qq.com
+The key's randomart image is:
++---[RSA 4096]----+
+| ....oo ..=.     |
+|  E .=...=.o     |
+|   . o+o*.B . .  |
+|    .o+Oo=oo . . |
+|    ..o+So..  .  |
+|   o .o o .. .   |
+|  . .  . + o. o .|
+|        . =. . o |
+|         ....    |
++----[SHA256]-----+
+</code></pre>
+<pre><code>4.添加密钥到代理，需要输入密码
+</code></pre>
+<p>ssh-add ~/.ssh/id_rsa</p>
+<pre><code>5.将该文件的内容添加到github网址的密钥（setting-&gt;ssh and GPG keys-&gt;new ssh key）
+</code></pre>
+<p>vim ~/.ssh/id_rsa.pub</p>
+<pre><code>
+6.检查
+```
+ssh -T git@github.com
+```
+```
+有输出如何：Hi wuyedehudie! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+
+
+项目启动所需依赖
+=================
+1.boost
+```
+apt install libboost-dev
+```
+2.yaml
+```
+git clone git@github.com:jbeder/yaml-cpp.git
+cd yaml-cpp
+mkdir build
+cd build
+cmake ..
+sudo make &amp; make install
+```
+
+3.安装openssl库,报错的话加权限sudo，下面同理
+```
+apt install libssl-dev  
+```
+4.安装Apache ab测试工具：
+```     
+apt install apache2-utils
+```
+5.其他依赖：
+```
+sudo apt install cmake graphviz doxygen  -y
+```
+6.mysql库
+```
+sudo apt-get install libmysqlclient-dev
+```
+7.protobuff
+sudo apt-get install libprotobuf-dev protobuf-compiler
+
+一键命令
+```
+sudo apt install libssl-dev apache2-utils cmake graphviz doxygen libmysqlclient-dev libprotobuf-dev protobuf-compiler ragel -y
+```
+git@github.com:vipshop/hiredis-vip.git
+
+libevent-dev libzookeeper-mt-dev libsqlite3-dev
+
+
+- 将mysql.h的my_bool改为bool(如果用的是新版本的sqlite的话)
+
+
+protol
+---
+生成命令.\protoc.exe --cpp_out=output ns_protobuf.proto
+
+
+
+
+
+cmakelist
+----
+
+源文件和头文件、
+
+&gt;- set(LIBS)
+&gt;- include_directories(.)
+&gt;- sylar_add_executable(test_service_discovery "tests/test_service_discovery.cc" sylar "${LIBS}")
+&gt;- add_library(sylar SHARED ${LIB_SRC})
+&gt;- set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+&gt;- set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
+
+
+&gt;- set(ORM_SRCS)
+
+说明
+----
+
+一个完整大型项目添加依赖的惯用顺序
+---
+- **系统级依赖项**：
+在CMake中，可以使用find_package()或者target_link_libraries()来链接这些系统级依赖项。
+- **第三方库依赖项**：
+任何从第三方获取的库，例如Boost、OpenSSL、SQLite等。
+对于CMake项目，你可以使用find_package()或者add_subdirectory()来引入这些库。
+- **内部库依赖项**：
+你项目内部的其他库。如果你的项目按模块划分，这就是不同模块之间的依赖关系。
+在CMake中，你可以使用add_subdirectory()引入其他子项目，然后使用target_link_libraries()来链接这些库。
+- **自身项目的模块和库**：
+使用add_subdirectory()将项目的不同部分引入主项目。
+- **应用程序或可执行文件**：
+最后是应用程序或可执行文件的构建。
+使用add_executable()或者add_library()来定义你的应用程序或库。</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p>vstudio远程连接vmvare
+ctrl+alt返回主机
+1.安装ssh服务</p>
+<pre><code>sudo apt install openssh-server
+</code></pre>
+<p>2.安装必要环境，如cmake项目需要下载cmake</p>
+<pre><code>sudo apt install build-essential cmake gcc
+</code></pre>
+<p>(详细在docker专章)
+vstudio连接docker远程开发
+docker当中
+1.安装linux发行版，debian</p>
+<pre><code>docker pull debian
+docker run -it --name my_debian debian(后台运行用docker run -d --name my_debian debian)
+（交互模式使用）docker exec -it my_debian bash
+</code></pre>
+<ul>
+<li>反馈：C:\Users\86178&gt;docker run -d --name my_debian debian
+f0ecb2357bcc52400216070b8fb8833cf87a365f0fe63bc84ad6fd19a8597b8f//一大串符号是容器标识符</li>
+<li>使用docker ps查看当前运行的容器；</li>
+</ul>
+<p>vstudio当中
+在管理链接中，如果有多个远程主机连接，需要将当前使用的设为默认，否则就算直接在菜单栏选择主机也没有用</p>
+<p>开发前记得将vstudio的编码改为无签名的utf-8，在左上角的高级保存选项中打开</p>
+<h1 id="在vstudio上安装linux开发"><a class="header" href="#在vstudio上安装linux开发">在vstudio上安装linux开发</a></h1>
+<p><a href="https://blog.csdn.net/HW140701/article/details/123479767">参考的博客1</a>
+<a href="https://learn.microsoft.com/zh-cn/cpp/linux/connect-to-your-remote-linux-computer?view=msvc-170#connect-to-wsl">官方文档</a></p>
+<h2 id="linux服务器配置"><a class="header" href="#linux服务器配置">linux服务器配置</a></h2>
+<ul>
+<li>设置ssh</li>
+</ul>
+<blockquote>
+<p>sudo apt install openssh-server//安装ssh
+sudo service ssh start//启动ssh服务<br />
+sudo systemctl enable ssh//开机自启动设置</p>
+</blockquote>
+<ul>
+<li>服务器安装所需要的包</li>
+</ul>
+<blockquote>
+<p>sudo apt install g++ gdb make ninja-build rsync gdbserver zip -y//-y参数表示自动确认安装，不需要你再输入y确认</p>
+</blockquote>
+<ul>
+<li>在wsl上的linux系统需要修改端口号为23</li>
+</ul>
+<blockquote>
+<p>1.在 <strong>/etc/ssh/sshd_config</strong> (看清楚，是sshd_config。还有个文件是ssh_config，少了个d的),注意是增加<strong>port 23</strong>这一句，在哪都行；有个注释##port 22的是注释，修改它是没用的
+2.同样是这个文件，该文PasswordAuthentication yes
+3.sudo systemctl restart ssh//重启ssh使其生效</p>
+</blockquote>
+<h2 id="vstudio连接服务器"><a class="header" href="#vstudio连接服务器">vstudio连接服务器</a></h2>
+<blockquote>
+<p>1.增加扩展：工具-&gt;获取工具和功能-&gt;选择使用c++进行Linux和嵌入式开发，然后点击右下角的修改，我这里已经安装了，显示的是关闭
+<img src="linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/image.png" alt="截图" />
+2.连接到服务器：工具-&gt;选项-&gt;跨平台
+<img src="linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/image-1.png" alt="Alt text" /></p>
+</blockquote>
+<h2 id="vstusio调试编译选项"><a class="header" href="#vstusio调试编译选项">vstusio调试编译选项</a></h2>
+<p><img src="linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/image-2.png" alt="Alt text" />
+1.点击管理配置，如图
+<img src="linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/image-3.png" alt="Alt text" />
+2.点击绿色加号，选择你需要的编译器进行调试</p>
+<h2 id="项目重新生成"><a class="header" href="#项目重新生成">项目重新生成</a></h2>
+<p>CMAKE
+重新配置和生成项目： 尝试在 Visual Studio 中删除 CMake 缓存（在 Visual Studio 项目窗口右键点击项目 -&gt; CMake -&gt; Delete Cache）
+task.vs.json
+Cmakesetting.json,添加编译器</p>
+<p>为cmake项目生成.sln文件</p>
+<h2 id="wsl1升级成wsl2"><a class="header" href="#wsl1升级成wsl2">wsl1升级成wsl2</a></h2>
+<p><a href="https://learn.microsoft.com/zh-cn/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">官方档案</a>
+1.启用wsl</p>
+<blockquote>
+<p>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+2.下载内核更新包,安装
+3.更改版本
+wsl --set-default-version 2
+cat /proc/version</p>
+</blockquote>
+<p><strong>检查</strong>
+window命令行上wsl --list --verbose,看到version为2
+<img src="linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/image-4.png" alt="Alt text" />
+wsl里面cat /proc/version</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="总结和回顾"><a class="header" href="#总结和回顾">总结和回顾</a></h1>
+<ul>
+<li>LogFormatter负责解析格式（在Logger中获取需要格式）,调用FormatterItem的函数最终输出</li>
+<li>LogEvent负责存储日志内容，内容由用户在程序中调用LogEvent构造函数来创造日志内容</li>
+<li>log()函数负责输出，logger的log最终要调用成员函数m_appender的log,m_appender的log负责输出到对应的地方，而m_appender的log最终会用FormatItem的format获取到日志内容的流，然后输出
+坑：注意宏定义后面需不需要分号";"</li>
+</ul>
+<h2 id="后续优化"><a class="header" href="#后续优化">后续优化</a></h2>
+<p>删除不需要的成员变量</p>
+<h1 id="过程中的新的知识和c基础"><a class="header" href="#过程中的新的知识和c基础">过程中的新的知识和c++基础</a></h1>
+<ul>
+<li>~virtual LogAppender(){}
+虚析构函数通常用于当基类的指针指向派生类的对象时，确保在销毁对象时调用正确的析构函数</li>
+</ul>
+<p>elapse</p>
+<p>1.日志模块:成员变量,智能指针,虚析构函数
+2.实现Logger
+3.Formatter,以及formatItem,有些日志输出不需要某些部分，有些需要某部分,需要选择性输出，所以分了好几个Item</p>
+<ul>
+<li>
+<p>考虑内存对齐，高性能场景,int,unsigned int,float是4字节，double</p>
+</li>
+<li>
+<p>LogFormatter::ptr getFormatter() <strong>const</strong> { return m_formatter };//当返回值是引用时，可以防止修改引用</p>
+</li>
+<li>
+<p>函数重载的另一种形式
+void Logger::debug(LogEvent::ptr event) {
+debug(LogLevel::DEBUG, event);
+}</p>
+</li>
+<li>
+<p>return !!m_filestream;//!m_filestream表示将文件流是否成功打开转为布尔值(文件流有效返回false，无效返回true)，还有一个感叹号则将布尔值取非，总的句子意思是文件流有效则返回true</p>
+</li>
+<li>
+<p>virtual std::string format(LogEvent::ptr event) = 0;//=0表示纯虚函数，只能被继承</p>
+</li>
+<li>
+<p>size_t,无符号整数，大小随平台决定</p>
+</li>
+<li>
+<p>日志格式：patten{}</p>
+</li>
+<li>
+<p>#name,将name当作字符串，相当于为name加上引号，name是字符，并不是自定义的变量</p>
+</li>
+<li>
+<p>std::funtion:</p>
+</li>
+<li>
+<p>class logger</p>
+</li>
+<li>
+<p>(std::get&lt;2&gt;(i) == 0)//获取元组第三个，如 auto i=make_tuple(string,string,int),这个就获取int位置的元素</p>
+</li>
+<li>
+<p>shared_ptr自带reset函数</p>
+</li>
+<li>
+<p>在.cc文件声明和定义的类，如果在文件内需要使用,需要把它放到用的地方之前</p>
+</li>
+</ul>
+<p>待填的坑:LogForamtter的init(),过程还没完全看懂</p>
+<blockquote>
+<p>std::vector&lt;std::tuple&lt;std::string, std::string, int&gt;&gt; vec;：定义了一个存储三元组（包含两个字符串和一个整数）的向量 vec，用于存储解析结果。
+size_t last_pos = 0;：定义了一个变量 last_pos，用于保存上一次解析的位置。
+std::string nstr;：定义了一个字符串 nstr，用于存储非格式化字符。
+for (size_t i = 0; i &lt; m_pattern.size(); ++i)：遍历字符串 m_pattern，进行解析。
+if (m_pattern[i] == '%')：如果当前字符是 %，表示可能是格式化项的开始，将 nstr 中的字符和 % 添加到 nstr 中。
+if ((i + 1) &lt; m_pattern.size())：判断下一个字符是否存在。
+如果下一个字符是 %，表示当前字符是一个普通字符，将 % 添加到 nstr 中。
+如果下一个字符不是 %，则进入格式化项的解析逻辑。
+进入格式化项解析逻辑：
+fmt_status 表示解析状态，0 表示未解析，1 表示解析格式，2 表示解析完成。
+fmt_begin 记录格式化项开始的位置。
+str 存储格式化项的名称。
+fmt 存储格式化项的参数。
+解析格式化项的名称和参数，存储到 str 和 fmt 变量中。
+根据解析结果构建不同类型的格式化项，并将其存储到 vec 中。
+如果 fmt_status 为 0，表示是普通字符串，将其存储到 vec 中。
+如果 fmt_status 为 1，表示格式化项解析错误，将错误信息存储到 vec 中。
+如果 fmt_status 为 2，表示格式化项解析成功，将格式化项存储到 vec 中。
+使用预定义的 std::map s_format_items 构建格式化项的类型映射。
+遍历 vec，根据解析结果构建相应的 FormatItem 对象，并存储到 m_items 中。
+总的来说，这段代码的目的是将一个字符串模式解析成多个格式化项，每个格式化项都有一个名称和可能的参数，这些格式化项会在日志记录时根据模式进行格式化。这种设计可以让用户自定义日志输出的格式，并且可以支持不同类型的格式化项，比如消息、时间戳、日志级别等。</p>
+</blockquote>
+<ul>
+<li><strong>指针函数</strong>定义一个指针函数，只要是满足这个的，都可以用operation=functionName来赋值，然后使用operation(int,int)来调用赋值的函数</li>
+</ul>
+<blockquote>
+<p>int (*operation)(int, int);</p>
+</blockquote>
+<h1 id="细节提高方面"><a class="header" href="#细节提高方面">细节提高方面</a></h1>
+<p>在编程中，有许多微小的细节和技巧可以用来提高性能。这些优化通常是针对特定的编程语言、编译器或者硬件架构的。以下是一些通用的性能优化技巧：</p>
+<ul>
+<li>选择适当的数据结构和算法： 选择合适的数据结构和算法可以大幅度提高程序性能。例如，使用哈希表来加速查找操作，使用合适的排序算法来提高排序效率。</li>
+<li>避免不必要的内存分配和释放： 减少动态内存分配的次数，尽量使用栈上的内存而不是堆上的内存。在C++中，可以使用对象池技术来重复利用已分配的对象，减少内存分配和释放的开销。</li>
+<li>减少函数调用的开销： 避免过多的函数调用，特别是在循环内部。函数调用通常伴随着栈帧的创建和销毁，可能会带来较大的开销。</li>
+<li>内联函数（Inline Functions）： 将频繁调用的小函数标记为内联函数，可以减少函数调用的开销。</li>
+<li>循环优化： 避免循环内部的计算或函数调用，将这些操作提到循环外部。例如，将循环不变式（loop invariant）移到循环外部，减少循环内部的计算次数。</li>
+<li>位运算优化： 使用位运算替代乘法和除法操作，特别是2的幂次方相关的操作，可以用位运算代替。</li>
+<li>缓存友好性： 编写缓存友好的代码，尽量使得数据访问更加连续，减少缓存未命中的次数。
+多线程和并行编程： 在多核处理器上，通过多线程和并行编程，可以更好地利用硬件资源，提高程序的整体性能。</li>
+<li>减少I/O操作： 尽量减少文件、网络等I/O操作，可以使用缓冲、异步I/O等技术来优化。</li>
+<li>编译器优化： 使用合适的编译器优化选项，例如 -O2、-O3 等，以及特定的编译器指令，来帮助编译器生成更高效的机器代码。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p>子进程的僵尸态
+子进程的所有状态
+<img src="linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/img/image-5.png" alt="Alt text" /></p>
+<div style="break-before: page; page-break-before: always;"></div><p>Cmu15445学习记录</p>
+<p>#源码bushub和环境
+先修知识：常用shell命令：ls，cd
+Settings &gt; Actions &gt; General &gt; Actions permissions &gt; Disable actions.//这个不是命令，是需要你在github上修改设置</p>
+<p>参考CMU15445（2023 spring） lab - 环境配置_J__M__C的博客-CSDN博客
+实在不行参考我下面的这个野路子</p>
+<ul>
+<li>下载clang14软件包</li>
+</ul>
+<pre><code>wget http://apt.llvm.org/llvm.sh  //下载软件包，使用ls可以看到多了llvm.sh文件
+chmod +x llvm.sh		//添加可执行权限
+sudo ./llvm.sh 14 all	//安装，过程中会有一大段脚本语言，等待一下（在最末尾看到[waiting for headers，此时要等），如果失败了可以重启再试一次（做到这里报错了，退出再执行了一次后成功了）
+</code></pre>
+<pre><code>sudo apt autoremove 
+sudo apt install clang
+clang –version //检查clang的版本，如果提示clang命令不存在说明没安装成功
+</code></pre>
+<ul>
+<li>然后在bustub.private目录下执行</li>
+<li>最后make check-tests测试是否成功</li>
+</ul>
+<p>索引和遍历0.
+查询优化器
+Select count(*)有优化
+Select AVG(gpa)</p>
+<h1 id="存储引擎"><a class="header" href="#存储引擎">存储引擎</a></h1>
+<h1 id="中级数据库语句"><a class="header" href="#中级数据库语句">中级数据库语句</a></h1>
+<ul>
+<li>数据库操作语句（DML）
+procedural 有过程的，自己指定查询方法(关系型代数)
+non-procedural 没有过程，只告诉数据库自己需要某个结果，比如&gt;select a from</li>
+</ul>
+<h2 id="关系代数算子relational-algebra"><a class="header" href="#关系代数算子relational-algebra">关系代数算子(relational algebra)</a></h2>
+<p>Cmu15445学习记录
+源码bushub
+先修知识：常用shell命令：ls，cd
+Settings &gt; Actions &gt; General &gt; Actions permissions &gt; Disable actions.//这个不是命令，是需要你在github上修改设置</p>
+<p>参考CMU15445（2023 spring） lab - 环境配置_J__M__C的博客-CSDN博客
+实在不行参考我下面的这个野路子
+下载clang14软件包
+wget http://apt.llvm.org/llvm.sh  //下载软件包，使用ls可以看到多了llvm.sh文件
+chmod +x llvm.sh		//添加可执行权限
+sudo ./llvm.sh 14 all	//安装，过程中会有一大段脚本语言，等待一下（在最末尾看到[waiting for headers，此时要等），如果失败了可以重启再试一次（做到这里报错了，退出再执行了一次后成功了）
+sudo apt autoremove
+sudo apt install clang
+clang –version //检查clang的版本，如果提示clang命令不存在说明没安装成功</p>
+<p>然后在bustub.private目录下执行
+最后make check-tests测试是否成功</p>
+<p>关系代数中常用的运算符号，用于描述对关系（表）进行的操作。</p>
+<blockquote>
+<p>σ (Select)：选取满足某一条件的行。
+π (Projection)：选取指定列，即去掉不需要的列。
+∪ (Union)：取两个关系的并集，要求两个关系的列数相同。
+∩ (Intersection)：取两个关系的交集，要求两个关系的列数相同。
+– (Difference)：取两个关系的差集，要求两个关系的列数相同。
+× (Product)：求两个关系的笛卡尔积，即把两个关系中的每个元组都进行组合。
+⋈ (Join)：连接两个关系，把它们的公共列组合成一个关系。具体有自然连接、等值连接、外连接等多种方式。</p>
+</blockquote>
+<blockquote>
+<p>→ σb_id=102(R⋈S) vs. (R⋈(σb_id=102(S))//第一个先运算R⋈S再查询，第二个现在S里面找σb_id=102再进行R⋈S
+SQL is the de facto standard(SQL是大多数据库使用的标准)
+索引和遍历0.
+查询优化器
+Select count(*)有优化
+Select AVG(gpa)</p>
+</blockquote>
+<ul>
+<li>Select,Projection(投影),Union,Intersection,Difference,Product,Join.</li>
+</ul>
+<blockquote>
+<ul>
+<li>PROJECTION,SELECT b_id-100,a_id FROM R WHERE a_id = 'a2',自动投影</li>
+<li>UNiON ALL(不去重),(SELECT * FROM R) UNION ALL (SELECT * FROM S) //S和R的两张表结果相同，将它俩合并后输出,all是不去掉充分的</li>
+<li>INTERSECTION (交集),(SELECT * FROM R) INTERSECTION (SELECT * FROM S) //取两个表的交集</li>
+<li>DIFFERENCE (取补集),(SELECT * FROM) EXCEPT (SELECT * FROM S)</li>
+<li>PRODUCT (取笛卡尔积) (SELSECT * FROM) CROSS JOIN S;或者SELECT * FROM R,S//隐式的join</li>
+<li><strong>JOIN</strong>,SELECT * FROM R NATURAL JOIN S;//一般不加natrual</li>
+</ul>
+</blockquote>
+<ul>
+<li>extra operators
+Rename,</li>
+</ul>
+<h2 id="数据和查询语言解耦sql聚会函数aggregates"><a class="header" href="#数据和查询语言解耦sql聚会函数aggregates">数据和查询语言解耦，SQL,聚会函数(aggregates)</a></h2>
+<blockquote>
+<ul>
+<li>函数count,sum,avg支持DISTINCT,把重复的去掉</li>
+<li>select AVG(R),e.sid FROM enrolled AS e, student AS s WHERE e.sid = s.sid (GROUP BY e.cid) (HAVING AVG(s.gpa) &gt;3.9);</li>
+<li>不加group by会报错,分组求平均值（相同e.cid 的求平均值）</li>
+<li>%模糊查询不要放最左边，（最左匹配原则）,不然难以优化</li>
+</ul>
+</blockquote>
+<h2 id="output-control"><a class="header" href="#output-control">output control</a></h2>
+<ul>
+<li>1.输出重定向,即把输出语句用作输入，如INSERT INTO CourseIds (SELECT DISTINCT cid FROM enrolled);//把括号内容的输出用作输入</li>
+<li>2.输出设定</li>
+</ul>
+<pre><code>output control:order by 1,//根据第一列排序
+order by grade DESC,sid ASC; //DESC降序，ASC升序，不写默认升序
+</code></pre>
+<h2 id="子查询查询嵌套nested-queries"><a class="header" href="#子查询查询嵌套nested-queries">子查询，查询嵌套（nested queries）</a></h2>
+<ul>
+<li>1.子查询关键字：ALL,ANY,IN,EXISTS(子查询只要有结果就可以)</li>
+</ul>
+<pre><code>SELSECT name FROM student WHERE sid IN(SELECT sid FROM enrolled WHERE cid = '15-445');  //ANY效果和IN一样
+SELSECT * FROM course WHERE NOT EXISTS(SELSECT * FROM enrolled WHERE course .cid = enrolled .cid); //排除掉括号内的结果后输出
+</code></pre>
+<h2 id="窗口函数"><a class="header" href="#窗口函数">窗口函数</a></h2>
+<pre><code>SELECT *, ROW_NUMBER() OVER() AS row_num FROM enrolled; //添加一行显示它的顺序，
+SELECT *, ROW_NUMBER() OVER(PARTITION BY cid) FROM enrolled; // 比如一列由多个cid相同的，就会将cid相同的排列，如下图所示
+</code></pre>
+<p><img src="%E6%95%B0%E6%8D%AE%E5%BA%93/91de1e121f721cf54e64a17886cc0ed.jpg" alt="Alt text" /></p>
+<blockquote>
+<p>还可以用order by代替PARTITION BY</p>
+</blockquote>
+<h2 id="ctecommon-table-expressions内部视图"><a class="header" href="#ctecommon-table-expressions内部视图">CTE(COMMON TABLE EXPRESSIONS),内部视图</a></h2>
+<pre><code>WITH cteSource(maxId) AS (SELECT MAX (sid) FROM enrolled ) SELECT name FROM student,cteSource WHERE stuendt.sid = cteSource.maxId; //用maxId,作为括号内语句输出内容的名字
+</code></pre>
+<ul>
+<li>CTE循环，炫技，没什么用。</li>
+</ul>
+<hr />
+<hr />
+<p>总结，尽量把想要的结果用一个SQL语句查询起来 ,尽量把优化的事情交给数据库(前提是数据库不弱);如果小公司数据库弱则需要自己拆分业务</p>
+<div style="break-before: page; page-break-before: always;"></div><p>##操作数据库基本语句</p>
+<blockquote>
+<blockquote>
+<ul>
+<li>CREATE TABLE table_name (
+column1 datatype,
+column2 datatype,
+...
+);</li>
+<li>INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);<strong>//如果value和表的结构顺序一样可以省略列名</strong></li>
+<li>SELECT column1, column2, ... FROM table_name WHERE condition;</li>
+<li>UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;</li>
+<li>DELETE FROM table_name WHERE condition;</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2>##进一步学习
+###一.对已建的数据库修改</h2>
+<blockquote>
+<ul>
+<li>alter table table_name MODIFY COLUMN name VACHAR(200);</li>
+<li>alter TABLE table_name RENAME COLUMN to new_name;</li>
+<li>alter TABLE table_name ADD COLUMN column_name type;</li>
+<li>alter TABLE table_name DROP COLUMN  column_name;</li>
+<li>DROP TABLE;</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>数据库改名：
+1.CREATE DATABASE song;
+2.在终端使用mysqldump -uwuye -p music &gt; music_backup.sql
+3.mysql -uwuye -p --default-character-set=utf8 song &lt; music_backup.sql
+4.del music_backup.sql
+5.drop music</li>
+</ul>
+</blockquote>
+<p>###二.导出表</p>
+<blockquote>
+<p><strong>mysqldump -uusername -p db_name &gt; db_name.sql</strong>
+输入密码后，导出表，
+<strong>mysql -u root -p db_name &lt; db_name;</strong>
+没有错误提示表示导入完成</p>
+</blockquote>
+<blockquote>
+<p><strong>SELECT * FROM table_name where 条件 and 条件</strong>
+not&gt;and&gt;or优先级
+<strong>SELECT * FROM table_name where level IN ()</strong></p>
+</blockquote>
+<p>###三.子查询</p>
+<blockquote>
+<ul>
+<li><strong>SELECT AVG(column_name) form tabel_name</strong>//求平均值</li>
+<li>select * from player where level &gt; (SELECT AVG(column_name) form tabel_name);//子查询
+round()//四舍五入</li>
+<li><strong>select level,ROUND((SELECt AVG(level) form player)) as average,leve - ROUND((SELECT AVG(level)from player)) as diff</strong>
+//将平均值和，level与平均值的差建立表</li>
+<li>CREATE table_name select * from table_name where 条件</li>
+<li>INSERT INTO table1 select * from table2 where 条件</li>
+<li><strong>SELECT exist(select * from table_name where 条件)//返会bool类型</strong></li>
+</ul>
+</blockquote>
+<h1 id="进阶"><a class="header" href="#进阶">进阶</a></h1>
+<h2 id="表关联"><a class="header" href="#表关联">表关联</a></h2>
+<ul>
+<li>内连接：返回左右两个表都有的数据；左连接会显示左表所有的数据，右表数据有条件匹配到的话就显示，没有的用null，右表多余的且条件匹配不到的不显示</li>
+</ul>
+<blockquote>
+<p>select * from db_left
+inner join db_right<br />
+on db_left.id = db_right.id;//条件</p>
+</blockquote>
+<ul>
+<li>内连接的另一种写法：</li>
+</ul>
+<blockquote>
+<p>select * from db_left l,db_right r where  l.id=r.colunm_id;<br />
+如果没有指定条件，将以笛卡尔积的形式显示</p>
+</blockquote>
+<h2 id="索引"><a class="header" href="#索引">索引</a></h2>
+<ul>
+<li>可以在添加表之后再添加索引.在数量少的时候查询速度比不加索引要快很多</li>
+</ul>
+<blockquote>
+<p>CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX index_name on tbl_name (index_col_name)</p>
+</blockquote>
+<ul>
+<li>主键 不能重复的记录，所以不用业务作为主键</li>
+</ul>
+<h1>#理论
+数据库的的查询流程</h1>
+<blockquote>
+<p>语法分析器，</p>
+</blockquote>
+<p>net start/stop mysql(管理员权限运行)</p>
+<p>javascripts脚本模式
+使用\js切换到js语言，同理用\sql切换到sql语言</p>
+<p>在sqlshell启动mysql</p>
+<h2 id="常用命令sql"><a class="header" href="#常用命令sql">常用命令（sql）</a></h2>
+<blockquote>
+<p>mysql -u username -p;
+USE database_name;
+SELECT CURRENT_USER();
+SHOW TABLES;
+SHOW DATABASE;
+DESCRIBE tableName;
+SELECT * FROM tableName;
+select count(*) from table;//返回表的数据量
+创建新用户</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>CREATE USER 'wuye'@'localhost' IDENTIFIED BY '1';</p>
+</blockquote>
+<p>//登陆(先exit退出当前用户)</p>
+<blockquote>
+<p>mysql -u wuye -p;</p>
+</blockquote>
+<p>//获取创建数据库的权限</p>
+<blockquote>
+<p>GRANT CREATE DATABASE ON <em>.</em> TO 'wuye'@'localhost';</p>
+</blockquote>
+<p>//刷新权限</p>
+<blockquote>
+<p>FLUSH PRIVILEGES;</p>
+</blockquote>
+<p>//授予所有权限</p>
+<blockquote>
+<p>GRANT ALL PRIVILEGES ON <em>.</em> TO 'wuye'@'localhost';//有密码需要在后面补上“Identified by '1'”.把1替换成你的密码</p>
+</blockquote>
+<hr />
+<h1 id="错误和解决"><a class="header" href="#错误和解决">错误和解决</a></h1>
+<p>1.mysql无法启动服务，在“服务”里手动启动后停止。</p>
+<blockquote>
+<p>mysqld -remove
+mysqld -install
+mysqld -initialize</p>
+</blockquote>
+<p>2.重置root密码
+1)管理员权限运行命令行</p>
+<blockquote>
+<p>net stop mysql
+mysqld --console --skip-grant-tables --shared-memory</p>
+</blockquote>
+<p>2)在新的命令行（原有的不能关闭）</p>
+<blockquote>
+<p>mysql -uroot -p  //不用输入密码，直接按下enter
+use mysql
+UPDATE mysql.user SET authentication_string='' WHERE user='root';//在命令中引号里面设置root密码，或者留空，用enter登陆</p>
+</blockquote>
+<p>3)关闭所有窗口
+net start mysql</p>
+<div style="break-before: page; page-break-before: always;"></div><blockquote>
+<p><strong>组合两张表</strong>:1.left join 用on;2.用逗号隔开;3.变量名字</p>
+</blockquote>
+<pre><code>SELECT FirstName,LastName,city,state FROM Person p left join Address a
+on P.PersonId = a.PersonId;
+</code></pre>
+<blockquote>
+<p><strong>找第二高的薪水</strong>:1.DISTINCT;2.ORDER BY ... DESC;3.limit offset</p>
+</blockquote>
+<pre><code>SELECT (
+    SELECT DISTINCT Salary 
+    FROM Employee 
+    ORDER BY Salary DESC
+    limit 1 OFFSET 1
+) AS SecondHighestSalary 
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p>主键
+唯一性；稳定不会修改；简洁保证查询</p>
+<ul>
+<li>关键字 limit</li>
+</ul>
+<pre><code>LIMIT 4 OFFSET 5;   //表示从第六行开始，输出五列。limit 5就是不要前面五列
+</code></pre>
+<p>创建用户</p>
+<h1 id="提高可读性"><a class="header" href="#提高可读性">提高可读性</a></h1>
+<ul>
+<li>0.注释</li>
+<li>查询所有活跃用户</li>
+</ul>
+<pre><code> SELECT *
+FROM users
+WHERE status = 'active';
+</code></pre>
+<ul>
+<li>1.WHERE</li>
+</ul>
+<pre><code>WHERE category = 'A'
+  AND status = 'active'
+</code></pre>
+<ul>
+<li>2.子查询缩进</li>
+</ul>
+<pre><code>SELECT column0, column2
+FROM (
+    SELECT column0, column2
+    FROM my_table
+    WHERE condition
+) AS subquery
+WHERE subquery.column0 &gt; 100;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p>前缀和</p>
+<pre><code>target[]={1,2,3,4,5,6}
+for (int i = 1; i &lt;= n; ++i) {
+        prefix[i] = prefix[i - 1] + target[i - 1];
+    }
+</code></pre>
+<p>节点a和b的最近公共祖先
+没学过算法的话按照朴素思想首先思路是用father[]来记录每一个节点的父节点，然后向上遍历，找到所有祖先直到根节点，然后比对每一个祖先是否有相同的。
+第一个优化是用一个deep数组来记录每一个节点的深度，假设a的深度比b小，即a离根节点更近，在这有两种情况，1.a是b的祖先，2.a和b有另外一个祖先。所以用一个临时节点p先从b往上遍历到和a同一个深度，判断p是不是a，如果不是，就直接从此时p和a同时往上找同一高度的祖先，判断是否相同，直到根节点。
+第二个优化就是倍增，指构建深度的时候记录每2的倍数
+第三个优化是，假如有多个树，而a和b可能不是同一棵树的时候，需要用并查集来判断是不是在同一颗树，就不需要遍历了。</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="拓扑排序"><a class="header" href="#拓扑排序">拓扑排序</a></h2>
+<p>拓扑排序是一种对有向无环图（DAG）进行排序的算法。它将图中的顶点排成一个线性序列，使得对图中的每一条有向边 (u, v)，顶点 u 在顶点 v 之前。这
+种排序并不唯一，图中可能存在多个合法的拓扑排序序列。
+通常使用深度优先搜索（DFS）：
+1.初始化一个空的结果列表 result，以及一个集合 vis 用于记录已访问的顶点。
+2.对于图中的每个未访问的顶点，调用 DFS 函数进行遍历。
+3.在 DFS 函数中，对当前顶点进行访问，并将其标记为已访问。
+4.对当前顶点的所有未访问邻居顶点递归调用 DFS 函数。
+5.在递归返回时，将当前顶点添加到result列表的开头。
+例题：洛谷B3644</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="arduino是一张微控制器板"><a class="header" href="#arduino是一张微控制器板">arduino是一张微控制器板</a></h2>
+<h3 id="接口"><a class="header" href="#接口">接口</a></h3>
+<p>usb接口，充电口</p>
+<h3 id="面包板"><a class="header" href="#面包板">面包板</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><p>自用学习记录和部分使用经验</p>
+<ul>
+<li>简单介绍cmake：cmake是跨平台构建工具，生成特定平台和编译器的Makefile、项目工程或工程文件。makefile描述源代码文件之间的依赖关系，描述如何将它们编译成可执行程序。</li>
+<li>一个cmakeList生成项目最基础需要描述cmake最低版本、c++版本、可执行文件，加上自己头文件的路径和外部头文件的路径。进阶的用法就是了解一些变量使用，方便大型项目的依赖管理。</li>
+</ul>
+<h3 id="一基础描述项目的部分"><a class="header" href="#一基础描述项目的部分">一.基础描述项目的部分</a></h3>
+<p><code>cmake_minimum_requried()</code>描述cmake工具的最低版本
+<code>project(name)</code>(可选）项目名
+<code>set(CMAKE_CXX_STANDARD 17)</code>
+<code>include_diretory(dir) </code>//程序需要找文件时会搜索的目录，头文件、库文件、源文件等都可以查找</p>
+<ul>
+<li>cmake用##来注释</li>
+</ul>
+<h3 id="二定义可执行文件或者库文件下面简称目标"><a class="header" href="#二定义可执行文件或者库文件下面简称目标">二.定义可执行文件或者库文件（下面简称目标）</a></h3>
+<ul>
+<li><code>add_executable(target,main.cpp)</code>target为可执行程序名，main.cpp是所需文件，可以添加多个，如果目标是库文件，可以不带main函数入口。没有可执行程序名的时候可能不会报错，编译器找不到执行目标，无法运行a</li>
+<li><code>add_library(target,path) </code>增加库</li>
+</ul>
+<h3 id="三为可执行文件或者库文件添加依赖"><a class="header" href="#三为可执行文件或者库文件添加依赖">三.为可执行文件或者库文件添加依赖</a></h3>
+<pre><code>add_dependencies(target,target1,target2)      //添加目标所需的其他目标
+target_include_directories(target,dir)        //添加目标所需的头文件目录
+</code></pre>
+<p><code>target_link_library(target,PRIVATE,b) </code></p>
+<ul>
+<li>添加所需要的库(静态库.lib或者.a文件，动态库.dll或.so文件)；不是自己用add_library()定义的库需要时，b为指定库的路径，如target_link_library(target,path/name.dll)；PRIVATE关键字表示只能将该库链接到该目标，不会让目标所依赖的其他目标被链接</li>
+</ul>
+<h3 id="四变量"><a class="header" href="#四变量">四,变量</a></h3>
+<pre><code>aux_source_directory(. DIR_SRCS)              //.指当前目录，可以设置成其他目录，DIR_SRCS是变量名，表示将该目录下的所有源文件（'.cpp''.cc''.cxx')赋值给DIR_SRCS，就不用麻烦写上所有源文件名了
+add_executable(Demo ${DIR_SRCS})              
+
+set(LIB_SRC
+    1.cc
+    2.cc
+)           //LIB_SRC是变量名,常见定义变量的方式，LIB_SRC用于目标的依赖文件
+set(LIBS
+    target1
+    target2
+    .dll
+)           
+</code></pre>
+<h5 id="部分默认变量"><a class="header" href="#部分默认变量">部分默认变量</a></h5>
+<ul>
+<li><code>${PROJECT_SOURCE_DIR}</code>, 用project()定义了项目后该CmakeList.txt所在目录</li>
+<li><code>${CMAKE_BINARY_DIR}</code>，bin目录</li>
+<li><code>${CMAKE_CURRENT_BINARY_DIR}</code>，当前CmakeList所在目录,当前cmakeList可能是子模块的cmakeList，大多时候该变量和${PROJECT_SOURCE_DIR}, 相同);</li>
+<li><code>${CMAKE_MODULE_PATH}</code>, 指向CMake模块文件的目录列表</li>
+</ul>
+<h3 id="五函数"><a class="header" href="#五函数">五.函数</a></h3>
+<pre><code>option(BUILD_TEST "ON for complile test" OFF)，BUILD_TEST是变量，“ON for compile test"是说明，OFF相当于bool的false
+if(BUILD_TEST)
+add_executable(test,...);   //便捷地决定是否编译某个东西
+endif
+</code></pre>
+<pre><code>configure_file (
+  "${PROJECT_SOURCE_DIR}/config.h.in"       //自己的config模板
+  "${PROJECT_BINARY_DIR}/config.h"          //自动生成，可以在其他源代码里使用，常见用法是定义一些环境宏定义，其他源代码可以使用该宏定义，比如window还是linux平台的宏定义
+  )
+</code></pre>
+<h3 id="其他"><a class="header" href="#其他">其他</a></h3>
+<pre><code>add_subdirectory(math)  //在当前目录（CmakekList所在目录）下找到math目录，以math目录下的CmakeList构建子项目
+install 安装某文件（可执行文件或库文件）到系统目录
+</code></pre>
+<ul>
+<li>Cmake模块
+1.Cmake模块包含CMake命令和函数的脚本文件,名字格式name.cmake, 可以被CMakeList.txt引用
+2.Cmake提供默认模块文件，用于执行常见的任务如查找标准库，查找第三方库，设置编译选项等
+3.Cmake函数:</li>
+</ul>
+<pre><code>function(name_add_executable target srcs depends libs)  //name_add_executable函数名, srcs可执行文件的源文件变量， 可执行文件依赖的库列表 
+    add_executable(${targetname} ${srcs})
+    add_dependencies(${targetname} ${depends})
+    force_redefine_file_macro_for_sources(${targetname})
+    target_link_libraries(${targetname} ${libs})
+endfunction()   //用于简化可执行文件添加过程
+</code></pre>
+<h2 id="报错"><a class="header" href="#报错">报错：</a></h2>
+<p>undefined reference
+如果依赖的头文件和源文件被设置成变量set()，还需要变量添加到add_execut</p>
+<p>其他：检查大小写、名字是否完全一致、是不是名字很像的几个弄混了</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="wsl"><a class="header" href="#wsl">wsl</a></h2>
+<p><code>wsl shutdown</code></p>
+<p><code>docker run -it maxxing/compiler-dev /bin/bash</code></p>
+<p>镜像文件
+容器虚拟化</p>
+<p>添加镜像仓库"registry-mirror":["https://registry.docker-cn.com","https://docker.mirrors.ustc.edu.cn","https://docker.mirrors.ustc.edu.cn"],</p>
+<h2 id="基础命令"><a class="header" href="#基础命令">基础命令</a></h2>
+<ul>
+<li>
+<p>docker ps //列出正在运行的容器</p>
+</li>
+<li>
+<p>docker pull redis:6.2
+docker run --name my-redis-container -d -p 6379:6379 redis:6.2      //-p端口号，--name 设定容器名字</p>
+</li>
+<li>
+<p>docker login  //登陆docker账号</p>
+</li>
+<li>
+<p>docker scout quickview jrottenberg/ffmpeg //查看容器漏洞和建议</p>
+</li>
+</ul>
+<h2 id="生成镜像"><a class="header" href="#生成镜像">生成镜像</a></h2>
+<p>From xxxx; //基础镜像，一般用小且好用的centos
+docker build -t test:v1 .   //build表示构建项目，-t设定版本名称，test:v1是用户自定义的版本名称（也叫tag），.表示当前目录</p>
+<h2 id="后台运行"><a class="header" href="#后台运行">后台运行</a></h2>
+<p>如果Docker 容器基于一个镜像，但是该镜像中没有运行任何进程，那么容器会立即退出，并返回一个退出码。
+docker run -itd --name=dibian debian /bin/bash</p>
+<h3 id="目录挂载"><a class="header" href="#目录挂载">目录挂载</a></h3>
+<p><code>docker run -it -v /d/docker/bind_directory:/home/wuye debian /bin/bash</code></p>
+<h2 id="实际项目的使用"><a class="header" href="#实际项目的使用">实际项目的使用</a></h2>
+<p>通常情况下，将 Docker 与应用程序一起打包成一个单独的可执行文件（.exe 或其他可执行格式）并不是常见的做法。Docker 是一种容器化技术，它的主要用途是将应用程序和其依赖项隔离在容器中，以确保应用程序在不同环境中具有一致性和可重复性。
+在实际部署应用程序时，通常的做法是：
+Docker 镜像：将应用程序及其依赖项打包到一个 Docker 镜像中。这个镜像可以在开发环境、测试环境和生产环境之间进行轻松迁移和部署。
+容器编排：使用容器编排工具（如 Docker Compose、Kubernetes 等）来管理和部署多个容器化的应用程序和服务。这些工具可以自动化应用程序的扩展、更新和监控。
+CI/CD 流程：将 Docker 镜像集成到持续集成/持续交付（CI/CD）流程中，以自动构建、测试和部署应用程序。这样可以确保每次代码更改都经过自动化测试并部署到目标环境。
+分发容器镜像：将 Docker 镜像存储在容器注册表（如 Docker Hub、Amazon ECR、Google Container Registry 等）中，以便在不同的环境中轻松分发和部署应用程序。
+将 Docker 与应用程序一起打包成一个单独的可执行文件可能会导致复杂性和性能问题，并且不符合容器化的最佳实践。通常，您应该将应用程序和容器化的依赖项作为独立的部分进行管理，并使用适当的工具来管理容器化应用程序的部署和运行。这种方式可以更好地利用容器化技术的优势，同时也更容易维护和管理应用程序。</p>
+<div style="break-before: page; page-break-before: always;"></div><pre><code>ulimit -a           //显示
+ulimit -c unlimited //开启
+</code></pre>
+<p>它会显示用户可以设置或查询的资源限制的当前值。这些资源包括文件大小、核心转储大小、数据段大小、堆栈大小、CPU时间、最大用户进程数等。</p>
+<pre><code>gcc -c -o name name.c //不是gdb里使用
+file name
+b 15
+info break
+r //运行
+n //继续单步调试
+c //执行到下一个断点
+</code></pre>
+<h2 id="进阶-1"><a class="header" href="#进阶-1">进阶</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><p>工作区，暂存区</p>
+<h2 id="1-git基础"><a class="header" href="#1-git基础">1. git基础</a></h2>
+<p>简单而言git用于保存项目，在项目根目录使用git应用程序保存项目代码，支持远程仓库github创建和提交。有版本回溯功能，有项目开发分支试验时合并的功能</p>
+<h3 id="11理论知识点"><a class="header" href="#11理论知识点">1.1理论/知识点</a></h3>
+<ul>
+<li>暂存区只要文件修改了都可以用git add，不会有冗余的修改记录，只有用<strong>git commit</strong>的代码才有可回溯的提交记录。</li>
+</ul>
+<blockquote>
+<p>git reset --soft/hard/mixed
+soft保留工作区和暂存区，hard都不保留，mixed仅保留工作区
+git diff --cathe//一般使用图形化工具</p>
+</blockquote>
+<h3 id="12-基础命令"><a class="header" href="#12-基础命令">1.2 基础命令</a></h3>
+<p>速查</p>
+<ul>
+<li><code>git init</code>将文件夹（命令执行所在目录）初始化，其实是增加了一个.git文件</li>
+<li><code>git add filename</code>git add ./git add *txt   将文件添加到暂存区，相当于随手保存</li>
+<li><code>git status</code>文件状态，可以</li>
+<li><code>git commit</code></li>
+<li><code>git commit -a</code> //跳过相当于使用了一次git add</li>
+<li><code>git branch</code></li>
+<li><code>git log /git log --online</code></li>
+<li><code>git rm --cache filename</code>     //只会删除暂存区内容，不会删除本地文件</li>
+</ul>
+<h3 id="13-文件状态"><a class="header" href="#13-文件状态">1.3 文件状态</a></h3>
+<ul>
+<li><strong>untracked</strong> 没使用过任何git命令前的最原始的状态</li>
+<li><strong>modified</strong></li>
+<li><strong>staged</strong></li>
+<li><strong>unmodified</strong></li>
+<li>总结：</li>
+<li><strong>untracked</strong>——<code>git add</code>——》<strong>staged</strong></li>
+<li><strong>staged</strong>——<code>git commit</code>——》<strong>unmodified</strong></li>
+<li>任一状态——任意修改——》<strong>modified</strong></li>
+<li><strong>unmodified</strong>——<code>git rm</code>——》<strong>untracked</strong></li>
+</ul>
+<h3 id="14-简单创建一个远程仓库"><a class="header" href="#14-简单创建一个远程仓库">1.4 简单创建一个远程仓库</a></h3>
+<p>先在github上创建一个远程仓库, 创建好后</p>
+<blockquote>
+<p>git remote add origin &lt;remote_repository_url&gt;
+//先绑定远程仓库
+git push -u origin master
+//上传
+<strong>git push --set-upstream QTmusicPlayer master</strong>
+<strong>git push --set-upstream origin master</strong>
+<strong>git checkout -b main</strong>//切换并创建分支main，然后推送到github默认的main分支上
+<strong>git pull origin main --allow-unrelated-histories，</strong>//**如果main仓库有你选择创建的readme.md文件（用第一个报错后），选择使用这个命令先把readme.md文件拉到本地仓库,在使用上述命令pull到远程仓库</p>
+</blockquote>
+<h2 id="2具体实践"><a class="header" href="#2具体实践">2.具体实践</a></h2>
+<h2 id="21-gitignore忽略某些文件"><a class="header" href="#21-gitignore忽略某些文件">2.1 .gitignore忽略某些文件</a></h2>
+<ul>
+<li>在.git文件夹所在目录下创建一个.gitignore文件</li>
+</ul>
+<pre><code># 示例：忽略编译生成的文件(就是忽略文件夹
+build/
+bin/
+# 示例：忽略临时文件
+temp/
+# 忽略特定文件
+filename
+</code></pre>
+<ul>
+<li>只要把文件名写在上面，用git add 将.gitignore添加上就可以。</li>
+<li>注意如果在创建.gitignore之前就已经对某文件用了<code>git add</code>，需要用<code>git rm --cached filename</code>将文件从缓存里删除，之后用<code>git status</code>会看到该文件不会出现在文件状态里</li>
+</ul>
+<h3 id=""><a class="header" href="#"></a></h3>
+<p><code>git config --list --show-origin</code>配置
+<code>git config &lt;key&gt;</code>查找某个配置的值
+<code>git confit --globa  user.email "xxx"</code> 设置全局邮件</p>
+<ul>
+<li>git push时，空文件夹不会提交</li>
+</ul>
+<h2 id="3-团队协作git流程"><a class="header" href="#3-团队协作git流程">3. 团队协作git流程</a></h2>
+<p>负责人a，团队成员b、c</p>
+<ul>
+<li>a
+先创建远程仓库，把基础代码上传。在github上邀请成员b,c</li>
+<li>b，c
+git clone
+git pull 确保最新
+先用git pull origion xxxx，在该xxx分支进行开发。</li>
+<li>b 先开发完他的分支
+尝试合并主分支后，发送pull request</li>
+<li>a
+检查和测试</li>
+<li>c
+有两个选择，如果开发时间较短，可以先开发完当前分支</li>
+</ul>
+<h3 id="31-其他问题"><a class="header" href="#31-其他问题">3.1 其他问题</a></h3>
+<ul>
+<li>多个PR（pull request）时，使用CI/CD自动化工具，在PR后自动进行，如果有问题会标记冲突，让开发人员解决冲突。多个PR涉及同一模块时，可以优先合并冲突最少的PR，剩余PR开发人员自己解决冲突，重新提交</li>
+</ul>
+<h3 id="32-git冲突类型"><a class="header" href="#32-git冲突类型">3.2 git冲突类型</a></h3>
+<ul>
+<li>同一文件冲突</li>
+<li>重命名冲突</li>
+</ul>
+<h2 id="4-项目开发"><a class="header" href="#4-项目开发">4. 项目开发</a></h2>
+<h3 id="41-cmake项目团队与模块化"><a class="header" href="#41-cmake项目团队与模块化">4.1 cmake项目团队与模块化</a></h3>
+<ul>
+<li>每个模块有自己的cmakeList，主程序文件由test文件代替</li>
+<li>主CmakeList 用add_subdirectory()</li>
+<li></li>
+</ul>
+<h3 id="42-开发风险"><a class="header" href="#42-开发风险">4.2 开发风险</a></h3>
+<p>工期拖延
+需求变化
+人员跳槽
+新技术</p>
+<h3 id="43-项目开发模型"><a class="header" href="#43-项目开发模型">4.3 项目开发模型</a></h3>
+<p>瀑布模型，渐增式模型</p>
+<ul>
+<li>基于组件的开发模型
+寻找Find, Select, Adapt, Create, 组装Compose，替代RePlace</li>
+</ul>
+<h2 id="暂存区"><a class="header" href="#暂存区">暂存区</a></h2>
+<ul>
+<li>暂存区只要文件修改了都可以用git add，不会有冗余的修改记录，只有用<strong>git commit</strong>的代码才有可回溯的提交记录。</li>
+</ul>
+<blockquote>
+<p>git reset --soft/hard/mixed
+soft保留工作区和暂存区，hard都不保留，mixed仅保留工作区
+git diff --cathe//一般使用图形化工具</p>
+</blockquote>
+<h2 id="远程仓库"><a class="header" href="#远程仓库">远程仓库</a></h2>
+<p>先在github上创建一个远程仓库, 创建好后</p>
+<blockquote>
+<p>git remote add origin &lt;remote_repository_url&gt;
+//先绑定远程仓库
+git push -u origin master
+//上传
+<strong>git push --set-upstream QTmusicPlayer master</strong>
+<strong>git push --set-upstream origin master</strong>
+<strong>git checkout -b main</strong>//切换并创建分支main，然后推送到github默认的main分支上
+<strong>git pull origin main --allow-unrelated-histories，</strong>//**如果main仓库有你选择创建的readme.md文件（用第一个报错后），选择使用这个命令先把readme.md文件拉到本地仓库,在使用上述命令pull到远程仓库</p>
+</blockquote>
+<h2 id="忽略某些文件"><a class="header" href="#忽略某些文件">忽略某些文件</a></h2>
+<p>在.git文件夹所在目录下创建一个.gitignore文件</p>
+<pre><code># 示例：忽略编译生成的文件
+build/
+bin/
+# 示例：忽略临时文件
+temp/
+# 忽略特定文件
+filename
+</code></pre>
+<ul>
+<li>只要把文件名写在上面，用git add将.gitignore添加上就可以。</li>
+<li>注意如果在创建.gitignore之前就已经对某文件用了<code>git add</code>，需要用<code>git rm --cached filename</code>将文件从缓存里删除，之后用<code>git status</code>会看到该文件不会出现在</li>
+</ul>
+<p>1.6
+<code>git config --list --show-origin</code>配置
+<code>git config &lt;key&gt;</code>查找某个配置的值</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="前置"><a class="header" href="#前置">前置</a></h2>
+<p>linux区分大小写
+<code>echo "Hellow world"</code> echo 打印函数</p>
+<h2 id="标题"><a class="header" href="#标题">标题</a></h2>
+<h2 id="创建一个脚本"><a class="header" href="#创建一个脚本">创建一个脚本</a></h2>
+<p>创建一个.sh文件<code>vim test.sh</code>
+启动.sh <code>bash test.sh</code></p>
+<h2 id="1变量相关"><a class="header" href="#1变量相关">1.变量相关</a></h2>
+<h3 id="11-shell变量"><a class="header" href="#11-shell变量">1.1 shell变量</a></h3>
+<pre><code>a=1, b="join",  //不需要类型声明
+a=b             //
+echo $a         //用$引用变量
+unset a         //删除变量
+set             //显示所有变量，太多默认的变量了，不好用。
+</code></pre>
+<h3 id="12-特殊变量"><a class="header" href="#12-特殊变量">1.2 特殊变量</a></h3>
+<p>Shell常见的变量之一系统变量，主要是用于对参数判断和命令返回值判断时使用，系统变量详解如下：
+$0 		当前脚本的名称；
+$n 		当前脚本的第n个参数,n=1,2,…9；
+$* 		当前脚本的所有参数(不包括程序本身)；
+$# 		当前脚本的参数个数(不包括程序本身)；
+$? 		令或程序执行完后的状态，返回0表示执行成功；
+$$ 		程序本身的PID号。</p>
+<h2 id="21命令"><a class="header" href="#21命令">2.1命令</a></h2>
+<pre><code>pwd   //显示当前的路径
+ls    //显示当前目录的文件, -a参数也显示隐藏文件或目录
+find /path -name "name"     //查找文件
+</code></pre>
+<h3 id="22find详细的用法"><a class="header" href="#22find详细的用法">2.2find详细的用法</a></h3>
+<p>find
+sudo find /home -type f -name "tesh.sh"  # 只搜索普通文件
+sudo find /home -type d -name "directory_name"  # 只搜索目录</p>
+<h2 id="语法"><a class="header" href="#语法">语法</a></h2>
+<p>语句：</p>
+<pre><code># 提示用户输入一个数字
+echo "Enter a number: "
+read num
+
+# 判断数字的正负性，并输出相应的消息
+if [ $num -gt 0 ]; then
+    echo "$num is positive"
+elif [ $num -lt 0 ]; then
+    echo "$num is negative"
+else
+    echo "$num is zero"
+fi
+```</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><p>nc-vz
+objdump -d查看汇编文件</p>
+<div style="break-before: page; page-break-before: always;"></div><p>图形化界面Redisinsight
+连接本地数据库服务</p>
+<p>常用命令</p>
+<blockquote>
+<p>SET key value
+GET key
+DEL key
+EXISTS key
+KEYS *
+FLUSHALL//删除所有键对
+clear</p>
+</blockquote>
+<blockquote>
+<p>键的值可以设成中文，但使用get会返回ascii码,即中文的二进制表示
+进入客户端时，使用<strong>redis-cli --raw</strong>进入客户端，可以显示数据原始形式，即显示中文</p>
+</blockquote>
+<blockquote>
+<p><strong>TTL key</strong>//查看过期时间，-1表示没有设置过期时间，返回-2表示已经过期，过期的数据使用KEYS key查看不了
+<strong>EXPIRE key time</strong>time单位是秒，或者使用<strong>SETEX</strong>代替
+<strong>SETNX key value</strong>//当键不存在时设立</p>
+</blockquote>
+<p>本地安装</p>
+<ul>
+<li>切换到安装的本地目录</li>
+<li>打开服务，修改redis为本地服务</li>
+<li>将redis添加到环境变量</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="第二次系统学习"><a class="header" href="#第二次系统学习">第二次系统学习</a></h2>
+<p>i,a
+r替换
+dw,d$,
+缩进&gt;&gt;(按住shift，按两次&gt;)，如果不按shift就是'.'，即重复上一次操作
+"#"上一行，"￥"行尾，"0"行首
+插入到下一行，自动缩进
+za将已折叠函数展开，或将函数折叠。z+M折叠所有。zc折叠光标上的单个函数,zo展开。,
+e跳转到下一个单词的末尾</p>
+<p>vstudio快捷键
+按住ctrl,按下k和o,在头文件和源文件之间快速切换
+通用：ctrl+tab快速切换程序内窗口
+f12在函数声明和函数定义之间转换</p>
+<p>ps:如果是VScode的vim用za折叠后，往下移动光标又打开了，可以在vim扩展设置（点击小齿轮后出现的菜单里面）里搜vim:fold，把勾上该选项就解决了
+<img src="%E8%87%AA%E5%AD%A6%E7%9A%84%E6%8A%80%E6%9C%AF/image.png" alt="Alt text" /></p>
+<div style="break-before: page; page-break-before: always;"></div><p>用于记录各种项目依赖配置和打包</p>
+<p>寻找依赖项</p>
+<blockquote>
+<ul>
+<li>1.如果是开源软件，直接读README.md</li>
+<li>2.使用依赖分析工具，如npm，pip，maven.对于一个含有源代码的项目使用pip的pipdeptree分析依赖项。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><p>cmake
+hello:main.cpp  //目标程序
+$(CXX) -o hello main.cpp   //CXX是cmake内部默认参数,指编译器
+echo "OK"</p>
+<ul>
+<li>前提：Makefile自动推断.o文件依赖同名的.cpp文件
+Makefile可以识别main.o中需要answer.o，所以不需要main.o:main.c</li>
+<li>Makefile命令：make all</li>
+<li>.PHONY:clean//PHONY是识别伪目标文件，</li>
+</ul>
+<p>sylar_add_executable(test1 "tests/test.cc" sylar "${LIBS}")</p>
+<p>指定CMake的最低版本要求
+cmake_minimum_required(VERSION 3.0)
+项目名称
+project(MyProject)
+设置编译器标准为C++11
+set(CMAKE_CXX_STANDARD 11)
+添加可执行文件
+add_executable(my_executable main.cpp)
+添加库文件（如果有的话）
+add_library(my_library source1.cpp source2.cpp)
+指定库文件链接到可执行文件
+target_link_libraries(my_executable my_library)</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="计算机网络之http"><a class="header" href="#计算机网络之http">计算机网络之HTTP</a></h2>
+<p>问题：缓存的实现（存储地方，浏览器机制）</p>
+<p><strong>socket和http 的关系</strong></p>
+<ul>
+<li>Socket是一种通信机制，而HTTP是一种基于Socket的应用层协议。HTTP使用Socket进行数据的传输，但它还定义了更高级别的概念和规则，例如请求方法、状态码、头部信息等，以便于在Web环境下进行数据交换和资源访问。</li>
+</ul>
+<blockquote>
+<ul>
+<li>客户端通常指的是发起网络请求或连接的一端。</li>
+<li>报文：host：服务器地址；accept：接收文件格式；User-agent：代理；Connect：连接状态；</li>
+</ul>
+</blockquote>
+<p><strong>包含的知识层次</strong></p>
+<blockquote>
+<p><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5CHTTP.html#%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0">基本概述</a>
+<a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5CHTTP.html#%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82">网络分层</a></p>
+</blockquote>
+<ul>
+<li>http1.0</li>
+</ul>
+<blockquote>
+<ul>
+<li><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5CHTTP.html#%E9%97%AEget-%E5%92%8C-post-%E6%96%B9%E6%B3%95%E9%83%BD%E6%98%AF%E5%AE%89%E5%85%A8%E5%92%8C%E5%B9%82%E7%AD%89%E7%9A%84%E5%90%97">问:GET 和 POST 方法都是安全和幂等的吗？</a></li>
+<li><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5CHTTP.html#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98">协商缓存</a></li>
+</ul>
+</blockquote>
+<ul>
+<li>http1.1</li>
+</ul>
+<blockquote>
+<ul>
+<li><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5CHTTP.html#%E5%AF%B9%E6%AF%9410%E7%9A%84%E4%BC%98%E5%8A%BF">对比10的优势</a></li>
+<li><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5CHTTP.html#%E5%AF%B9http11%E7%9A%84%E4%BC%98%E5%8C%96">对http11的优化</a></li>
+</ul>
+</blockquote>
+<ul>
+<li>https部分<a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5CHTTP.html#https-%E6%98%AF%E5%A6%82%E4%BD%95%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%85%B6%E9%97%B4%E4%BA%A4%E4%BA%92%E4%BA%86%E4%BB%80%E4%B9%88">httpss-是如何建立连接的其间交互了什么</a></li>
+</ul>
+<h2 id="基本概述"><a class="header" href="#基本概述">基本概述</a></h2>
+<p><strong>HTTP（Hypertext Transfer Protocol）是一种用于在客户端和服务器之间进行通信的应用层协议。</strong></p>
+<blockquote>
+<p>以下是HTTP协议的一些关键特点和基本原理：
+<strong>无连接性</strong>（Connectionless）：每个HTTP请求都是独立的，服务器在响应后立即关闭连接，不会保持持久连接。这意味着每个请求都需要建立新的连接，增加了一定的开销。为了减少连接建立的开销，引入了持久连接（HTTP/1.1）和连接池等技术。
+<strong>无状态性</strong>（Stateless）：HTTP协议本身是无状态的，即服务器不会保留关于客户端的状态信息。每个请求都是相互独立的，服务器不会在不同请求之间保留任何上下文信息。为了处理用户状态，如登录会话等，通常使用会话管理技术，如使用Cookie或Token来维护用户状态。
+<strong>请求-响应模型</strong>：HTTP通信遵循请求-响应模型。客户端发送HTTP请求到服务器，服务器处理请求并返回相应的HTTP响应。请求和响应都由一组结构化的信息组成，包括请求/响应行、请求/响应头和请求/响应体。
+<strong>URI</strong>（Uniform Resource Identifier）：URI用于标识要访问的资源，它可以是Web上的一个文件、一个API端点或其他资源。在HTTP请求中，URI用于指定要访问的资源的位置。
+<strong>请求方法</strong>（HTTP Methods）：HTTP定义了一组请求方法，用于指定对资源的不同操作。常见的请求方法包括：
+GET：获取指定资源的数据。
+POST：提交数据，用于创建新资源或处理数据。
+PUT：更新指定资源的数据。
+DELETE：删除指定资源。
+其他方法如PATCH、HEAD、OPTIONS等。
+<strong>状态码</strong>（Status Codes）：HTTP响应包括一个状态码，用于指示请求的处理结果。常见的状态码已在前面提到过，例如200表示成功，404表示资源未找到，500表示服务器错误等。
+<strong>报文格式</strong>：HTTP请求和响应都由报文组成，报文包括请求/响应行、请求/响应头和请求/响应体。请求行包含请求方法、URI和HTTP版本；响应行包含状态码和HTTP版本。</p>
+</blockquote>
+<h2 id="网络分层"><a class="header" href="#网络分层">网络分层</a></h2>
+<blockquote>
+<p>分层提供了一种结构化方式来讨论系统组件。模块化使更新系统组件更为容易
+同一层是对等实体(服务端和客户端的HTTP是对等实体，TCP也是对等实体)，各层的所有协议被称为协议栈（HTTP、TCP等所有分层用到的协议）
+-协议模型：osi（七层）和tcp（五层）</p>
+<ul>
+<li>tcp:(A的ip、端口，B的ip、端口) //B的ip可以是A，即自己连自己</li>
+<li>报文：头部+包体</li>
+<li>time_wait状态</li>
+</ul>
+</blockquote>
+<h2 id="状态码"><a class="header" href="#状态码">状态码</a></h2>
+<blockquote>
+<p>1xx 类状态码（信息性状态码），指示请求已被接收并继续处理。，是协议处理中的一种中间状态，实际用到的比较少。
+2xx 类状态码（成功状态码）表示服务器成功处理了客户端的请求，也是我们最愿意看到的状态。
+3xx 类状态码（重定向状态码）表示客户端请求的资源发生了变动，需要客户端用新的 URL 重新发送请求获取资源，也就是重定向。
+4xx 类状态码（客户端错误代码）表示客户端发送的报文有误，服务器无法处理，也就是错误码的含义。
+5xx 类状态码（服务器错误状态码）表示客户端请求报文正确，但是服务器处理时内部发生了错误，属于服务器端的错误码。如502，503等</p>
+</blockquote>
+<h2 id="问get-和-post-方法都是安全和幂等的吗"><a class="header" href="#问get-和-post-方法都是安全和幂等的吗">问:GET 和 POST 方法都是安全和幂等的吗？</a></h2>
+<blockquote>
+<ul>
+<li>概念:在 HTTP 协议里，所谓的「安全」是指请求方法不会「破坏」服务器上的资源。
+所谓的「幂等」，意思是多次执行相同的操作，结果都是「相同」的。</li>
+<li>答:GET 方法就是安全且幂等的，因为它是「只读」操作，无论操作多少次，服务器上的数据都是安全的，且每次的结果都是相同的。所以，可以对 GET 请求的数据做缓存，这个缓存可以做到浏览器本身上（彻底避免浏览器发请求），也可以做到代理上（如nginx），而且在浏览器中 GET 请求可以保存为书签。
+POST 因为是「新增或提交数据」的操作，会修改服务器上的资源，所以是不安全的，且多次提交数据就会创建多个资源，所以不是幂等的。所以，浏览器一般不会缓存 POST 请求，也不能把 POST 请求保存为书签。</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="协商缓存"><a class="header" href="#协商缓存">协商缓存</a></h2>
+<blockquote>
+<p><strong>第一种</strong>：<strong>请求头部</strong>中的 If-Modified-Since 字段与<strong>响应头部</strong>中的 Last-Modified 字段实现
+响应头部中的 Last-Modified：标示这个响应资源的最后修改时间；
+请求头部中的 If-Modified-Since：当<strong>资源过期</strong>（服务器端设置的一个时间戳，用于指示浏览器何时应该重新请求更新资源）了，发现响应头中具有 Last-Modified 声明，则再次发起请求的时候带上 Last-Modified 的时间，服务器收到请求后发现有 If-Modified-Since 则与被请求资源的最后修改时间进行对比（Last-Modified），如果最后修改时间较新（大），说明资源又被改过，则返回最新资源，HTTP 200 OK；如果最后修改时间较旧（小），说明资源无新修改，响应 HTTP 304 走缓存。</p>
+</blockquote>
+<blockquote>
+<p><strong>第二种</strong>：<strong>请求头部</strong>中的 If-None-Match 字段与<strong>响应头部</strong>中的 ETag 字段
+响应头部中 Etag：唯一标识响应资源；
+请求头部中的If-None-Match：当资源过期时，浏览器发现响应头里有 Etag，则再次向服务器发起请求时，会将请求头 If-None-Match 值设置为 Etag 的值。服务器收到请求后进行比对，如果资源没有变化返回 304，如果资源变化了返回 200。</p>
+</blockquote>
+<blockquote>
+<p><strong>对比</strong>第一种实现方式是基于时间实现的，第二种实现方式是基于一个唯一标识实现的，相对来说后者可以更加准确地判断文件内容是否被修改，避免由于时间篡改导致的不可靠问题。
+如果在第一次请求资源的时候，服务端返回的 HTTP 响应头部同时有 Etag 和 Last-Modified 字段，那么客户端再下一次请求的时候，如果带上了 ETag 和 Last-Modified 字段信息给服务端，这时 Etag 的优先级更高，也就是服务端先会判断 Etag 是否变化了，如果 Etag 有变化就不用在判断 Last-Modified 了，如果 Etag 没有变化，然后再看 Last-Modified。</p>
+</blockquote>
+<blockquote>
+<p><strong>为什么 ETag 的优先级更高</strong>这是因为 ETag 主要能解决 Last-Modified 几个比较难以解决的问题：
+在没有修改文件内容情况下文件的最后修改时间可能也会改变，这会导致客户端认为这文件被改动了，从而重新请求；
+可能有些文件是在秒级以内修改的，If-Modified-Since 能检查到的粒度是秒级的，使用 Etag就能够保证这种需求下客户端在 1 秒内能刷新多次；
+有些服务器不能精确获取文件的最后修改时间。</p>
+</blockquote>
+<h1 id="http11"><a class="header" href="#http11">HTTP/1.1</a></h1>
+<h2 id="对比10的优势"><a class="header" href="#对比10的优势">对比1.0的优势</a></h2>
+<ul>
+<li>长连接</li>
+</ul>
+<blockquote>
+<ul>
+<li>早期 HTTP/1.0 性能问题：每发起一个请求，都要新建一次 TCP 连接（三次握手），而且是串行请求，做了无谓的 TCP 连接建立和断开</li>
+<li>HTTP/1.1 提出了长连接的通信方式，也叫持久连接。这种方式的好处在于减少了 TCP 连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。长连接超过一定时间没有任何数据交互，服务端就会主动断开这个连接。</li>
+</ul>
+</blockquote>
+<ul>
+<li>管道网络传输</li>
+</ul>
+<blockquote>
+<ul>
+<li>如果服务端在处理 A 请求时耗时比较长，那么后续的请求的处理都会被阻塞住，这称为「队头堵塞」</li>
+</ul>
+</blockquote>
+<h2 id="对http11的优化"><a class="header" href="#对http11的优化">对HTTP/1.1的优化</a></h2>
+<ul>
+<li><strong>减少重定向请求</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>重定向请求：所求的资源从url1迁移到url2，客户端使用url1获取页面时，服务器返回url2，然后用户使用url2来获取资源</li>
+<li>用户的请求一般先传到代理服务器，再由代理服务器发送到url到源服务器。
+方式：用户url1传到代理服务器，代理服务器用url1得知迁移后，用url2获取资源再返回到用户；如果代理服务器已经知道了迁移到哪里，就在接收到url1后使用url2获取资源返回</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>合并请求</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>可以用Css Image Sprites将小图片合并为大图片，减少HTTP请求数量（每个请求都对应tcp连接，合并后只要一个tcp连接）</li>
+<li>webpack打包的方式，将js、css等文件</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>延迟发送</strong></li>
+</ul>
+<blockquote>
+<p>当一个页面的URL资源太多的时候，只获取用户看到的资源，当用户向下滑动时再请求资源</p>
+</blockquote>
+<ul>
+<li>压缩文件 使用有损压缩和无损压缩两种方式</li>
+</ul>
+<blockquote>
+<p><strong>持久连接</strong>（Persistent Connection）：HTTP/1.1引入了持久连接机制，允许在单个TCP连接上发送多个HTTP请求和响应，避免了每次请求都建立和关闭连接的开销，提高了性能和效率。
+流水线（Pipeline）：HTTP/1.1支持请求和响应的流水线处理，即在发送请求后可以继续发送后续请求，而无需等待前面的响应返回。这样可以减少请求的延迟，提高并发性能。
+<strong>分块传输编码</strong>（Chunked Transfer Encoding）：HTTP/1.1引入了分块传输编码，允许将响应数据分成多个块进行传输，而不需要事先知道整个响应的大小。这样可以更早地将部分响应数据发送给客户端，提高响应速度。
+<strong>缓存控制</strong>（Cache Control）：HTTP/1.1提供了更强大的缓存机制，包括可缓存性、过期控制、验证等方式，使得客户端和代理服务器可以更有效地利用缓存，减少对服务器的请求，降低网络传输成本。
+域名解析优化：HTTP/1.1中可以使用多个域名来并行加载页面的资源，通过将资源分布在不同的域名下，可以增加浏览器同时请求资源的并发数，提高页面加载速度。</p>
+<blockquote>
+<p>这些优化措施可以减少延迟、提高并发性能、节省带宽等，从而提升了HTTP/1.1协议的性能和效率。然而，随着互联网的发展，HTTP/1.1仍存在一些性能瓶颈，后续的HTTP/2和HTTP/3协议进一步对HTTP协议进行了优化和改进。</p>
+</blockquote>
+</blockquote>
+<h2 id="https-是如何建立连接的其间交互了什么"><a class="header" href="#https-是如何建立连接的其间交互了什么">HTTPS 是如何建立连接的？其间交互了什么？</a></h2>
+<blockquote>
+<p>HTTPS 在 TCP 三次握手之后，还需进行 SSL/TLS 的握手过程，才可进入加密报文传输。默认端口443.
+非对称加密算法;一个是公钥，这个是可以公开给所有人的；一个是私钥，这个必须由本人管理，不可泄露。
+私钥加密内容不是内容本身，而是对内容的哈希值加密</p>
+</blockquote>
+<blockquote>
+<p>SSL/TLS 协议基本流程：
+客户端向服务器索要并验证服务器的公钥。
+双方协商生产「会话秘钥」。
+双方采用「会话秘钥」进行加密通信。
+前两步也就是 SSL/TLS 的建立过程，也就是 TLS 握手阶段。</p>
+</blockquote>
+<blockquote>
+<p>TLS 的「握手阶段」涉及四次通信，使用不同的密钥交换算法，TLS 握手流程也会不一样的，现在常用的密钥交换算法有两种：RSA 算法 (opens new window)和 ECDHE 算法 (opens new window)。</p>
+</blockquote>
+<p>HTTPS 的应用数据是如何保证完整性的？</p>
+<blockquote>
+<p>TLS 在实现上分为握手协议和记录协议两层：
+TLS 握手协议就是我们前面说的 TLS 四次握手的过程，负责协商加密算法和生成对称密钥，后续用此密钥来保护应用程序数据（即 HTTP 数据）；
+TLS 记录协议负责保护应用程序数据并验证其完整性和来源，所以对 HTTP 数据加密是使用记录协议；</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="ip"><a class="header" href="#ip">IP</a></h2>
+<h2 id="概念"><a class="header" href="#概念">概念</a></h2>
+<blockquote>
+<p>有32位，192.168.1.1，只是显示出来方便人看</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><p>进度</p>
+<p>TCP协议格式</p>
+<pre><code>------------------------------------------------------------------------
+|     Source Port (16 bits)      |    Destination Port (16 bits)      |
+------------------------------------------------------------------------
+|                        Sequence Number (32 bits)                    |
+------------------------------------------------------------------------
+|                   Acknowledgment Number (32 bits)                   |
+------------------------------------------------------------------------
+| Data Offset |Reserved|  Flags  |        Window Size (16 bits)       |
+------------------------------------------------------------------------
+|      Checksum (16 bits)        |    Urgent Pointer (16 bits)       |
+------------------------------------------------------------------------
+|                           Options                                |
+|                             (if any)                                 |
+------------------------------------------------------------------------
+|                            Data                                     |
+------------------------------------------------------------------------
+</code></pre>
+<p>Source Port / Destination Port: 用于标识源和目标应用程序的端口号。
+Sequence Number: 用于按序传送数据，每个数据包都有一个唯一的序列号。
+Acknowledgment Number: 确认已接收到的数据序列号。
+Data Offset: 数据偏移量，指示数据字段在整个TCP数据包中的位置。
+Reserved: 保留字段，暂时未使用。
+Flags: TCP标志位，用于控制TCP连接的建立、终止和状态等。
+Window Size: 接收窗口大小，用于流量控制，指示发送方可以发送的数据量。
+Checksum: 校验和，用于检查数据包在传输过程中是否损坏。
+Urgent Pointer: 用于指示紧急数据在数据段中的位置。
+Options: 可能包含选项信息，如最大报文长度（MSS）等。
+Data: 实际传输的数据。</p>
+<p>##计算机网络之TCP</p>
+<ul>
+<li>概念/定位：TCP:transport control princple传输控制协议，TCP位于网络协议栈的传输层，负责提供可靠的数据传输和连接管理</li>
+<li>据TCP协议的设计，即使在关闭连接的过程（四次挥手过程中）中，数据仍然可以在连接保持期间传输。</li>
+<li>套接字是tcp的具体实现,//类似文件描述符文件描述符</li>
+</ul>
+<h1 id="四次挥手"><a class="header" href="#四次挥手">四次挥手</a></h1>
+<h2><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.webp" alt="Alt text" />
+挥手是双向的(双方对等)</h2>
+<p>即服务器也可以通过四次挥手的过程来断开连接,FIN（Finish）报文段,ACK（Acknowledgment）</p>
+<h2 id="简单概括为什么要设计四次挥手"><a class="header" href="#简单概括为什么要设计四次挥手">简单概括为什么要设计四次挥手</a></h2>
+<ul>
+<li>发出fin报文后，相当于客户端向服务端喊了一声，但客户端不知道服务端是否收到中断的请求，所以需要服务端收到fin后立刻告知客户端它已经知道要结束了，但还没有真正结束，因为可能数据没传完。等真正传输完了之后服务端发出fin报文告诉客户端真的结束了</li>
+<li>为什么服务端还要客户端确认结束，直接断开不就好了？这是因为在服务端发送ack发和fin报文这中间的数据还不确定是否完整地被客户端收到，当客户端的ack报文到达服务端后才可以进入close状态，因为这时候是没有数据传输了。</li>
+</ul>
+<h2 id="状态总结"><a class="header" href="#状态总结">状态总结</a></h2>
+<ul>
+<li>CLOSED（关闭）：表示连接处于关闭状态，未建立连接。
+LISTEN（监听）：表示服务器正在监听传入的连接请求。</li>
+<li>SYN_SENT（同步已发送）：表示客户端已发送SYN（同步）报文，等待服务器的确认。</li>
+<li>SYN_RECEIVED（同步已接收）：表示服务器已收到客户端的SYN报文，并发送了自己的SYN和ACK（确认）报文。</li>
+<li>ESTABLISHED（已建立）：表示连接已成功建立，双方可以进行数据的传输。</li>
+<li>FIN_WAIT_1（结束等待1）：表示连接中一方已发送FIN（结束）报文，等待对方的ACK报文。</li>
+<li>FIN_WAIT_2（结束等待2）：表示连接中一方已收到对方的ACK报文，等待对方发送FIN报文。</li>
+<li>TIME_WAIT（时间等待）：表示连接已关闭，但仍在等待一段时间以确保所有报文都已被处理完毕。</li>
+<li>CLOSE_WAIT（关闭等待）：表示连接中一方已收到对方的FIN报文，正在等待自己发送FIN报文。</li>
+<li>LAST_ACK（最后确认）：表示连接中一方已发送FIN报文，等待对方的确认。</li>
+<li>CLOSED（关闭）：表示连接已彻底关闭。</li>
+</ul>
+<h2 id="挥手断开连接丢失的情况"><a class="header" href="#挥手断开连接丢失的情况">挥手断开连接丢失的情况</a></h2>
+<ul>
+<li><strong>第一次</strong>挥手丢失（服务器）</li>
+</ul>
+<blockquote>
+<ul>
+<li>客户端发送FIN（结束）报文给服务器，希望关闭连接并停止发送数据。</li>
+<li>服务器没有收到客户端发送的FIN报文，此时服务器并不知道客户端希望关闭连接。</li>
+<li>服务器将保持连接状态，继续接收客户端发送的数据，以及发送自己的数据给客户端。</li>
+<li>客户端在超时等待一段时间后，可能会重新发送挥手报文（FIN）给服务器，以确保服务器收到关闭连接的请求。</li>
+<li>如果客户端持续未能收到服务器的回应，客户端可能会认为服务器已经关闭了连接，并主动关闭自己的连接。</li>
+<li>在这种情况下，服务器可能会继续发送数据给客户端，但客户端已经不再接收数据，并认为连接已关闭。</li>
+<li>由于服务器并不知道客户端已经关闭连接，服务器将保持连接状态，直到其自己的应用层决定关闭连接。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>第二次</strong>挥手丢失
+客户端首先发送一个关闭连接的请求给服务器，这是第一次挥手（FIN）。</li>
+</ul>
+<blockquote>
+<ul>
+<li>服务器收到客户端的关闭请求后，会进入关闭等待状态，并发送一个确认报文给客户端，表示已经接收到关闭请求。这是第二次挥手（ACK）。
+在接收到服务器的确认报文后，客户端进入等待状态，等待服务器发送最后的数据。在这个阶段，客户端仍然可以接收服务器发送的数据。
+服务器完成最后的数据传输后，会发送一个关闭连接的请求给客户端，这是第三次挥手（FIN）。
+客户端收到服务器的关闭请求后，发送一个确认报文给服务器，表示已经接收到关闭请求的确认。这是第四次挥手（ACK）。
+在收到客户端的确认报文后，服务器进入关闭状态，双方都已完成连接的关闭。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>第三次</strong>挥手丢失</li>
+</ul>
+<blockquote>
+<p>客户端已发送了FIN报文并进入了TIME_WAIT状态。它将继续等待一段时间，以确保服务器接收到了ACK报文，并且等待时间取决于具体的实现，默认为2倍的最大段生存时间（2MSL）。
+服务器没有收到来自客户端的ACK报文确认，它会持续发送FIN报文，试图重新触发客户端发送ACK报文。
+如果客户端在等待时间结束后仍未收到服务器的FIN报文，它将关闭连接并释放资源，此时服务器可能仍然认为连接是打开的。
+如果服务器在一定时间内没有收到来自客户端的ACK报文，并且超过了服务器的超时时间，服务器将关闭连接并释放资源。
+最终，如果客户端和服务器的连接状态不一致，可能会导致连接的不正常关闭和资源泄漏。</p>
+</blockquote>
+<h2 id="time_wait相关"><a class="header" href="#time_wait相关">TIME_WAIT相关</a></h2>
+<blockquote>
+<ul>
+<li>为什么 TIME_WAIT 等待的时间是 2MSL？
+MSL 是 Maximum Segment Lifetime，报文最大生存时间</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>为什么需要 TIME_WAIT 状态？
+主动发起关闭连接的一方，才会有 TIME-WAIT 状态。
+防止历史连接中的数据，被后面相同四元组的连接错误的接收；(如果主动关闭的一方在另一个进程里使用了相同的四元组，可能会接收到上一次连接的数据)
+保证「被动关闭连接」的一方，能被正确的关闭；</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>服务器出现大量 TIME_WAIT 状态的原因
+第一个场景：HTTP 没有使用长连接
+第二个场景：HTTP 长连接超时
+第三个场景：HTTP 长连接的请求数量达到上限</p>
+</blockquote>
+<p>Linux内核相关</p>
+<blockquote>
+<p>Linux内核中会维护两个队列：
+半连接队列（SYN 队列）：接收到一个 SYN 建立连接请求，处于 SYN_RCVD 状态；//接收到SYN后加入
+全连接队列（Accpet 队列）：已完成 TCP 三次握手过程，处于 ESTABLISHED 状态； //接收到ACK后加入</p>
+</blockquote>
+<h2 id="什么时候发出fin报文"><a class="header" href="#什么时候发出fin报文">什么时候发出fin报文</a></h2>
+<blockquote>
+<p>close 函数，同时 socket 关闭发送方向和读取方向，也就是 socket 不再有发送和接收数据的能力。如果有多进程/多线程共享同一个 socket，如果有一个进程调用了 close 关闭只是让 socket 引用计数 -1，并不会导致 socket 不可用，同时也不会发出 FIN 报文，其他进程还是可以正常读写该 socket，直到引用计数变为 0，才会发出 FIN 报文。
+shutdown 函数，可以指定 socket 只关闭发送方向而不关闭读取方向，也就是 socket 不再有发送数据的能力，但是还是具有接收数据的能力。如果有多进程/多线程共享同一个 socket，shutdown 则不管引用计数，直接使得该 socket 不可用，然后发出 FIN 报文，如果有别的进程企图使用该 socket，将会受到影响。</p>
+</blockquote>
+<h1 id="tcp机制"><a class="header" href="#tcp机制">TCP机制</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p>GS代码优化
+图片压缩，观察页面加载速度
+你在项目管理上，git协作开发，远程开发，查看文档
+chatgpt代码辅助
+相对复杂深度（没那么卷）pulsar（云原生）
+jvm虚拟机原生，（可扩展性）
+卡夫卡，大数据处理（日志收集）
+原型链，闭包，宏任务，微任务
+读源码中了解相对深入的技术，
+Chrome DevTooLs koa框架啊，打包工具
+前端工程化，SEO，微前端，monorepo
+DDD在前端的应用（后端架构），通过什么工具
+应用后缀数组、高度数组、解决寻找公共连接数据问题
+推动代码规范化（待人），使用什么规范，使用什么工具来保证规范Memory\ESLint、Pylint、EditorConfig
+为小组抢资源
+技术分享（分享的主题）
+实际开发的重难点
+写满，每一行都满
+重复的项目写太多会减分
+实习平台的数据（项目的真实性和高度）
+路由，现成的分库分表的框架
+XXLXXL（分布式任务调度框架）：XXL-Job是一个开源的分布式任务调度框架，用于管理和调度分布式任务。它提供了任务的定时触发、分布式任务执行、任务监控等功能。
+哪里体现千万级的编程经验
+被学校官方采用（三万人）出现过什么问题，系统安全问题
+收获了什么，不如写做了什么
+MQ，查询使用缓存
+保证项目的高可用
+系统学习并发编程
+java基础，什么基础
+Mysql底层结构
+精通的证明（博客
+mabatisPlus
+不用解释
+top,netstat,ps,tail</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="网络与信息安全"><a class="header" href="#网络与信息安全">网络与信息安全</a></h2>
+<ul>
+<li>IETF定义端口，公认端口，动态分配的端口</li>
+<li>PDRR模型
+protect, detect, recovery, reaction存储</li>
+<li>netstat -t</li>
+</ul>
+<h3 id="cdn"><a class="header" href="#cdn">CDN</a></h3>
+<p>内容分发网络，通过在不同地理位置网络服务器节点来分发内容，降低主服务器的压力。
+用户请求时（一般是通过域名访问，要经过DNS转换），访问到DNS服务器时，会将请求分发到最近的CDN节点，CDN节点存储部分内容，不需要主服务器来返回请求。当CDN节点没有该资源时会再从主服务器获取，再由CDN节点返回</p>
+<h3 id="dns"><a class="header" href="#dns">DNS</a></h3>
+<p>DNS(DNS（Domain Name System，域名系统)。将域名转换为 IP 地址：DNS 将人类可读的域名（如 www.example.com）转换为机器可读的 IP 地址（如 192.0.2.1），使设备能够相互通信。
+工作流程：</p>
+<ul>
+<li>
+<ol>
+<li>用户请求。
+当用户在浏览器中输入一个网址（如 www.example.com） 并按下回车时，操作系统首先需要将该域名解析为 IP 地址。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>操作系统查询 DNS
+本地 DNS 缓存：操作系统会首先检查本地缓存，看是否已经有该域名的 IP 地址。如果有，并且未过期，则直接使用这个 IP 地址。</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>DNS 解析流程
+如果本地缓存中没有该 IP 地址，操作系统将进行 DNS 查询：
+递归 DNS 服务器：操作系统会向配置的 DNS 服务器（通常是互联网服务提供商提供的）发送请求。这个 DNS 服务器通常是递归 DNS 服务器，负责帮助用户查找所请求的域名。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>DNS 解析过程
+根 DNS 服务器：如果递归 DNS 服务器没有缓存结果，它会查询根 DNS 服务器，获得对应的顶级域名服务器的地址。
+顶级域名服务器：根服务器会返回负责该域名的顶级域名服务器（如 .com、.org 等）的地址。
+权威 DNS 服务器：顶级域名服务器再将请求转发到权威 DNS 服务器，以获取最终的 IP 地址。</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>返回 IP 地址
+权威 DNS 服务器返回 IP 地址到递归 DNS 服务器，递归 DNS 服务器再将结果返回给操作系统。
+操作系统将该 IP 地址缓存一段时间（根据 TTL 设置），以便未来使用。</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>发送实际请求
+一旦操作系统获取到 IP 地址，就会使用该地址向目标服务器发送实际的 HTTP 请求。</li>
+</ol>
+</li>
+</ul>
+<h3 id="arp协议"><a class="header" href="#arp协议">ARP协议</a></h3>
+<p>Dynamic Host Configuration Protocol（DHCP）是一种用于在计算机网络上自动分配 IP 地址和其他网络配置信息的协议。它有以下功能和特点：</p>
+<blockquote>
+<p>ARP（Address Resolution Protocol）地址解析协议是用于将 IP 地址解析为物理 MAC 地址的协议。在数据包从一个网络设备发送到另一个网络设备时，需要知道目标设备的物理地址（MAC 地址）才能将数据包正确传递到目标设备。
+ARP 协议工作原理如下：</p>
+<ul>
+<li>IP 地址解析为 MAC 地址：当设备 A 要发送数据包给设备 B 时，设备 A 首先检查本地 ARP 缓存中是否有设备 B 的 MAC 地址。如果找到了，它就会直接使用这个地址发送数据包。</li>
+<li>ARP 查询：如果设备 A 的 ARP 缓存中没有设备 B 的 MAC 地址，它会发送一个 ARP 请求广播到本地网络，该请求包含设备 A 想要通信的设备 B 的 IP 地址。这个请求会发送到本地网络的所有设备。</li>
+<li>ARP 响应：设备 B 收到 ARP 请求后，会回复一个 ARP 响应，其中包含它的 MAC 地址。这个响应只发送给设备 A。</li>
+<li>ARP 缓存：设备 A 收到 ARP 响应后，会将设备 B 的 IP 地址和 MAC 地址映射关系存储到本地的 ARP 缓存中，以便下次发送数据包时直接使用。</li>
+<li>ARP 协议的主要作用是在通信之前解析目标设备的物理地址，以确保数据包能够正确地传输到目标设备。ARP 请求和响应过程帮助网络设备建立起 IP 地址和 MAC 地址之间的对应关系，提供了在本地网络中进行通信所需的基础。</li>
+</ul>
+</blockquote>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/img/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%BA%A7%E7%9A%84%E5%8D%8F%E8%AE%AE.png" alt="Alt text" /></p>
+<h2 id="其他-1"><a class="header" href="#其他-1">其他</a></h2>
+<p>ICMP（Internet Control Message Protocol，互联网控制消息协议）是在 TCP/IP 协议族中的一个重要协议，用于在 IP 网络上发送控制和错误消息。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

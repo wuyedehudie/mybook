@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>git.md - wuye book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../ar眼镜开发/unity.html"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="../ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="../c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="../c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="../c++/深入c++.html"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="../c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="../c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="../数据库/cmu15445.html"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库.html"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="../算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="../算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/git.html" class="active"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP.html"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/网络其他相关知识.html"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>工作区，暂存区</p>
+<h2 id="1-git基础"><a class="header" href="#1-git基础">1. git基础</a></h2>
+<p>简单而言git用于保存项目，在项目根目录使用git应用程序保存项目代码，支持远程仓库github创建和提交。有版本回溯功能，有项目开发分支试验时合并的功能</p>
+<h3 id="11理论知识点"><a class="header" href="#11理论知识点">1.1理论/知识点</a></h3>
+<ul>
+<li>暂存区只要文件修改了都可以用git add，不会有冗余的修改记录，只有用<strong>git commit</strong>的代码才有可回溯的提交记录。</li>
+</ul>
+<blockquote>
+<p>git reset --soft/hard/mixed
+soft保留工作区和暂存区，hard都不保留，mixed仅保留工作区
+git diff --cathe//一般使用图形化工具</p>
+</blockquote>
+<h3 id="12-基础命令"><a class="header" href="#12-基础命令">1.2 基础命令</a></h3>
+<p>速查</p>
+<ul>
+<li><code>git init</code>将文件夹（命令执行所在目录）初始化，其实是增加了一个.git文件</li>
+<li><code>git add filename</code>git add ./git add *txt   将文件添加到暂存区，相当于随手保存</li>
+<li><code>git status</code>文件状态，可以</li>
+<li><code>git commit</code></li>
+<li><code>git commit -a</code> //跳过相当于使用了一次git add</li>
+<li><code>git branch</code></li>
+<li><code>git log /git log --online</code></li>
+<li><code>git rm --cache filename</code>     //只会删除暂存区内容，不会删除本地文件</li>
+</ul>
+<h3 id="13-文件状态"><a class="header" href="#13-文件状态">1.3 文件状态</a></h3>
+<ul>
+<li><strong>untracked</strong> 没使用过任何git命令前的最原始的状态</li>
+<li><strong>modified</strong></li>
+<li><strong>staged</strong></li>
+<li><strong>unmodified</strong></li>
+<li>总结：</li>
+<li><strong>untracked</strong>——<code>git add</code>——》<strong>staged</strong></li>
+<li><strong>staged</strong>——<code>git commit</code>——》<strong>unmodified</strong></li>
+<li>任一状态——任意修改——》<strong>modified</strong></li>
+<li><strong>unmodified</strong>——<code>git rm</code>——》<strong>untracked</strong></li>
+</ul>
+<h3 id="14-简单创建一个远程仓库"><a class="header" href="#14-简单创建一个远程仓库">1.4 简单创建一个远程仓库</a></h3>
+<p>先在github上创建一个远程仓库, 创建好后</p>
+<blockquote>
+<p>git remote add origin &lt;remote_repository_url&gt;
+//先绑定远程仓库
+git push -u origin master
+//上传
+<strong>git push --set-upstream QTmusicPlayer master</strong>
+<strong>git push --set-upstream origin master</strong>
+<strong>git checkout -b main</strong>//切换并创建分支main，然后推送到github默认的main分支上
+<strong>git pull origin main --allow-unrelated-histories，</strong>//**如果main仓库有你选择创建的readme.md文件（用第一个报错后），选择使用这个命令先把readme.md文件拉到本地仓库,在使用上述命令pull到远程仓库</p>
+</blockquote>
+<h2 id="2具体实践"><a class="header" href="#2具体实践">2.具体实践</a></h2>
+<h2 id="21-gitignore忽略某些文件"><a class="header" href="#21-gitignore忽略某些文件">2.1 .gitignore忽略某些文件</a></h2>
+<ul>
+<li>在.git文件夹所在目录下创建一个.gitignore文件</li>
+</ul>
+<pre><code># 示例：忽略编译生成的文件(就是忽略文件夹
+build/
+bin/
+# 示例：忽略临时文件
+temp/
+# 忽略特定文件
+filename
+</code></pre>
+<ul>
+<li>只要把文件名写在上面，用git add 将.gitignore添加上就可以。</li>
+<li>注意如果在创建.gitignore之前就已经对某文件用了<code>git add</code>，需要用<code>git rm --cached filename</code>将文件从缓存里删除，之后用<code>git status</code>会看到该文件不会出现在文件状态里</li>
+</ul>
+<h3 id=""><a class="header" href="#"></a></h3>
+<p><code>git config --list --show-origin</code>配置
+<code>git config &lt;key&gt;</code>查找某个配置的值
+<code>git confit --globa  user.email "xxx"</code> 设置全局邮件</p>
+<ul>
+<li>git push时，空文件夹不会提交</li>
+</ul>
+<h2 id="3-团队协作git流程"><a class="header" href="#3-团队协作git流程">3. 团队协作git流程</a></h2>
+<p>负责人a，团队成员b、c</p>
+<ul>
+<li>a
+先创建远程仓库，把基础代码上传。在github上邀请成员b,c</li>
+<li>b，c
+git clone
+git pull 确保最新
+先用git pull origion xxxx，在该xxx分支进行开发。</li>
+<li>b 先开发完他的分支
+尝试合并主分支后，发送pull request</li>
+<li>a
+检查和测试</li>
+<li>c
+有两个选择，如果开发时间较短，可以先开发完当前分支</li>
+</ul>
+<h3 id="31-其他问题"><a class="header" href="#31-其他问题">3.1 其他问题</a></h3>
+<ul>
+<li>多个PR（pull request）时，使用CI/CD自动化工具，在PR后自动进行，如果有问题会标记冲突，让开发人员解决冲突。多个PR涉及同一模块时，可以优先合并冲突最少的PR，剩余PR开发人员自己解决冲突，重新提交</li>
+</ul>
+<h3 id="32-git冲突类型"><a class="header" href="#32-git冲突类型">3.2 git冲突类型</a></h3>
+<ul>
+<li>同一文件冲突</li>
+<li>重命名冲突</li>
+</ul>
+<h2 id="4-项目开发"><a class="header" href="#4-项目开发">4. 项目开发</a></h2>
+<h3 id="41-cmake项目团队与模块化"><a class="header" href="#41-cmake项目团队与模块化">4.1 cmake项目团队与模块化</a></h3>
+<ul>
+<li>每个模块有自己的cmakeList，主程序文件由test文件代替</li>
+<li>主CmakeList 用add_subdirectory()</li>
+<li></li>
+</ul>
+<h3 id="42-开发风险"><a class="header" href="#42-开发风险">4.2 开发风险</a></h3>
+<p>工期拖延
+需求变化
+人员跳槽
+新技术</p>
+<h3 id="43-项目开发模型"><a class="header" href="#43-项目开发模型">4.3 项目开发模型</a></h3>
+<p>瀑布模型，渐增式模型</p>
+<ul>
+<li>基于组件的开发模型
+寻找Find, Select, Adapt, Create, 组装Compose，替代RePlace</li>
+</ul>
+<h2 id="暂存区"><a class="header" href="#暂存区">暂存区</a></h2>
+<ul>
+<li>暂存区只要文件修改了都可以用git add，不会有冗余的修改记录，只有用<strong>git commit</strong>的代码才有可回溯的提交记录。</li>
+</ul>
+<blockquote>
+<p>git reset --soft/hard/mixed
+soft保留工作区和暂存区，hard都不保留，mixed仅保留工作区
+git diff --cathe//一般使用图形化工具</p>
+</blockquote>
+<h2 id="远程仓库"><a class="header" href="#远程仓库">远程仓库</a></h2>
+<p>先在github上创建一个远程仓库, 创建好后</p>
+<blockquote>
+<p>git remote add origin &lt;remote_repository_url&gt;
+//先绑定远程仓库
+git push -u origin master
+//上传
+<strong>git push --set-upstream QTmusicPlayer master</strong>
+<strong>git push --set-upstream origin master</strong>
+<strong>git checkout -b main</strong>//切换并创建分支main，然后推送到github默认的main分支上
+<strong>git pull origin main --allow-unrelated-histories，</strong>//**如果main仓库有你选择创建的readme.md文件（用第一个报错后），选择使用这个命令先把readme.md文件拉到本地仓库,在使用上述命令pull到远程仓库</p>
+</blockquote>
+<h2 id="忽略某些文件"><a class="header" href="#忽略某些文件">忽略某些文件</a></h2>
+<p>在.git文件夹所在目录下创建一个.gitignore文件</p>
+<pre><code># 示例：忽略编译生成的文件
+build/
+bin/
+# 示例：忽略临时文件
+temp/
+# 忽略特定文件
+filename
+</code></pre>
+<ul>
+<li>只要把文件名写在上面，用git add将.gitignore添加上就可以。</li>
+<li>注意如果在创建.gitignore之前就已经对某文件用了<code>git add</code>，需要用<code>git rm --cached filename</code>将文件从缓存里删除，之后用<code>git status</code>会看到该文件不会出现在</li>
+</ul>
+<p>1.6
+<code>git config --list --show-origin</code>配置
+<code>git config &lt;key&gt;</code>查找某个配置的值</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../自学的技术/gdb.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../自学的技术/Linux_shell.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../自学的技术/gdb.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../自学的技术/Linux_shell.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>深入c++.md - wuye book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../ar眼镜开发/unity.html"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="../ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="../c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="../c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="../c++/深入c++.html" class="active"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="../c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="../c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="../数据库/cmu15445.html"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库.html"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="../算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="../算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/git.html"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP.html"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/网络其他相关知识.html"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="编译器基本规则"><a class="header" href="#编译器基本规则">编译器基本规则</a></h3>
+<p>创建变量就会分配空间，
+调用函数时会为函数的参数中是变量的参数会分配空间
+简单理解堆和栈，堆是一个数组，或者理解成静态链表
+程序说白了，就是对一些数据进行修改</p>
+<h2 id="各种关键字"><a class="header" href="#各种关键字">各种关键字</a></h2>
+<p>noexcept 不抛出异常
+<code>constexpr</code>用于声明常量表达式, 指示编译器在编译时计算表达式的值, 声明的变量必须在编译时求值，所以必须是常量表达式。onstexpr 还可以用于函数模板参数，从而可以在编译时对函数进行求值，而不仅仅是对常量进行求值。常量构造函数 C++11 中，constexpr 还可以用于构造函数，用于声明常量表达式构造函数，这样的构造函数可以在编译时求值，并且可以用于在编译时初始化常量表达式</p>
+<h3 id="模板"><a class="header" href="#模板">模板</a></h3>
+<p>函数模板/类模板/
+template <typename T>
+T myFunction(T a, T b) {
+return a + b;
+}
+template <typenameT>
+class MyTemplateClass{
+T myVariable;
+}
+Myclass<T>::funtional(T&amp; name)</p>
+<h3 id="匿名函数"><a class="header" href="#匿名函数">匿名函数</a></h3>
+<p><code>[捕获列表](参数列表) -&gt; 返回类型 { 函数体 }</code></p>
+<h2 id="理论知识"><a class="header" href="#理论知识">理论知识</a></h2>
+<ul>
+<li>有些编译器要求您使用特定的标记，让其支持部分C+11特性:g++-std=c++0x use_auto.cpp</li>
+<li>强制类型转换只在表达式里转换，不会修改变量真正属性</li>
+<li><code>[[nodiscard]]</code> 是 C++11 新增的属性（attribute），用于告诉编译器应该检查函数的返回值，并在调用函数时处理其返回值。如果你希望确保调用 check() 函数时不会忽略其返回值，可以使用 <code>[[nodiscard]]</code> 标记该函数。</li>
+</ul>
+<pre><code>const bool getbool(){}      //函数的返回值不可修改
+bool getbool()const{return} //保证函数内部不可修改成员
+</code></pre>
+<h2 id="实战过程的零散知识"><a class="header" href="#实战过程的零散知识">实战过程的零散知识</a></h2>
+<ul>
+<li>如果模板头文件没有c++文件引用它，它可能会被用c编译器编译</li>
+<li>::sendmsg(m_sock, &amp;msg, flags);//用::表示它是全局命名空间的函数，提高可读性</li>
+</ul>
+<h2 id="跨平台"><a class="header" href="#跨平台">跨平台</a></h2>
+<ul>
+<li>条件编译</li>
+</ul>
+<pre><code>#ifdef _WIN32
+#elif __linux__
+#endif
+</code></pre>
+<h2 id="标准库的函数或容器"><a class="header" href="#标准库的函数或容器">标准库的函数或容器</a></h2>
+<ul>
+<li>std::multimap 也是按照键（key）来组织和存储数据的，不同之处在于 std::multimap 允许键具有重复的值。</li>
+<li>std::funtional
+函数对象:</li>
+</ul>
+<pre><code>class MyFunctor {
+public:
+    // 重载 () 运算符
+    int operator()(int a, int b) const {
+        return a + b;
+    }
+};
+MyFunctor functor;
+int a = functor(3,4);
+</code></pre>
+<ul>
+<li>funtional用法</li>
+</ul>
+<pre><code>#include &lt;functional&gt;
+int add(int a, int b) {
+    return a + b;
+}
+// 一个可调用对象（函数对象）
+struct Substract {
+    int operator()(int a, int b) const {
+        return a - b;
+    }
+};
+int main() {
+    std::function&lt;int(int, int)&gt; func;
+    func = add;
+    std::cout &lt;&lt; "add(3, 4): " &lt;&lt; func(3, 4) &lt;&lt; std::endl; // 输出 7
+
+    Substract sub;
+    func = sub;
+    std::cout &lt;&lt; "sub(8, 5): " &lt;&lt; func(8, 5) &lt;&lt; std::endl; // 输出 3
+
+    func = [](int a, int b) { return a * b; };
+    std::cout &lt;&lt; "lambda(6, 7): " &lt;&lt; func(6, 7) &lt;&lt; std::endl; // 输出 42
+    return 0;
+}
+</code></pre>
+<h2 id="inline内联函数"><a class="header" href="#inline内联函数">inline内联函数：</a></h2>
+<ul>
+<li>函数调用改为直接函数代码的代码嵌入程序使用该函数的地方，就不需要函数调用过程中创造栈帧浪费时间，缺点是将代码嵌入程序需要更大的内存（如循环过程，内联函数就需要复制10次代码到内存区，如果函数调用只需要一份代码的内存区。）</li>
+</ul>
+<h2 id="继承与多态"><a class="header" href="#继承与多态">继承与多态</a></h2>
+<blockquote>
+<p>子类构造函数初始化父类私有变量：</p>
+<ul>
+<li>调用父类私有变量进行构造</li>
+<li>在构造函数中调用父类函数修改私有变量,如下面的代码</li>
+</ul>
+</blockquote>
+<pre><code>-ChildClass(int parentValue, int childValue) : ParentClass(parentValue) {}
+</code></pre>
+<ul>
+<li>子类在构造前先调用父类构造函数</li>
+<li>private关键字也对派生类进行限制，如果对析构函数使用private，外部不能delete该对象</li>
+</ul>
+<h2 id="数据类型"><a class="header" href="#数据类型">数据类型</a></h2>
+<ul>
+<li>_t表示是数据类型
+size_t 无符号整数类型，不同系统上表示内存中对象的大小,也常用于表示数字长度，内存分配，字符串长度</li>
+<li>int32_t保证不同平台都是64位宽度</li>
+<li>自动变量，静态变量(程序运行时创建，程序结束时销毁)，动态变量</li>
+</ul>
+<h2 id="内存模型相关"><a class="header" href="#内存模型相关">内存模型相关</a></h2>
+<h3 id="移动语义"><a class="header" href="#移动语义">移动语义</a></h3>
+<p>移动语义可以相当于浅拷贝+源指针置空
+浅拷贝就是遇到指针的成员变量时只复制指针，不复制指针指向的内容</p>
+<ul>
+<li>传入的对象处于有效但未定义的状态，通常被称为移后源对象（Moved-From Object）</li>
+<li>拷贝构造函数和移动构造函数</li>
+<li>std::move()是将对象标志为可移动状态, 如果有移动构造的话就会调用移动构造</li>
+</ul>
+<h4 id="左值右值亡值"><a class="header" href="#左值右值亡值">左值，右值，亡值</a></h4>
+<p>左值: 变量
+纯右值表达式:字面量如常数, 匿名函数返回值[]{return1;}, 引用&amp;a, 算数表达式a+b
+亡值: 资源权将要被转移的<code>a=std::move(b)</code>中的b, <code>int a{3}</code>中的3</p>
+<pre><code>//函数里在什么时候使用对象的拷贝构造函数情况
+//拷贝两次
+Myclass fun1(myclass a) {     //在传入参数a时，没有用到&amp;，所以传进来是靠拷贝得来的a，
+    //这里任一修改a, 随便写
+    return a;                //返回值是Myclass, return a时函数还会拷贝一次, 原来的a会析构掉。如果编译器有返回值优化（Return Value Optimization，RVO），会直接将第一次拷贝直接构造到返回值的内存空间里, 只拷贝一次
+}                                  
+//拷贝一次
+Myclass fun2(myclass&amp; a){    //传的是引用，不用再拷贝a参数了
+    //这里任一修改a
+    return std::move(a);     //这里还是会拷贝一次, 返回的是a修改后的拷贝, 因为返回值是Myclass，而不是Myclass的引用
+}
+//没有拷贝
+Myclass&amp; fun3(myclass&amp; a){
+    //任一修改a
+    return a;               //此时返回的是a修改后的引用
+}
+</code></pre>
+<p>右值引用相关函数相关函数
+<code>static_cast&lt;int&amp;&amp;&gt;(value)</code>强制转为右值引用</p>
+<h4 id="stdmove使用例子"><a class="header" href="#stdmove使用例子">std::move使用例子</a></h4>
+<ol>
+<li></li>
+</ol>
+<pre><code> unique_ptr&lt;Myclass&gt; ptr1,ptr2;
+ ptr2 = std::make_shared&lt;Myclass&gt;(*arg);
+ ptr1=std::move(ptr1);
+</code></pre>
+<ol start="2">
+<li><code>myClasses.push_back(std::move(tmp));</code></li>
+</ol>
+<pre><code>右值指在表达式中只能出现在赋值号右边的值，它通常具有临时性质，表示无法被取地址的、即将被销毁或者不再被使用的值
+e:&amp;10;、&amp;(x + y);、&amp;fmin(x, y);右值不可取地址,上述三个会报错，所以是右值
+int&amp; ra = a;
+左值引用和右值引用
+- 临时创建的对象(没有声明的):在函数返回语句中，函数返回一个临时对象,可以是对象，也可以是变量；在类型中转换的临时对象
+- 右值引用使用 &amp;&amp; 符号声明，允许程序员访问临时创建的对象，并且允许移动语义，右值引用主要用于两个方面：移动语义和完美转发。
+</code></pre>
+<pre><code>- 浅拷贝：其中仅复制对象的成员变量的值。对于包含指针的对象，浅拷贝将仅复制指针的值，而不会复制指针所指向的内容。
+- 深拷贝：
+深拷贝（Deep Copy）通常是指当一个对象包含指针成员变量时，对这些指针所指向的内存进行复制，而不是简单地复制指针本身。(需要手动写代码用new为指针分配内存空间)
+</code></pre>
+<h3 id="原子性"><a class="header" href="#原子性">原子性</a></h3>
+<p>即保证某些操作必须连续完成且过程不被骚扰，例如修改一个变量的值需要找地址，修改地址上的该变量值，多线程情况下可能出现一个线程a在取地址的过程中，另外一个线程b修改了该变量的值，导致线程a修改的不是原有的值。原子性的实现需要依赖处理器之类或者锁</p>
+<h2 id="指针"><a class="header" href="#指针">指针</a></h2>
+<h3 id="基础"><a class="header" href="#基础">基础</a></h3>
+<p><code>&amp;</code>取地址符号
+<code>*</code>声明指针对象或者解引用
+<strong>引用</strong>：<code>Myclass&amp; b=a</code>, 此时的<code>b</code>相当于<code>&amp;a</code>，因为引用没有存储空间，相当于<code>&amp;a</code>的一个别名, 所以不能声明必须初始化
+<strong>解引用</strong>：<code>*（地址）</code>这就是一个右值，如<code>*p</code>或者<code>&amp;value</code>，其中p是指针变量，value是变量</p>
+<h3 id="普通指针"><a class="header" href="#普通指针">普通指针</a></h3>
+<ul>
+<li>指针基础声明</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>int *ptr</code>强调 *ptr是int类型,<code>int* ptr</code>则强调这是指向int类型的指针，实际都一样</li>
+<li>int*pl,p2;//创建一个int类型指针和一个int类型变量</li>
+<li>指针长度一样，无论指向什么类型。。。</li>
+<li><code>long fellow; *fe11ow=223323;</code>野指针</li>
+<li>pt=(int*)0xB8000000;</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>悬挂指针：指针原本指向的内存区域已经被释放或者未被初始化的指针。当指针指向的内存区域被释放后，指针仍然保留着之前指向的地址，这样的指针就成为悬挂指针。在使用悬挂指针时，由于指针所指向的内存已经被释放，访问该指针可能导致未定义的行为。</li>
+<li>野指针：指针未初始化或者指向了未知的内存区域，可能是任意值（包括0、无效地址或者已释放的地址等）。野指针通常是指没有被明确初始化或赋值的指针，在程序中引起未定义的行为。</li>
+</ul>
+</blockquote>
+<h3 id="malloc和new"><a class="header" href="#malloc和new">malloc和new</a></h3>
+<ul>
+<li>指针内存分配</li>
+</ul>
+<blockquote>
+<p>1.new,分配在堆上
+2.malloc和calloc，分配在堆上，需要用free释放
+3.alloc,分配在栈上,在函数返回时自动释放</p>
+</blockquote>
+<h3 id="智能指针"><a class="header" href="#智能指针">智能指针</a></h3>
+<h4 id="基础使用"><a class="header" href="#基础使用">基础使用</a></h4>
+<p>首先，智能指针是一个模板类，头文件<code>#include &lt;memory&gt;</code></p>
+<ul>
+<li><code>std::shared_ptr&lt;T&gt;</code></li>
+</ul>
+<p>两种创建方式
+<code>std::shared_ptr&lt;Myclass&gt; ptr(new Myclass(*arg))</code>构造函数构造</p>
+<pre><code>std::shared_ptr&lt;Myclass&gt; ptr
+std::make_shared&lt;Myclass&gt;(*arg)
+</code></pre>
+<ul>
+<li><code>std::weak_ptr</code></li>
+</ul>
+<blockquote>
+<ul>
+<li>std::weak_ptr 也用于管理动态分配的内存资源，但它并不拥有所指向的对象。它主要用于解决由 std::shared_ptr 可能造成的强引用环（circular reference）问题。强引用环是指两个或多个对象相互持有彼此的 std::shared_ptr，导致它们之间形成循环引用，使得对象无法被正确地释放，从而造成内存泄漏。</li>
+<li>std::weak_ptr 是一种弱引用，它不会增加对象的引用计数。它可以从 std::shared_ptr 创建，允许观察由 std::shared_ptr 管理的对象，但不会增加对象的引用计数。因此，即使存在 std::weak_ptr，所指向的对象也可以被释放。</li>
+</ul>
+</blockquote>
+<hr />
+<ul>
+<li>使用场景概述：需要对引用的资源进行共享的时候, 通常使用share_ptr。需要解决循环引用的时候</li>
+</ul>
+<h4 id="底层原理相关"><a class="header" href="#底层原理相关">底层原理相关</a></h4>
+<p><code>std::shared_ptr</code>的计数是原子的，性能开销大。</p>
+<h3 id="智能指针代码案例"><a class="header" href="#智能指针代码案例">智能指针代码案例</a></h3>
+<ul>
+<li><code>tcs::socket::ptr sock = CreateTCPSocket();</code>如果函数返回一个临时智能指针对象，编译器会使用移动构造来将临时智能指针对象的资源权赋值给</li>
+<li><code>tcs::socket::ptr sock(CreateTCPSocket());</code>和<code>tcs::socket::ptr sock=CreateTCPSocket()</code>的效果是一样的。</li>
+</ul>
+<pre><code>tcs::socket::ptr sock1(new tcs::socket());
+tcs::socket::ptr sock2(new tcs::socket());
+// 深拷贝，引用计数增加
+sock1 = sock2;
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../c++/求职.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../c++/设计模式.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../c++/求职.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../c++/设计模式.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

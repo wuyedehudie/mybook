@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>cmu15445.md - wuye book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../ar眼镜开发/unity.html"><strong aria-hidden="true">1.</strong> unity.md</a></li><li class="chapter-item expanded "><a href="../ar眼镜开发/项目计划.html"><strong aria-hidden="true">2.</strong> 项目计划.md</a></li><li class="chapter-item expanded "><a href="../c++/c++cs106.html"><strong aria-hidden="true">3.</strong> c++cs106.md</a></li><li class="chapter-item expanded "><a href="../c++/求职.html"><strong aria-hidden="true">4.</strong> 求职.md</a></li><li class="chapter-item expanded "><a href="../c++/深入c++.html"><strong aria-hidden="true">5.</strong> 深入c++.md</a></li><li class="chapter-item expanded "><a href="../c++/设计模式.html"><strong aria-hidden="true">6.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../c++/语言基础.html"><strong aria-hidden="true">7.</strong> 语言基础.md</a></li><li class="chapter-item expanded "><a href="../c++/面向对象的设计原则.html"><strong aria-hidden="true">8.</strong> 面向对象的设计原则.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/muduo阅读.html"><strong aria-hidden="true">9.</strong> muduo阅读.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发依赖配置过程.html"><strong aria-hidden="true">10.</strong> 开发依赖配置过程.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/开发环境配置.html"><strong aria-hidden="true">11.</strong> 开发环境配置.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/日志模块记录.html"><strong aria-hidden="true">12.</strong> 日志模块记录.md</a></li><li class="chapter-item expanded "><a href="../linux服务器开发/服务器开发知识库.html"><strong aria-hidden="true">13.</strong> 服务器开发知识库.md</a></li><li class="chapter-item expanded "><a href="../数据库/cmu15445.html" class="active"><strong aria-hidden="true">14.</strong> cmu15445.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库.html"><strong aria-hidden="true">15.</strong> 数据库.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库刷题.html"><strong aria-hidden="true">16.</strong> 数据库刷题.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库实践.html"><strong aria-hidden="true">17.</strong> 数据库实践.md</a></li><li class="chapter-item expanded "><a href="../算法/模板.html"><strong aria-hidden="true">18.</strong> 模板.md</a></li><li class="chapter-item expanded "><a href="../算法/算法.html"><strong aria-hidden="true">19.</strong> 算法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/arduino.html"><strong aria-hidden="true">20.</strong> arduino.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/cmake语法.html"><strong aria-hidden="true">21.</strong> cmake语法.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/docker.html"><strong aria-hidden="true">22.</strong> docker.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/gdb.html"><strong aria-hidden="true">23.</strong> gdb.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/git.html"><strong aria-hidden="true">24.</strong> git.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/Linux_shell.html"><strong aria-hidden="true">25.</strong> Linux_shell.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/linux命令工具.html"><strong aria-hidden="true">26.</strong> linux命令工具.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/redis.html"><strong aria-hidden="true">27.</strong> redis.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/vim.html"><strong aria-hidden="true">28.</strong> vim.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/打包项目.html"><strong aria-hidden="true">29.</strong> 打包项目.md</a></li><li class="chapter-item expanded "><a href="../自学的技术/项目构建.html"><strong aria-hidden="true">30.</strong> 项目构建.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">31.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/IP.html"><strong aria-hidden="true">32.</strong> IP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP.html"><strong aria-hidden="true">33.</strong> TCP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/简历的亮点.html"><strong aria-hidden="true">34.</strong> 简历的亮点.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/网络其他相关知识.html"><strong aria-hidden="true">35.</strong> 网络其他相关知识.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">wuye book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Cmu15445学习记录</p>
+<p>#源码bushub和环境
+先修知识：常用shell命令：ls，cd
+Settings &gt; Actions &gt; General &gt; Actions permissions &gt; Disable actions.//这个不是命令，是需要你在github上修改设置</p>
+<p>参考CMU15445（2023 spring） lab - 环境配置_J__M__C的博客-CSDN博客
+实在不行参考我下面的这个野路子</p>
+<ul>
+<li>下载clang14软件包</li>
+</ul>
+<pre><code>wget http://apt.llvm.org/llvm.sh  //下载软件包，使用ls可以看到多了llvm.sh文件
+chmod +x llvm.sh		//添加可执行权限
+sudo ./llvm.sh 14 all	//安装，过程中会有一大段脚本语言，等待一下（在最末尾看到[waiting for headers，此时要等），如果失败了可以重启再试一次（做到这里报错了，退出再执行了一次后成功了）
+</code></pre>
+<pre><code>sudo apt autoremove 
+sudo apt install clang
+clang –version //检查clang的版本，如果提示clang命令不存在说明没安装成功
+</code></pre>
+<ul>
+<li>然后在bustub.private目录下执行</li>
+<li>最后make check-tests测试是否成功</li>
+</ul>
+<p>索引和遍历0.
+查询优化器
+Select count(*)有优化
+Select AVG(gpa)</p>
+<h1 id="存储引擎"><a class="header" href="#存储引擎">存储引擎</a></h1>
+<h1 id="中级数据库语句"><a class="header" href="#中级数据库语句">中级数据库语句</a></h1>
+<ul>
+<li>数据库操作语句（DML）
+procedural 有过程的，自己指定查询方法(关系型代数)
+non-procedural 没有过程，只告诉数据库自己需要某个结果，比如&gt;select a from</li>
+</ul>
+<h2 id="关系代数算子relational-algebra"><a class="header" href="#关系代数算子relational-algebra">关系代数算子(relational algebra)</a></h2>
+<p>Cmu15445学习记录
+源码bushub
+先修知识：常用shell命令：ls，cd
+Settings &gt; Actions &gt; General &gt; Actions permissions &gt; Disable actions.//这个不是命令，是需要你在github上修改设置</p>
+<p>参考CMU15445（2023 spring） lab - 环境配置_J__M__C的博客-CSDN博客
+实在不行参考我下面的这个野路子
+下载clang14软件包
+wget http://apt.llvm.org/llvm.sh  //下载软件包，使用ls可以看到多了llvm.sh文件
+chmod +x llvm.sh		//添加可执行权限
+sudo ./llvm.sh 14 all	//安装，过程中会有一大段脚本语言，等待一下（在最末尾看到[waiting for headers，此时要等），如果失败了可以重启再试一次（做到这里报错了，退出再执行了一次后成功了）
+sudo apt autoremove
+sudo apt install clang
+clang –version //检查clang的版本，如果提示clang命令不存在说明没安装成功</p>
+<p>然后在bustub.private目录下执行
+最后make check-tests测试是否成功</p>
+<p>关系代数中常用的运算符号，用于描述对关系（表）进行的操作。</p>
+<blockquote>
+<p>σ (Select)：选取满足某一条件的行。
+π (Projection)：选取指定列，即去掉不需要的列。
+∪ (Union)：取两个关系的并集，要求两个关系的列数相同。
+∩ (Intersection)：取两个关系的交集，要求两个关系的列数相同。
+– (Difference)：取两个关系的差集，要求两个关系的列数相同。
+× (Product)：求两个关系的笛卡尔积，即把两个关系中的每个元组都进行组合。
+⋈ (Join)：连接两个关系，把它们的公共列组合成一个关系。具体有自然连接、等值连接、外连接等多种方式。</p>
+</blockquote>
+<blockquote>
+<p>→ σb_id=102(R⋈S) vs. (R⋈(σb_id=102(S))//第一个先运算R⋈S再查询，第二个现在S里面找σb_id=102再进行R⋈S
+SQL is the de facto standard(SQL是大多数据库使用的标准)
+索引和遍历0.
+查询优化器
+Select count(*)有优化
+Select AVG(gpa)</p>
+</blockquote>
+<ul>
+<li>Select,Projection(投影),Union,Intersection,Difference,Product,Join.</li>
+</ul>
+<blockquote>
+<ul>
+<li>PROJECTION,SELECT b_id-100,a_id FROM R WHERE a_id = 'a2',自动投影</li>
+<li>UNiON ALL(不去重),(SELECT * FROM R) UNION ALL (SELECT * FROM S) //S和R的两张表结果相同，将它俩合并后输出,all是不去掉充分的</li>
+<li>INTERSECTION (交集),(SELECT * FROM R) INTERSECTION (SELECT * FROM S) //取两个表的交集</li>
+<li>DIFFERENCE (取补集),(SELECT * FROM) EXCEPT (SELECT * FROM S)</li>
+<li>PRODUCT (取笛卡尔积) (SELSECT * FROM) CROSS JOIN S;或者SELECT * FROM R,S//隐式的join</li>
+<li><strong>JOIN</strong>,SELECT * FROM R NATURAL JOIN S;//一般不加natrual</li>
+</ul>
+</blockquote>
+<ul>
+<li>extra operators
+Rename,</li>
+</ul>
+<h2 id="数据和查询语言解耦sql聚会函数aggregates"><a class="header" href="#数据和查询语言解耦sql聚会函数aggregates">数据和查询语言解耦，SQL,聚会函数(aggregates)</a></h2>
+<blockquote>
+<ul>
+<li>函数count,sum,avg支持DISTINCT,把重复的去掉</li>
+<li>select AVG(R),e.sid FROM enrolled AS e, student AS s WHERE e.sid = s.sid (GROUP BY e.cid) (HAVING AVG(s.gpa) &gt;3.9);</li>
+<li>不加group by会报错,分组求平均值（相同e.cid 的求平均值）</li>
+<li>%模糊查询不要放最左边，（最左匹配原则）,不然难以优化</li>
+</ul>
+</blockquote>
+<h2 id="output-control"><a class="header" href="#output-control">output control</a></h2>
+<ul>
+<li>1.输出重定向,即把输出语句用作输入，如INSERT INTO CourseIds (SELECT DISTINCT cid FROM enrolled);//把括号内容的输出用作输入</li>
+<li>2.输出设定</li>
+</ul>
+<pre><code>output control:order by 1,//根据第一列排序
+order by grade DESC,sid ASC; //DESC降序，ASC升序，不写默认升序
+</code></pre>
+<h2 id="子查询查询嵌套nested-queries"><a class="header" href="#子查询查询嵌套nested-queries">子查询，查询嵌套（nested queries）</a></h2>
+<ul>
+<li>1.子查询关键字：ALL,ANY,IN,EXISTS(子查询只要有结果就可以)</li>
+</ul>
+<pre><code>SELSECT name FROM student WHERE sid IN(SELECT sid FROM enrolled WHERE cid = '15-445');  //ANY效果和IN一样
+SELSECT * FROM course WHERE NOT EXISTS(SELSECT * FROM enrolled WHERE course .cid = enrolled .cid); //排除掉括号内的结果后输出
+</code></pre>
+<h2 id="窗口函数"><a class="header" href="#窗口函数">窗口函数</a></h2>
+<pre><code>SELECT *, ROW_NUMBER() OVER() AS row_num FROM enrolled; //添加一行显示它的顺序，
+SELECT *, ROW_NUMBER() OVER(PARTITION BY cid) FROM enrolled; // 比如一列由多个cid相同的，就会将cid相同的排列，如下图所示
+</code></pre>
+<p><img src="91de1e121f721cf54e64a17886cc0ed.jpg" alt="Alt text" /></p>
+<blockquote>
+<p>还可以用order by代替PARTITION BY</p>
+</blockquote>
+<h2 id="ctecommon-table-expressions内部视图"><a class="header" href="#ctecommon-table-expressions内部视图">CTE(COMMON TABLE EXPRESSIONS),内部视图</a></h2>
+<pre><code>WITH cteSource(maxId) AS (SELECT MAX (sid) FROM enrolled ) SELECT name FROM student,cteSource WHERE stuendt.sid = cteSource.maxId; //用maxId,作为括号内语句输出内容的名字
+</code></pre>
+<ul>
+<li>CTE循环，炫技，没什么用。</li>
+</ul>
+<hr />
+<hr />
+<p>总结，尽量把想要的结果用一个SQL语句查询起来 ,尽量把优化的事情交给数据库(前提是数据库不弱);如果小公司数据库弱则需要自己拆分业务</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../linux服务器开发/服务器开发知识库.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../数据库/数据库.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../linux服务器开发/服务器开发知识库.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../数据库/数据库.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
